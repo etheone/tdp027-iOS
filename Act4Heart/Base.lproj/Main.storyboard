@@ -33,12 +33,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Goq-cG-3oH">
-                                <rect key="frame" x="172" y="485" width="31" height="30"/>
-                                <state key="normal" title="Spel">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="act4heart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nt-ER-qUw">
                                 <rect key="frame" x="0.0" y="100" width="375" height="25"/>
                                 <constraints>
@@ -48,6 +42,15 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Goq-cG-3oH">
+                                <rect key="frame" x="172" y="485" width="31" height="30"/>
+                                <state key="normal" title="Spel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="laM-4E-l3b" kind="presentation" modalTransitionStyle="crossDissolve" id="eKJ-OC-Ojk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.69019607839999997" green="0.27450980390000002" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -69,10 +72,50 @@
             </objects>
             <point key="canvasLocation" x="359.5" y="447.5"/>
         </scene>
-        <!--Akut-->
+        <!--Game-->
+        <scene sceneID="0Pm-c2-9ew">
+            <objects>
+                <viewController id="laM-4E-l3b" customClass="Game" customModule="Act4Heart" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dx5-bq-RYe"/>
+                        <viewControllerLayoutGuide type="bottom" id="A5A-gX-1sX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h96-Kv-TRS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hjärtspelet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7r-Sy-eO9">
+                                <rect key="frame" x="145" y="323" width="84.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Aj-9y-r8x">
+                                <rect key="frame" x="134" y="587" width="107" height="30"/>
+                                <state key="normal" title="Tillbaka (TEMP)"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="nhR-d8-jMf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="N7r-Sy-eO9" firstAttribute="centerX" secondItem="h96-Kv-TRS" secondAttribute="centerX" id="74q-pD-OJ2"/>
+                            <constraint firstItem="9Aj-9y-r8x" firstAttribute="centerX" secondItem="h96-Kv-TRS" secondAttribute="centerX" id="DHF-v4-pa2"/>
+                            <constraint firstItem="A5A-gX-1sX" firstAttribute="top" secondItem="9Aj-9y-r8x" secondAttribute="bottom" constant="50" id="YMb-tR-taS"/>
+                            <constraint firstItem="N7r-Sy-eO9" firstAttribute="centerY" secondItem="h96-Kv-TRS" secondAttribute="centerY" id="ayZ-yy-PLQ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0yY-LC-vF9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359.5" y="1221.5"/>
+        </scene>
+        <!--Emergency-->
         <scene sceneID="wRh-AW-goR">
             <objects>
-                <viewController id="SeH-bM-0Pu" customClass="Akut" customModule="Act4Heart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SeH-bM-0Pu" customClass="Emergency" customModule="Act4Heart" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dXM-kv-ZlJ"/>
                         <viewControllerLayoutGuide type="bottom" id="o8g-AV-1s3"/>
@@ -81,19 +124,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mb6-xf-Vsw">
-                                <rect key="frame" x="67" y="111" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="rX0-8r-fvZ"/>
-                                    <constraint firstAttribute="height" constant="128" id="ydw-vU-pCD"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Akutsituation / Återfallsprocessen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LC1-qD-v1J">
-                                <rect key="frame" x="59" y="40" width="257.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Akutsituation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LC1-qD-v1J">
+                                <rect key="frame" x="137" y="40" width="100.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3G-EH-dx0">
+                                <rect key="frame" x="150" y="502" width="74" height="30"/>
+                                <state key="normal" title="Nästa steg"/>
+                                <connections>
+                                    <action selector="continueToNextStep:" destination="SeH-bM-0Pu" eventType="touchUpInside" id="plv-3w-dBd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Klocka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSe-5I-SPY">
+                                <rect key="frame" x="161" y="323" width="51.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -105,23 +150,94 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="5Ng-fe-75B"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8vu-2w-ESQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saknar du Nitroglycerin?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPl-GJ-47Q">
+                                        <rect key="frame" x="93" y="150" width="187.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Annars ta en Nitroglycerin och" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkL-UU-rPF">
+                                        <rect key="frame" x="72" y="260" width="231" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DsG-De-0J9">
+                                        <rect key="frame" x="138" y="180" width="100" height="30"/>
+                                        <state key="normal" title="Akut - ring 112"/>
+                                        <connections>
+                                            <action selector="emergencyStart:" destination="SeH-bM-0Pu" eventType="touchUpInside" id="21m-o2-4jM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOb-4F-TrL">
+                                        <rect key="frame" x="101" y="290.5" width="173" height="30"/>
+                                        <state key="normal" title="Starta återfallsprocessen"/>
+                                        <connections>
+                                            <action selector="relapseStart:" destination="SeH-bM-0Pu" eventType="touchUpInside" id="sh8-9a-kHm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="DsG-De-0J9" firstAttribute="top" secondItem="WPl-GJ-47Q" secondAttribute="bottom" constant="10" id="7g4-gt-zI5"/>
+                                    <constraint firstItem="dOb-4F-TrL" firstAttribute="top" secondItem="DsG-De-0J9" secondAttribute="bottom" constant="80" id="EPR-Ce-6Nn"/>
+                                    <constraint firstItem="DsG-De-0J9" firstAttribute="centerX" secondItem="8vu-2w-ESQ" secondAttribute="centerX" id="HoT-pO-xVq"/>
+                                    <constraint firstItem="WPl-GJ-47Q" firstAttribute="top" secondItem="8vu-2w-ESQ" secondAttribute="top" constant="150" id="LjW-UC-e1q"/>
+                                    <constraint firstItem="dOb-4F-TrL" firstAttribute="centerX" secondItem="8vu-2w-ESQ" secondAttribute="centerX" id="P3T-SR-Dbs"/>
+                                    <constraint firstItem="jkL-UU-rPF" firstAttribute="top" secondItem="DsG-De-0J9" secondAttribute="bottom" constant="50" id="Qh9-mI-MvD"/>
+                                    <constraint firstItem="WPl-GJ-47Q" firstAttribute="centerX" secondItem="8vu-2w-ESQ" secondAttribute="centerX" id="SYW-i0-4Sg"/>
+                                    <constraint firstItem="dOb-4F-TrL" firstAttribute="top" secondItem="jkL-UU-rPF" secondAttribute="bottom" constant="10" id="XiA-DF-M2P"/>
+                                    <constraint firstItem="DsG-De-0J9" firstAttribute="top" secondItem="8vu-2w-ESQ" secondAttribute="top" constant="180" id="YH6-gG-23L"/>
+                                    <constraint firstItem="jkL-UU-rPF" firstAttribute="centerX" secondItem="8vu-2w-ESQ" secondAttribute="centerX" id="jrb-5I-eNF"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="YH6-gG-23L"/>
+                                        <exclude reference="EPR-Ce-6Nn"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mb6-xf-Vsw" firstAttribute="centerX" secondItem="NS3-2q-dkJ" secondAttribute="centerX" id="9Fe-l4-tG9"/>
+                            <constraint firstItem="8vu-2w-ESQ" firstAttribute="top" secondItem="NS3-2q-dkJ" secondAttribute="top" id="1lf-T8-qfY"/>
+                            <constraint firstItem="q3G-EH-dx0" firstAttribute="centerX" secondItem="NS3-2q-dkJ" secondAttribute="centerX" id="3dX-bp-VwY"/>
+                            <constraint firstItem="YSe-5I-SPY" firstAttribute="centerY" secondItem="NS3-2q-dkJ" secondAttribute="centerY" id="BfU-QX-WqL"/>
+                            <constraint firstItem="8vu-2w-ESQ" firstAttribute="leading" secondItem="NS3-2q-dkJ" secondAttribute="leading" id="FGz-Eo-bYl"/>
+                            <constraint firstAttribute="trailing" secondItem="8vu-2w-ESQ" secondAttribute="trailing" id="K35-JX-7zQ"/>
                             <constraint firstItem="LC1-qD-v1J" firstAttribute="top" secondItem="dXM-kv-ZlJ" secondAttribute="bottom" constant="20" id="MxC-qf-7v4"/>
                             <constraint firstItem="3ZI-L2-0h4" firstAttribute="leading" secondItem="NS3-2q-dkJ" secondAttribute="leadingMargin" id="Sk8-uT-lbR"/>
+                            <constraint firstItem="3ZI-L2-0h4" firstAttribute="top" secondItem="q3G-EH-dx0" secondAttribute="bottom" constant="80" id="UqY-2u-mKQ"/>
+                            <constraint firstItem="YSe-5I-SPY" firstAttribute="centerX" secondItem="NS3-2q-dkJ" secondAttribute="centerX" id="ZnH-wu-ZlH"/>
+                            <constraint firstItem="3ZI-L2-0h4" firstAttribute="top" secondItem="8vu-2w-ESQ" secondAttribute="bottom" id="fNz-8h-Zaq"/>
                             <constraint firstItem="LC1-qD-v1J" firstAttribute="centerX" secondItem="NS3-2q-dkJ" secondAttribute="centerX" id="jTL-Tj-gt2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3ZI-L2-0h4" secondAttribute="trailing" id="nYb-CQ-hma"/>
                             <constraint firstItem="o8g-AV-1s3" firstAttribute="top" secondItem="3ZI-L2-0h4" secondAttribute="bottom" constant="25" id="ofa-i8-K1S"/>
-                            <constraint firstItem="mb6-xf-Vsw" firstAttribute="top" secondItem="LC1-qD-v1J" secondAttribute="bottom" constant="50" id="wli-LJ-jWm"/>
+                            <constraint firstAttribute="bottom" secondItem="8vu-2w-ESQ" secondAttribute="bottom" id="yRD-74-E67"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="fNz-8h-Zaq"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="blueWatch" destination="YSe-5I-SPY" id="Py9-Nx-nW5"/>
+                        <outlet property="nextStepButton" destination="q3G-EH-dx0" id="orF-zr-yAF"/>
+                        <outlet property="secondMenu" destination="8vu-2w-ESQ" id="BsU-sC-DaO"/>
+                        <outlet property="topTitle" destination="LC1-qD-v1J" id="bMl-F1-is1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIy-Lm-1oq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="827.5" y="461.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="5Ng-fe-75B"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -1,18 +1,18 @@
 //
-//  Akut.swift
+//  Game.swift
 //  Act4Heart
 //
-//  Created by Joel Karlsson on 2016-02-01.
+//  Created by Joel Karlsson on 2016-02-03.
 //  Copyright © 2016 act4heart. All rights reserved.
 //
 
 import UIKit
 
-class Akut: UIViewController {
+class Game: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
 
