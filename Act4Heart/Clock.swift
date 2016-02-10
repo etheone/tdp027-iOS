@@ -10,17 +10,17 @@ import Foundation
 import UIKit
 
 class Clock : NSObject {
-    // BLÅ TICKAR NED
-    // RÖD RÄKNAR UPP
-    
+
     var timerValue: Int = 0
     var countDown: Bool
     var timerLabel: UILabel
     var time: Int = 0
     var parent: Emergency
+    var initialTime: Int = 0
     
     init (timerValue: Int, countDown: Bool, timerLabel: UILabel, parent: Emergency) {
         self.timerValue = timerValue
+        self.initialTime = timerValue
         self.countDown = countDown
         self.timerLabel = timerLabel
         self.parent = parent
@@ -30,20 +30,25 @@ class Clock : NSObject {
     }
     
     var timer = NSTimer()
-    
+
     func updateTimer() {
+        // Determine if the clock ticks up or down
         if countDown {
             time--
         } else {
             time++
         }
-        timerLabel.text = String(format: "%02d:%02d", ((time % 3600) / 60), ((time % 3600) % 60))
+        // Only display hours if needed
+        if time < 3600 {
+            timerLabel.text = String(format: "%02d:%02d", ((time % 3600) / 60), ((time % 3600) % 60))
+        } else {
+            timerLabel.text = String(format: "%02d:%02d:%02d", (time / 3600), ((time % 3600) / 60), ((time % 3600) % 60))
+        }
+        // When the timer extends its limit
         if !countDown && time == timerValue {
-            timerLabel.text = "SLUT"
             pause()
             parent.timerDone()
         } else if countDown && time == 0 {
-            timerLabel.text = "SLUT"
             pause()
             parent.timerDone()
         }
@@ -59,7 +64,6 @@ class Clock : NSObject {
     
     func reset() {
         timer.invalidate()
-        time = 0
-        //timerLabel.text = "0"
+        time = initialTime
     }
 }
