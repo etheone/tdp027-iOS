@@ -18,14 +18,14 @@ class Emergency: UIViewController {
     @IBOutlet weak var redWatch: UILabel!
     @IBOutlet weak var breadcrumb: UILabel!
     
+    @IBOutlet weak var callButton: UIButton!
+    @IBOutlet weak var processStartButton: UIButton!
+    
     var currentPage = 1
     let numberOfPages = 4
     var blueClock: Clock?
     var redClock: Clock?
     var stepDone = false
-    
-    let buttonImageEnabled = UIImage(named: "buttonNextEnabled.png")
-    let buttonImageDisabled = UIImage(named: "buttonNextDisabled.png")
     
     // Sound variables
     var audioPlayer = AVAudioPlayer() // Needed for alert sound
@@ -52,8 +52,8 @@ class Emergency: UIViewController {
         // Function that runs when nextStepButton is clicked
         if (stepDone) {
             // Disable the button
-            self.nextStepButton.setImage(buttonImageDisabled, forState: UIControlState.Normal)
             self.nextStepButton.enabled = false
+            self.nextStepButton.alpha = 0.25
             
             currentPage++
             if (currentPage == numberOfPages) {
@@ -76,11 +76,35 @@ class Emergency: UIViewController {
         self.redClock = Clock(timerValue: (0), countDown: false, timerLabel: redWatch, parent: self)
         
         // Disable the button
-        self.nextStepButton.setImage(buttonImageDisabled, forState: UIControlState.Normal)
         self.nextStepButton.enabled = false
+        self.nextStepButton.alpha = 0.25
         
         self.breadcrumb.text = "Start > Akutsituation"
         
+        callButton.layer.cornerRadius = 3
+        callButton.layer.borderWidth = 1
+        callButton.layer.borderColor = UIColor.whiteColor().CGColor
+        callButton.clipsToBounds = true
+        
+        nextStepButton.layer.cornerRadius = 3
+        nextStepButton.layer.borderWidth = 1
+        nextStepButton.layer.borderColor = UIColor.whiteColor().CGColor
+        nextStepButton.clipsToBounds = true
+        
+        processStartButton.layer.cornerRadius = 3
+        processStartButton.layer.borderWidth = 1
+        processStartButton.layer.borderColor = UIColor.whiteColor().CGColor
+        processStartButton.clipsToBounds = true
+        
+        redWatch.layer.cornerRadius = 3
+        redWatch.layer.borderWidth = 1
+        redWatch.layer.borderColor = UIColor.whiteColor().CGColor
+        redWatch.clipsToBounds = true
+        
+        blueWatch.clipsToBounds = true
+        blueWatch.layer.cornerRadius = blueWatch.frame.size.width/2
+        blueWatch.layer.borderWidth = 1
+        blueWatch.layer.borderColor = UIColor.whiteColor().CGColor
         
     }
     
@@ -94,8 +118,8 @@ class Emergency: UIViewController {
         stepDone = true
         
         // Enable the button
-        self.nextStepButton.setImage(buttonImageEnabled, forState: UIControlState.Normal)
         self.nextStepButton.enabled = true
+        self.nextStepButton.alpha = 1.0
         
         playSound(alertSound)
         alertBox()
@@ -114,7 +138,7 @@ class Emergency: UIViewController {
     
     func alertBox() {
         let alertTitle = "5 minuter har gått"
-        let alertMessage = "Lorem ipsum"
+        let alertMessage = "Ta en ny nitroglycering"
         let alertCloseText = "OK"
         if #available(iOS 8.0, *) {
             let alertController = UIAlertController(title: alertTitle, message:
@@ -127,6 +151,10 @@ class Emergency: UIViewController {
             alert.delegate = self
             alert.show()
         }
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
     
     
