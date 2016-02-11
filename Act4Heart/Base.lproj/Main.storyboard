@@ -23,14 +23,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Y8-DJ-0mb">
-                                <rect key="frame" x="131" y="479" width="112" height="39"/>
+                                <rect key="frame" x="66" y="468" width="243" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Oee-f0-WhG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Information">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="3"/>
-                                </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Goq-cG-3oH">
                                 <rect key="frame" x="165" y="568" width="44" height="39"/>
@@ -46,12 +46,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vI5-cD-Nhp">
-                                <rect key="frame" x="66" y="379" width="243" height="50"/>
+                                <rect key="frame" x="66" y="368" width="243" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="y2I-Rx-vC9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Akutsituation">
                                     <color key="titleColor" red="0.92941176470588238" green="0.28627450980392155" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -76,10 +76,12 @@
                             <constraint firstItem="Goq-cG-3oH" firstAttribute="top" secondItem="5Y8-DJ-0mb" secondAttribute="bottom" constant="50" id="aoy-5v-db7"/>
                             <constraint firstItem="oXI-f8-qXv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bFV-if-Wwm"/>
                             <constraint firstItem="oXI-f8-qXv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bvX-V7-qFy"/>
+                            <constraint firstItem="5Y8-DJ-0mb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="dTB-jz-0Pb"/>
                             <constraint firstItem="oXI-f8-qXv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="ewy-MK-JQV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oXI-f8-qXv" secondAttribute="trailing" id="hsj-b6-vYs"/>
                             <constraint firstItem="vI5-cD-Nhp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iMG-iY-ZbQ"/>
                             <constraint firstItem="5Y8-DJ-0mb" firstAttribute="top" secondItem="vI5-cD-Nhp" secondAttribute="bottom" constant="80" id="jrw-cJ-fQ1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Y8-DJ-0mb" secondAttribute="trailing" constant="50" id="oVL-Sk-MeD"/>
                             <constraint firstItem="5Y8-DJ-0mb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wdc-6v-24x"/>
                             <constraint firstItem="5Y8-DJ-0mb" firstAttribute="top" secondItem="vI5-cD-Nhp" secondAttribute="bottom" constant="50" id="x5D-Ac-NSd"/>
                         </constraints>
@@ -95,6 +97,9 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="informationButton" destination="5Y8-DJ-0mb" id="ntd-S6-Dnp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
