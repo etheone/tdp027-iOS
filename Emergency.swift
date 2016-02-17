@@ -22,8 +22,8 @@ class Emergency: UIViewController {
     
     @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var processStartButton: UIButton!
+    @IBOutlet weak var soundIcon: UIBarButtonItem!
     
-    var storedUserData = NSUserDefaults.standardUserDefaults()
     var currentPage = 1
     let numberOfPages = 4
     var blueClock: Clock?
@@ -39,9 +39,21 @@ class Emergency: UIViewController {
         UIApplication.sharedApplication().openURL(NSURL(string: "act4heart://")!)
     }
     
+    func changeSoundIcon() {
+        if soundOn {
+            let newImage = UIImage(named:"ic_volume_off_white_48pt.png")
+            soundIcon.image = newImage
+        } else {
+            let newImage = UIImage(named:"ic_volume_up_white_48pt.png")
+            soundIcon.image = newImage
+        }
+    }
+    
     @IBAction func soundChanger(sender: AnyObject) {
+        print("click")
         soundOn = !soundOn
-        storedUserData.setBool(soundOn, forKey: "soundOn")
+        NSUserDefaults.standardUserDefaults().setBool(soundOn, forKey: "soundOn")
+        changeSoundIcon()
     }
     
     @IBAction func emergencyStart(sender: AnyObject) {
@@ -94,9 +106,9 @@ class Emergency: UIViewController {
             print(error)
         }
         
-        // Gets saved sound option
-        self.soundOn = self.storedUserData.boolForKey("soundOn")
-        print(soundOn)
+        // Gets saved sound option and updates icon if needed
+        self.soundOn = NSUserDefaults.standardUserDefaults().boolForKey("soundOn")
+        changeSoundIcon()
         
         
         self.navBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)

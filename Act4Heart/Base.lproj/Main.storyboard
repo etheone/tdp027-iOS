@@ -448,6 +448,7 @@
                         <outlet property="processStartButton" destination="dOb-4F-TrL" id="XaU-cF-2Xi"/>
                         <outlet property="redWatch" destination="y3E-tq-EUK" id="xuh-Np-Ljm"/>
                         <outlet property="secondMenu" destination="8vu-2w-ESQ" id="BsU-sC-DaO"/>
+                        <outlet property="soundIcon" destination="X90-3G-66F" id="Yha-d5-Px4"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="emergencyToMenu" modalTransitionStyle="crossDissolve" id="2FG-Ot-6ZO"/>
                     </connections>
                 </viewController>
