@@ -23,11 +23,13 @@ class Emergency: UIViewController {
     @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var processStartButton: UIButton!
     
+    var storedUserData = NSUserDefaults.standardUserDefaults()
     var currentPage = 1
     let numberOfPages = 4
     var blueClock: Clock?
     var redClock: Clock?
     var stepDone = false
+    var soundOn:Bool = true;
     
     // Sound variables
     var audioPlayer = AVAudioPlayer() // Needed for alert sound
@@ -37,13 +39,17 @@ class Emergency: UIViewController {
         UIApplication.sharedApplication().openURL(NSURL(string: "act4heart://")!)
     }
     
+    @IBAction func soundChanger(sender: AnyObject) {
+        soundOn = !soundOn
+        storedUserData.setBool(soundOn, forKey: "soundOn")
+    }
+    
     @IBAction func emergencyStart(sender: AnyObject) {
         // Function that runs when emergencyButton is clicked
         secondMenu.hidden = true
         
         NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(2), target: self, selector: "openApp", userInfo: nil, repeats: false)
         UIApplication.sharedApplication().openURL(NSURL(string: "tel://0708565661")!)
-        
     }
     
     
@@ -79,6 +85,19 @@ class Emergency: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Overrides user mute
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch {
+            print(error)
+        }
+        
+        // Gets saved sound option
+        self.soundOn = self.storedUserData.boolForKey("soundOn")
+        print(soundOn)
+        
         
         self.navBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navBar.shadowImage = UIImage()
@@ -134,7 +153,10 @@ class Emergency: UIViewController {
         self.nextStepButton.enabled = true
         self.nextStepButton.alpha = 1.0
         
-        playSound(alertSound)
+        // Only play sound if app sound is on
+        if soundOn {
+            playSound(alertSound)
+        }
         alertBox()
         
     }
@@ -145,6 +167,7 @@ class Emergency: UIViewController {
         } catch {
             // Handle errors
         }
+        
         audioPlayer.prepareToPlay()
         audioPlayer.play()
     }

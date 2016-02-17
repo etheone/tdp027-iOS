@@ -368,7 +368,17 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Title" id="Tij-Sh-tIh"/>
+                                    <navigationItem title="Title" id="OgC-kI-s7n">
+                                        <barButtonItem key="leftBarButtonItem" image="ic_menu_white_48pt" id="5Il-36-eEo">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="ic_volume_up_white_48pt" style="plain" id="X90-3G-66F">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="soundChanger:" destination="SeH-bM-0Pu" id="GwF-zt-dzd"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -433,7 +443,7 @@
                         <outlet property="breadcrumb" destination="cPs-Sb-cXH" id="B5r-Ws-alB"/>
                         <outlet property="callButton" destination="DsG-De-0J9" id="N2v-HG-oUy"/>
                         <outlet property="navBar" destination="T4l-BL-sdt" id="kO5-ax-qIN"/>
-                        <outlet property="navTitle" destination="Tij-Sh-tIh" id="fjr-Vz-cCZ"/>
+                        <outlet property="navTitle" destination="OgC-kI-s7n" id="3dG-5H-t76"/>
                         <outlet property="nextStepButton" destination="q3G-EH-dx0" id="orF-zr-yAF"/>
                         <outlet property="processStartButton" destination="dOb-4F-TrL" id="XaU-cF-2Xi"/>
                         <outlet property="redWatch" destination="y3E-tq-EUK" id="xuh-Np-Ljm"/>
@@ -449,6 +459,8 @@
     <resources>
         <image name="bg" width="640" height="1136"/>
         <image name="bg-with-logo" width="640" height="1136"/>
+        <image name="ic_menu_white_48pt" width="48" height="48"/>
+        <image name="ic_volume_up_white_48pt" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2FG-Ot-6ZO"/>
