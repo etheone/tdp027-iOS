@@ -17,6 +17,8 @@ class Emergency: UIViewController {
     @IBOutlet weak var blueWatch: UILabel!
     @IBOutlet weak var redWatch: UILabel!
     @IBOutlet weak var breadcrumb: UILabel!
+    @IBOutlet weak var navBar: UINavigationBar!
+    @IBOutlet weak var navTitle: UINavigationItem!
     
     @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var processStartButton: UIButton!
@@ -39,7 +41,6 @@ class Emergency: UIViewController {
         // Function that runs when emergencyButton is clicked
         secondMenu.hidden = true
         
-        
         NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(2), target: self, selector: "openApp", userInfo: nil, repeats: false)
         UIApplication.sharedApplication().openURL(NSURL(string: "tel://0708565661")!)
         
@@ -50,7 +51,7 @@ class Emergency: UIViewController {
         // Function that runs when relapseButton is clicked
         secondMenu.hidden = true
         breadcrumb.text = "Start > Akutsituation > Återfallsprocessen \(currentPage)/\(numberOfPages)"
-        topTitle.text = "Återfallsprocessen - Steg \(currentPage) av \(numberOfPages)"
+        navTitle.title = "Återfallsprocessen - Steg \(currentPage) av \(numberOfPages)"
         blueClock!.play()
         redClock!.play()
     }
@@ -69,7 +70,7 @@ class Emergency: UIViewController {
             blueClock!.reset()
             blueClock!.play()
             breadcrumb.text = "Start > Akutsituation > Återfallsprocessen \(currentPage)/\(numberOfPages)"
-            topTitle.text = "Återfallsprocessen - Steg \(currentPage) av \(numberOfPages)"
+            navTitle.title = "Återfallsprocessen - Steg \(currentPage) av \(numberOfPages)"
         }
         stepDone = false
     }
@@ -78,6 +79,11 @@ class Emergency: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navBar.shadowImage = UIImage()
+        self.navBar.translucent = true
+        
         //imerValue: Int, clockType: String, timerLabel: UILabel)
         self.blueClock = Clock(timerValue: (3), countDown: true, timerLabel: blueWatch, parent: self)
         self.redClock = Clock(timerValue: (0), countDown: false, timerLabel: redWatch, parent: self)
