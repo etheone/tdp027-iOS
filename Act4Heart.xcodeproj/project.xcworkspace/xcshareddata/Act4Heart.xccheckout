@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>ABD2AC71-F97B-4E8A-BBE4-28A1A629C9E2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Act4Heart</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D35DB3345D409EE3D00791E8F6FE7D193CAF75B3</key>
+		<string>gitlab.ida.liu.se:emini901/act4Heart-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Act4Heart.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D35DB3345D409EE3D00791E8F6FE7D193CAF75B3</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>gitlab.ida.liu.se:emini901/act4Heart-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D35DB3345D409EE3D00791E8F6FE7D193CAF75B3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D35DB3345D409EE3D00791E8F6FE7D193CAF75B3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>act4Heart-iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
