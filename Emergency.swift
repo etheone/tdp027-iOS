@@ -31,11 +31,18 @@ class Emergency: UIViewController {
     var audioPlayer = AVAudioPlayer() // Needed for alert sound
     let alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("alarm", ofType: "mp3")!)
     
+    func openApp() {
+        UIApplication.sharedApplication().openURL(NSURL(string: "act4heart://")!)
+    }
+    
     @IBAction func emergencyStart(sender: AnyObject) {
         // Function that runs when emergencyButton is clicked
         secondMenu.hidden = true
-        let url:NSURL = NSURL(string: "tel://0708565661")! // Jockes nr
-        UIApplication.sharedApplication().openURL(url)
+        
+        
+        NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(2), target: self, selector: "openApp", userInfo: nil, repeats: false)
+        UIApplication.sharedApplication().openURL(NSURL(string: "tel://0708565661")!)
+        
     }
     
     

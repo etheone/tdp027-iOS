@@ -443,6 +443,7 @@
                         <outlet property="redWatch" destination="y3E-tq-EUK" id="xuh-Np-Ljm"/>
                         <outlet property="secondMenu" destination="8vu-2w-ESQ" id="BsU-sC-DaO"/>
                         <outlet property="topTitle" destination="LC1-qD-v1J" id="bMl-F1-is1"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="emergencyToMenu" modalTransitionStyle="crossDissolve" id="2FG-Ot-6ZO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIy-Lm-1oq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -454,4 +455,7 @@
         <image name="bg" width="640" height="1136"/>
         <image name="bg-with-logo" width="640" height="1136"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="2FG-Ot-6ZO"/>
+    </inferredMetricsTieBreakers>
 </document>
