@@ -28,6 +28,9 @@ class ViewController: UIViewController {
         emergencyButton.layer.cornerRadius = 3
         emergencyButton.layer.borderWidth = 1
         emergencyButton.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        var gpsTracker = GPSTracker()
+ 
     }
 
     override func didReceiveMemoryWarning() {

@@ -8,9 +8,8 @@
 
 import UIKit
 import AVFoundation
-import CoreLocation
 
-class Emergency: UIViewController, CLLocationManagerDelegate {
+class Emergency: UIViewController {
     
     @IBOutlet weak var topTitle: UILabel!
     @IBOutlet weak var secondMenu: UIView!
@@ -30,8 +29,9 @@ class Emergency: UIViewController, CLLocationManagerDelegate {
     var blueClock: Clock?
     var redClock: Clock?
     var stepDone = false
-    var soundOn:Bool = true;
-    var manager:CLLocationManager!
+    var soundOn:Bool = true
+    var gpsTracker = GPSTracker()
+
     
     // Sound variables
     var audioPlayer = AVAudioPlayer() // Needed for alert sound
@@ -141,7 +141,7 @@ class Emergency: UIViewController, CLLocationManagerDelegate {
         blueWatch.layer.cornerRadius = blueWatch.frame.size.width/2
         blueWatch.layer.borderWidth = 1
         blueWatch.layer.borderColor = UIColor.whiteColor().CGColor
-        
+       /*
         manager = CLLocationManager()
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
@@ -152,7 +152,8 @@ class Emergency: UIViewController, CLLocationManagerDelegate {
         }
         
        
-        manager.startUpdatingLocation()
+        manager.startUpdatingLocation() */
+        gpsTracker.startTracking()
         
     }
     
@@ -161,7 +162,7 @@ class Emergency: UIViewController, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+ /*   func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let userLocation:CLLocation = locations[0]
         
@@ -186,7 +187,7 @@ class Emergency: UIViewController, CLLocationManagerDelegate {
         })
         
         
-    }
+    } */
 
 
     
@@ -215,6 +216,7 @@ class Emergency: UIViewController, CLLocationManagerDelegate {
     }
     
     func alertBox() {
+        print(gpsTracker.getLocationInformation())
         let alertTitle = "5 minuter har gått"
         let alertMessage = "Ta en ny nitroglycering och tryck OK för att gå vidare"
         let alertCloseText = "OK"
