@@ -25,13 +25,13 @@ class Emergency: UIViewController {
     @IBOutlet weak var soundIcon: UIBarButtonItem!
     
     var currentPage = 1
-    let numberOfPages = 3
+    let numberOfPages = 4
     var blueClock: Clock?
     var redClock: Clock?
-    var stepDone = false
     var soundOn:Bool = true
     var gpsTracker = GPSTracker()
-
+    var userData = [[String: String]]()
+    var currentEmergency = Dictionary<String,String>()
     
     // Sound variables
     var audioPlayer = AVAudioPlayer() // Needed for alert sound
@@ -49,6 +49,9 @@ class Emergency: UIViewController {
             let newImage = UIImage(named:"ic_volume_off_white_36pt.png")
             soundIcon.image = newImage
         }
+    }
+    @IBAction func backToMenu(sender: AnyObject) {
+        performSegueWithIdentifier("emergencyToMenu", sender: nil)
     }
     
     @IBAction func soundChanger(sender: AnyObject) {
@@ -72,29 +75,103 @@ class Emergency: UIViewController {
         secondMenu.hidden = true
         breadcrumb.text = "Start > Akutsituation > Återfallsprocessen \(currentPage)/\(numberOfPages)"
         navTitle.title = "Återfallsprocessen \(currentPage) av \(numberOfPages)"
-        blueClock!.play()
+        
+        currentEmergency["Start"] = parseDate()
+        
+        //blueClock!.play()
         redClock!.play()
+        
+        timerDone()
+    }
+    
+    func parseDate() -> String {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy,MM,dd,HH,mm,ss"
+        return formatter.stringFromDate(NSDate())
     }
     
     func continueToNextStep() {
-        // Function that runs when nextStepButton is clicked
-        if (stepDone) {
-            
-            currentPage++
-            if(currentPage < numberOfPages) {
-                
-                blueClock!.reset()
-                blueClock!.play()
-                
-                
-            }
-           
-            breadcrumb.text = "Start > Akutsituation > Återfallsprocessen \(currentPage)/\(numberOfPages)"
-            navTitle.title = "Återfallsprocessen \(currentPage) av \(numberOfPages)"
+        
+        currentPage++
+        if(currentPage < numberOfPages) {
+            blueClock!.reset()
+            blueClock!.play()
         }
-        stepDone = false
+        
+        if currentPage == 2 {
+            currentEmergency["Second"] = parseDate()
+        } else if currentPage == 3 {
+            currentEmergency["Third"] = parseDate()
+        } else {
+            textView.text = "STEG 4!"
+        }
+        
+        print(currentEmergency, currentPage)
+        
+        breadcrumb.text = "Start > Akutsituation > Återfallsprocessen \(currentPage)/\(numberOfPages)"
+        navTitle.title = "Återfallsprocessen \(currentPage) av \(numberOfPages)"
     }
     
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    
+    func timerDone() {
+        // Only play sound if app sound is on
+        if soundOn {
+            playSound(alertSound)
+        }
+        alertBox()
+        
+    }
+    
+    func playSound(soundFile: NSURL) {
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOfURL: soundFile)
+        } catch {
+            // Handle errors
+        }
+        
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
+    }
+    
+    func alertBox() {
+        let alertTitle = "Ta en nitroglycerin"
+        var alertMessage = "5 minuter har gått. Tryck OK för att gå vidare till nästa steg."
+        if (currentPage == 1) {
+            alertMessage = "Tryck OK för att gå vidare till nästa steg."
+        }
+        let alertCloseText = "OK"
+        if #available(iOS 8.0, *) {
+            let alertController = UIAlertController(title: alertTitle, message:
+                alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
+            let confirmAction = UIAlertAction(
+                title: alertCloseText, style: UIAlertActionStyle.Default) { (action) in
+                self.continueToNextStep()
+            }
+            
+            alertController.addAction(confirmAction)
+            
+        } else {
+            
+            let alert:UIAlertView = UIAlertView(title: alertTitle, message: alertMessage, delegate: self, cancelButtonTitle: alertCloseText)
+            alert.delegate = self
+            alert.show()
+            
+            
+            func alertView(View: UIAlertView!, clickedButtonAtIndex buttonIndex: Int){
+                self.continueToNextStep()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -141,110 +218,11 @@ class Emergency: UIViewController {
         blueWatch.layer.cornerRadius = blueWatch.frame.size.width/2
         blueWatch.layer.borderWidth = 1
         blueWatch.layer.borderColor = UIColor.whiteColor().CGColor
-       /*
-        manager = CLLocationManager()
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        if #available(iOS 8.0, *) {
-            manager.requestWhenInUseAuthorization()
-        } else {
-            //iOS 7 code stuff
-        }
         
-       
-        manager.startUpdatingLocation() */
         gpsTracker.startTracking()
         
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
- /*   func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        let userLocation:CLLocation = locations[0]
-        
-        CLGeocoder().reverseGeocodeLocation(userLocation, completionHandler: { (placemarks, error) -> Void in
-            
-            if (error != nil) {
-                
-                print(error)
-                
-            } else {
-                
-                if let p = placemarks?[0] {
-                    
-                    self.textView.text = String(p.addressDictionary!)
-                    //p.addressDictionary["Street"]
-                    
-                }
-                
-                
-            }
-            
-        })
-        
-        
-    } */
 
-
-    
-    func timerDone() {
-        // When the timer is done - activate button at bottom.
-        stepDone = true
-        
-        
-        // Only play sound if app sound is on
-        if soundOn {
-            playSound(alertSound)
-        }
-        alertBox()
-        
-    }
-    
-    func playSound(soundFile: NSURL) {
-        do {
-            try audioPlayer = AVAudioPlayer(contentsOfURL: soundFile)
-        } catch {
-            // Handle errors
-        }
-        
-        audioPlayer.prepareToPlay()
-        audioPlayer.play()
-    }
-    
-    func alertBox() {
-        print(gpsTracker.getLocationInformation())
-        let alertTitle = "5 minuter har gått"
-        let alertMessage = "Ta en ny nitroglycering och tryck OK för att gå vidare"
-        let alertCloseText = "OK"
-        if #available(iOS 8.0, *) {
-            let alertController = UIAlertController(title: alertTitle, message:
-                alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
-            
-            self.presentViewController(alertController, animated: true, completion: nil)
-            
-            let confirmAction = UIAlertAction(
-                title: alertCloseText, style: UIAlertActionStyle.Default) { (action) in
-                self.continueToNextStep()
-            }
-            
-            alertController.addAction(confirmAction)
-            
-        } else {
-            
-            let alert:UIAlertView = UIAlertView(title: alertTitle, message: alertMessage, delegate: self, cancelButtonTitle: alertCloseText)
-            alert.delegate = self
-            alert.show()
-            
-            
-            func alertView(View: UIAlertView!, clickedButtonAtIndex buttonIndex: Int){
-                self.continueToNextStep()
-            }
-        }
-    }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent

@@ -354,6 +354,9 @@
                                     <navigationItem title="Akutsituation" id="OgC-kI-s7n">
                                         <barButtonItem key="leftBarButtonItem" image="ic_home_white_36pt" id="5Il-36-eEo">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="backToMenu:" destination="SeH-bM-0Pu" id="Xcm-Zf-eoz"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="ic_volume_up_white_36pt" id="X90-3G-66F">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
