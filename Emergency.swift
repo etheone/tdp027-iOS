@@ -8,12 +8,12 @@
 
 import UIKit
 import AVFoundation
+import CoreLocation
 
-class Emergency: UIViewController {
+class Emergency: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var topTitle: UILabel!
     @IBOutlet weak var secondMenu: UIView!
-    @IBOutlet weak var nextStepButton: UIButton!
     @IBOutlet weak var blueWatch: UILabel!
     @IBOutlet weak var redWatch: UILabel!
     @IBOutlet weak var breadcrumb: UILabel!
@@ -25,11 +25,12 @@ class Emergency: UIViewController {
     @IBOutlet weak var soundIcon: UIBarButtonItem!
     
     var currentPage = 1
-    let numberOfPages = 4
+    let numberOfPages = 3
     var blueClock: Clock?
     var redClock: Clock?
     var stepDone = false
     var soundOn:Bool = true;
+    var manager:CLLocationManager!
     
     // Sound variables
     var audioPlayer = AVAudioPlayer() // Needed for alert sound
@@ -74,25 +75,24 @@ class Emergency: UIViewController {
         redClock!.play()
     }
     
-    @IBAction func continueToNextStep(sender: AnyObject) {
+    func continueToNextStep() {
         // Function that runs when nextStepButton is clicked
         if (stepDone) {
-            // Disable the button
-            self.nextStepButton.enabled = false
-            self.nextStepButton.alpha = 0.25
             
             currentPage++
-            if (currentPage == numberOfPages) {
-                nextStepButton.hidden = true
+            if(currentPage < numberOfPages) {
+                
+                blueClock!.reset()
+                blueClock!.play()
+                
+                
             }
-            blueClock!.reset()
-            blueClock!.play()
+           
             breadcrumb.text = "Start > Akutsituation > Återfallsprocessen \(currentPage)/\(numberOfPages)"
             navTitle.title = "Återfallsprocessen \(currentPage) av \(numberOfPages)"
         }
         stepDone = false
     }
-    
     
     
     override func viewDidLoad() {
@@ -119,21 +119,12 @@ class Emergency: UIViewController {
         self.blueClock = Clock(timerValue: (3), countDown: true, timerLabel: blueWatch, parent: self)
         self.redClock = Clock(timerValue: (0), countDown: false, timerLabel: redWatch, parent: self)
         
-        // Disable the button
-        self.nextStepButton.enabled = false
-        self.nextStepButton.alpha = 0.25
-        
         self.breadcrumb.text = "Start > Akutsituation"
         
         callButton.layer.cornerRadius = 3
         callButton.layer.borderWidth = 1
         callButton.layer.borderColor = UIColor.whiteColor().CGColor
         callButton.clipsToBounds = true
-        
-        nextStepButton.layer.cornerRadius = 3
-        nextStepButton.layer.borderWidth = 1
-        nextStepButton.layer.borderColor = UIColor.whiteColor().CGColor
-        nextStepButton.clipsToBounds = true
         
         processStartButton.layer.cornerRadius = 3
         processStartButton.layer.borderWidth = 1
@@ -150,6 +141,18 @@ class Emergency: UIViewController {
         blueWatch.layer.borderWidth = 1
         blueWatch.layer.borderColor = UIColor.whiteColor().CGColor
         
+        manager = CLLocationManager()
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        if #available(iOS 8.0, *) {
+            manager.requestWhenInUseAuthorization()
+        } else {
+            //iOS 7 code stuff
+        }
+        
+       
+        manager.startUpdatingLocation()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -157,13 +160,60 @@ class Emergency: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        print(locations)
+        
+        //userLocation - there is no need for casting, because we are now using CLLocation object
+        
+        var userLocation:CLLocation = locations[0]
+  /*
+        self.latitudeLabel.text = "\(userLocation.coordinate.latitude)"
+        
+        self.longitudeLabel.text = "\(userLocation.coordinate.longitude)"
+        
+        self.courseLabel.text = "\(userLocation.course)"
+        
+        self.speedLabel.text = "\(userLocation.speed)"
+        
+        self.altitudeLabel.text = "\(userLocation.altitude)" */
+        
+        CLGeocoder().reverseGeocodeLocation(userLocation, completionHandler: { (placemarks, error) -> Void in
+            
+            if (error != nil) {
+                
+                print(error)
+                
+            } else {
+                
+                if let p = placemarks?[0] {
+                    
+                    var subThoroughfare:String = ""
+                    
+                    if (p.subThoroughfare != nil) {
+                        
+                        subThoroughfare = p.subThoroughfare!
+                        
+                    }
+                    
+                    print ("\(subThoroughfare) \(p.thoroughfare) \n \(p.subLocality) \n \(p.subAdministrativeArea) \n \(p.postalCode) \n \(p.country)")
+                    
+                }
+                
+                
+            }
+            
+        })
+        
+        
+    }
+
+
+    
     func timerDone() {
         // When the timer is done - activate button at bottom.
         stepDone = true
         
-        // Enable the button
-        self.nextStepButton.enabled = true
-        self.nextStepButton.alpha = 1.0
         
         // Only play sound if app sound is on
         if soundOn {
@@ -186,18 +236,31 @@ class Emergency: UIViewController {
     
     func alertBox() {
         let alertTitle = "5 minuter har gått"
-        let alertMessage = "Ta en ny nitroglycering"
+        let alertMessage = "Ta en ny nitroglycering och tryck OK för att gå vidare"
         let alertCloseText = "OK"
         if #available(iOS 8.0, *) {
             let alertController = UIAlertController(title: alertTitle, message:
                 alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: alertCloseText, style: UIAlertActionStyle.Default,handler: nil))
             
             self.presentViewController(alertController, animated: true, completion: nil)
+            
+            let confirmAction = UIAlertAction(
+                title: alertCloseText, style: UIAlertActionStyle.Default) { (action) in
+                self.continueToNextStep()
+            }
+            
+            alertController.addAction(confirmAction)
+            
         } else {
+            
             let alert:UIAlertView = UIAlertView(title: alertTitle, message: alertMessage, delegate: self, cancelButtonTitle: alertCloseText)
             alert.delegate = self
             alert.show()
+            
+            
+            func alertView(View: UIAlertView!, clickedButtonAtIndex buttonIndex: Int){
+                self.continueToNextStep()
+            }
         }
     }
     
