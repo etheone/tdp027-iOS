@@ -19,6 +19,7 @@ class Emergency: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var breadcrumb: UILabel!
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var navTitle: UINavigationItem!
+    @IBOutlet weak var textView: UITextView!
     
     @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var processStartButton: UIButton!
@@ -162,21 +163,7 @@ class Emergency: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        print(locations)
-        
-        //userLocation - there is no need for casting, because we are now using CLLocation object
-        
-        var userLocation:CLLocation = locations[0]
-  /*
-        self.latitudeLabel.text = "\(userLocation.coordinate.latitude)"
-        
-        self.longitudeLabel.text = "\(userLocation.coordinate.longitude)"
-        
-        self.courseLabel.text = "\(userLocation.course)"
-        
-        self.speedLabel.text = "\(userLocation.speed)"
-        
-        self.altitudeLabel.text = "\(userLocation.altitude)" */
+        let userLocation:CLLocation = locations[0]
         
         CLGeocoder().reverseGeocodeLocation(userLocation, completionHandler: { (placemarks, error) -> Void in
             
@@ -188,15 +175,8 @@ class Emergency: UIViewController, CLLocationManagerDelegate {
                 
                 if let p = placemarks?[0] {
                     
-                    var subThoroughfare:String = ""
-                    
-                    if (p.subThoroughfare != nil) {
-                        
-                        subThoroughfare = p.subThoroughfare!
-                        
-                    }
-                    
-                    print ("\(subThoroughfare) \(p.thoroughfare) \n \(p.subLocality) \n \(p.subAdministrativeArea) \n \(p.postalCode) \n \(p.country)")
+                    self.textView.text = String(p.addressDictionary!)
+                    //p.addressDictionary["Street"]
                     
                 }
                 
