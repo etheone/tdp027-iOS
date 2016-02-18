@@ -41,10 +41,10 @@ class Emergency: UIViewController {
     
     func changeSoundIcon() {
         if soundOn {
-            let newImage = UIImage(named:"ic_volume_off_white_48pt.png")
+            let newImage = UIImage(named:"ic_volume_up_white_36pt.png")
             soundIcon.image = newImage
         } else {
-            let newImage = UIImage(named:"ic_volume_up_white_48pt.png")
+            let newImage = UIImage(named:"ic_volume_off_white_36pt.png")
             soundIcon.image = newImage
         }
     }
@@ -69,7 +69,7 @@ class Emergency: UIViewController {
         // Function that runs when relapseButton is clicked
         secondMenu.hidden = true
         breadcrumb.text = "Start > Akutsituation > Återfallsprocessen \(currentPage)/\(numberOfPages)"
-        navTitle.title = "Återfallsprocessen - Steg \(currentPage) av \(numberOfPages)"
+        navTitle.title = "Återfallsprocessen \(currentPage) av \(numberOfPages)"
         blueClock!.play()
         redClock!.play()
     }
@@ -88,7 +88,7 @@ class Emergency: UIViewController {
             blueClock!.reset()
             blueClock!.play()
             breadcrumb.text = "Start > Akutsituation > Återfallsprocessen \(currentPage)/\(numberOfPages)"
-            navTitle.title = "Återfallsprocessen - Steg \(currentPage) av \(numberOfPages)"
+            navTitle.title = "Återfallsprocessen \(currentPage) av \(numberOfPages)"
         }
         stepDone = false
     }

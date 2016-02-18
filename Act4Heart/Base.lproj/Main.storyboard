@@ -368,11 +368,11 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Title" id="OgC-kI-s7n">
-                                        <barButtonItem key="leftBarButtonItem" image="ic_menu_white_48pt" id="5Il-36-eEo">
+                                    <navigationItem title="Akutsituation" id="OgC-kI-s7n">
+                                        <barButtonItem key="leftBarButtonItem" image="ic_home_white_36pt" id="5Il-36-eEo">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="ic_volume_up_white_48pt" style="plain" id="X90-3G-66F">
+                                        <barButtonItem key="rightBarButtonItem" image="ic_volume_up_white_36pt" style="plain" id="X90-3G-66F">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="soundChanger:" destination="SeH-bM-0Pu" id="GwF-zt-dzd"/>
@@ -460,8 +460,8 @@
     <resources>
         <image name="bg" width="640" height="1136"/>
         <image name="bg-with-logo" width="640" height="1136"/>
-        <image name="ic_menu_white_48pt" width="48" height="48"/>
-        <image name="ic_volume_up_white_48pt" width="48" height="48"/>
+        <image name="ic_home_white_36pt" width="36" height="36"/>
+        <image name="ic_volume_up_white_36pt" width="36" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2FG-Ot-6ZO"/>
