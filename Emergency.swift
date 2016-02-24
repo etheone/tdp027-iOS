@@ -13,16 +13,31 @@ class Emergency: UIViewController {
     
     @IBOutlet weak var topTitle: UILabel!
     @IBOutlet weak var secondMenu: UIView!
+    @IBOutlet weak var sosView: UIView!
     @IBOutlet weak var blueWatch: UILabel!
     @IBOutlet weak var redWatch: UILabel!
     @IBOutlet weak var breadcrumb: UILabel!
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var navTitle: UINavigationItem!
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var topText: UILabel!
     
     @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var processStartButton: UIButton!
     @IBOutlet weak var soundIcon: UIBarButtonItem!
+    @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var stepOneSOSButton: UIButton!
+    @IBOutlet weak var relapseAddress: UILabel!
+    
+    // SOS
+    @IBOutlet weak var sosLocation: UILabel!
+    @IBOutlet weak var sosClickText: UILabel!
+    @IBOutlet weak var sosButton: UIButton!
+    
+    // Step 4
+    @IBOutlet weak var noEmergencyButton: UIButton!
+    @IBOutlet weak var stillEmergencyButton: UIButton!
+    
+    
     
     var currentPage = 1
     let numberOfPages = 4
@@ -32,6 +47,8 @@ class Emergency: UIViewController {
     var gpsTracker = GPSTracker()
     var userData = [[String: String]]()
     var currentEmergency = Dictionary<String,String>()
+    var userLocation : Dictionary<String,String> = [String: String]()
+    var callInProgress : Bool = false
     
     // Sound variables
     var audioPlayer = AVAudioPlayer() // Needed for alert sound
@@ -50,8 +67,32 @@ class Emergency: UIViewController {
             soundIcon.image = newImage
         }
     }
+    
+    @IBAction func continueToStep2(sender: AnyObject) {
+        stepOneSOSButton.hidden = true
+        relapseAddress.hidden = true
+        continueButton.hidden = true
+        blueWatch.hidden = false
+        topText.text = "Ta en ny Nitroglycerin när \nden blå klockan når 00:00"
+        continueToNextStep()
+    }
+    
     @IBAction func backToMenu(sender: AnyObject) {
-        performSegueWithIdentifier("emergencyToMenu", sender: nil)
+        let refreshAlert = UIAlertController(title: "Tillbaka till menyn", message: "Du kan inte ångra detta val.", preferredStyle: UIAlertControllerStyle.Alert)
+        refreshAlert.addAction(UIAlertAction(title: "Fortsätt", style: .Default, handler: { (action: UIAlertAction!) in
+            self.performSegueWithIdentifier("emergencyToMenu", sender: nil)
+        }))
+        refreshAlert.addAction(UIAlertAction(title: "Avbryt", style: .Default, handler: { (action: UIAlertAction!) in
+            print("Handle Cancel Logic here")
+        }))
+        presentViewController(refreshAlert, animated: true, completion: nil)
+    }
+    
+    @IBAction func sosStart(sender: AnyObject) {
+        breadcrumb.text = "Start > Akutsituation > Första gången"
+        navTitle.title = "Första gången"
+        sosView.hidden = false
+        sosLocation.text = getLocationToText()
     }
     
     @IBAction func soundChanger(sender: AnyObject) {
@@ -61,17 +102,29 @@ class Emergency: UIViewController {
         changeSoundIcon()
     }
     
-    @IBAction func emergencyStart(sender: AnyObject) {
-        // Function that runs when emergencyButton is clicked
-        secondMenu.hidden = true
+    @IBAction func sosCall(sender: AnyObject) {
+        if !callInProgress {
+            // Function that runs when emergencyButton is clicked
+            animation()
+            
+            let newSOSCText = "Ringer nu till SOS\n\n\n\nDin nuvarande position:"
+            sosClickText.text = newSOSCText
+            secondMenu.hidden = true
+            callInProgress = true
+            sosButton.setImage(UIImage(named: "calling.gif"), forState: UIControlState.Normal)
+            stepOneSOSButton.setImage(UIImage(named: "calling.gif"), forState: UIControlState.Normal)
+            
         
-        NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(2), target: self, selector: "openApp", userInfo: nil, repeats: false)
-        UIApplication.sharedApplication().openURL(NSURL(string: "tel://0708565661")!)
+            NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(2), target: self, selector: "openApp", userInfo: nil, repeats: false)
+            UIApplication.sharedApplication().openURL(NSURL(string: "tel://0708565661")!)
+        }
     }
-    
     
     @IBAction func relapseStart(sender: AnyObject) {
         // Function that runs when relapseButton is clicked
+        
+        relapseAddress.text = getLocationToText()
+        
         secondMenu.hidden = true
         breadcrumb.text = "Start > Akutsituation > Återfallsprocessen \(currentPage)/\(numberOfPages)"
         navTitle.title = "Återfallsprocessen \(currentPage) av \(numberOfPages)"
@@ -81,7 +134,35 @@ class Emergency: UIViewController {
         //blueClock!.play()
         redClock!.play()
         
-        timerDone()
+        //timerDone()
+    }
+    
+    func animation(){
+        var imageList = [UIImage]()
+        let image0:UIImage = UIImage(named:"call-button.png")!
+        let image1:UIImage = UIImage(named:"call-button-1.png")!
+        let image2:UIImage = UIImage(named:"call-button-2.png")!
+        let image3:UIImage = UIImage(named:"call-button-3.png")!
+        
+        //animationButtonscreenButton = screenButton
+        imageList = [image0, image1, image2, image3]
+        
+        sosButton!.imageView!.animationImages = imageList
+        sosButton!.imageView!.animationDuration = 2.0
+        sosButton!.imageView!.startAnimating()
+    }
+    
+    func getLocationToText() -> String {
+        userLocation = gpsTracker.getLocationInformation()
+        var locationString = ""
+        if (userLocation["street"] != "") {
+            locationString += "Gata: \(userLocation["street"]!)"
+        } else {
+            locationString += "Plats: \(userLocation["name"]!)"
+        }
+        locationString += "\nStad: \(userLocation["city"]!)"
+        locationString += "\nPostnummer: \(userLocation["zip"]!)"
+        return locationString
     }
     
     func parseDate() -> String {
@@ -93,23 +174,26 @@ class Emergency: UIViewController {
     func continueToNextStep() {
         
         currentPage++
-        if(currentPage < numberOfPages) {
+        if(currentPage <= numberOfPages) {
             blueClock!.reset()
             blueClock!.play()
         }
+        
+        breadcrumb.text = "Start > Akutsituation > Återfallsprocessen \(currentPage)/\(numberOfPages)"
+        navTitle.title = "Återfallsprocessen \(currentPage) av \(numberOfPages)"
         
         if currentPage == 2 {
             currentEmergency["Second"] = parseDate()
         } else if currentPage == 3 {
             currentEmergency["Third"] = parseDate()
         } else {
-            textView.text = "STEG 4!"
+            topText.text = "När den blå klockan når 00:00\nvälj något av alternativen nedan"
+            noEmergencyButton.hidden = false
+            stillEmergencyButton.hidden = false
         }
         
         print(currentEmergency, currentPage)
         
-        breadcrumb.text = "Start > Akutsituation > Återfallsprocessen \(currentPage)/\(numberOfPages)"
-        navTitle.title = "Återfallsprocessen \(currentPage) av \(numberOfPages)"
     }
     
     
@@ -126,7 +210,7 @@ class Emergency: UIViewController {
             playSound(alertSound)
         }
         alertBox()
-        
+        userLocation = gpsTracker.getLocationInformation()
     }
     
     func playSound(soundFile: NSURL) {
@@ -141,36 +225,25 @@ class Emergency: UIViewController {
     }
     
     func alertBox() {
-        let alertTitle = "Ta en nitroglycerin"
+        let alertTitle = "Ta en Nitroglycerin"
         var alertMessage = "5 minuter har gått. Tryck OK för att gå vidare till nästa steg."
         if (currentPage == 1) {
             alertMessage = "Tryck OK för att gå vidare till nästa steg."
         }
         let alertCloseText = "OK"
-        if #available(iOS 8.0, *) {
-            let alertController = UIAlertController(title: alertTitle, message:
-                alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
-            
-            self.presentViewController(alertController, animated: true, completion: nil)
-            
-            let confirmAction = UIAlertAction(
-                title: alertCloseText, style: UIAlertActionStyle.Default) { (action) in
+        let alertController = UIAlertController(title: alertTitle, message:
+            alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
+        let confirmAction = UIAlertAction(
+            title: alertCloseText, style: UIAlertActionStyle.Default) { (action) in
                 self.continueToNextStep()
-            }
-            
-            alertController.addAction(confirmAction)
-            
-        } else {
-            
-            let alert:UIAlertView = UIAlertView(title: alertTitle, message: alertMessage, delegate: self, cancelButtonTitle: alertCloseText)
-            alert.delegate = self
-            alert.show()
-            
-            
-            func alertView(View: UIAlertView!, clickedButtonAtIndex buttonIndex: Int){
-                self.continueToNextStep()
-            }
         }
+        
+        alertController.addAction(confirmAction)
+        
+        
     }
     
     override func viewDidLoad() {
@@ -183,6 +256,9 @@ class Emergency: UIViewController {
         } catch {
             print(error)
         }
+        
+        // Hide the blue clock at start - call button is active
+        self.blueWatch.hidden = true
         
         // Gets saved sound option and updates icon if needed
         self.soundOn = NSUserDefaults.standardUserDefaults().boolForKey("soundOn")
@@ -199,15 +275,11 @@ class Emergency: UIViewController {
         
         self.breadcrumb.text = "Start > Akutsituation"
         
-        callButton.layer.cornerRadius = 3
-        callButton.layer.borderWidth = 1
-        callButton.layer.borderColor = UIColor.whiteColor().CGColor
-        callButton.clipsToBounds = true
-        
-        processStartButton.layer.cornerRadius = 3
-        processStartButton.layer.borderWidth = 1
-        processStartButton.layer.borderColor = UIColor.whiteColor().CGColor
-        processStartButton.clipsToBounds = true
+        roundedButtons(callButton)
+        roundedButtons(processStartButton)
+        roundedButtons(continueButton)
+        roundedButtons(stillEmergencyButton)
+        roundedButtons(noEmergencyButton)
         
         redWatch.layer.cornerRadius = 3
         redWatch.layer.borderWidth = 1
@@ -219,8 +291,21 @@ class Emergency: UIViewController {
         blueWatch.layer.borderWidth = 1
         blueWatch.layer.borderColor = UIColor.whiteColor().CGColor
         
-        gpsTracker.startTracking()
+        continueButton.layer.cornerRadius = 3
+        continueButton.layer.borderWidth = 1
+        continueButton.layer.borderColor = UIColor.whiteColor().CGColor
         
+        gpsTracker.startTracking()
+        userLocation = gpsTracker.getLocationInformation()
+        print(userLocation);
+        
+    }
+    
+    func roundedButtons(button:UIButton) {
+        button.layer.cornerRadius = 3
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.whiteColor().CGColor
+        button.clipsToBounds = true
     }
 
     

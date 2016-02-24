@@ -13,7 +13,7 @@ class GPSTracker: NSObject, CLLocationManagerDelegate {
     
     var locationManager1: CLLocationManager!
     var seenError : Bool = false
-    var address = ""
+    var address : Dictionary<String,String> = [String: String]()
     
     func startTracking() {
         
@@ -28,8 +28,7 @@ class GPSTracker: NSObject, CLLocationManagerDelegate {
         locationManager1.startUpdatingLocation()
     }
     
-    func getLocationInformation() -> String {
-        
+    func getLocationInformation() -> Dictionary<String,String> {
         return address
     }
     
@@ -47,7 +46,25 @@ class GPSTracker: NSObject, CLLocationManagerDelegate {
                 
                 if let p = placemarks?[0] {
                     
-                    self.address = String(p.addressDictionary!)
+                    //self.address = String(p.addressDictionary!)
+                    //print(p.addressDictionary!)
+                    
+                    var city = ""
+                    var zip = ""
+                    var street = ""
+                    var name = ""
+                    
+                    if (p.addressDictionary!["City"] != nil) { city = p.addressDictionary!["City"]! as! String }
+                    if (p.addressDictionary!["ZIP"] != nil) { zip = p.addressDictionary!["ZIP"]! as! String }
+                    if (p.addressDictionary!["Street"] != nil) { street = p.addressDictionary!["Street"]! as! String }
+                    if (p.addressDictionary!["Name"] != nil) { name = p.addressDictionary!["Name"]! as! String }
+                    
+                    self.address["city"] = city
+                    self.address["zip"] = zip
+                    self.address["street"] = street
+                    self.address["name"] = name
+                    //self.address["info"] = String(p.addressDictionary!)
+                    
                     //p.addressDictionary["Street"]
                     
                 }

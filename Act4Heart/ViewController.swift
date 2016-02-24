@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var informationButton: UIButton!
     @IBOutlet weak var gameButton: UIButton!
     @IBOutlet weak var emergencyButton: UIButton!
+    @IBOutlet weak var historyButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,11 @@ class ViewController: UIViewController {
         emergencyButton.layer.borderWidth = 1
         emergencyButton.layer.borderColor = UIColor.whiteColor().CGColor
         
-        var gpsTracker = GPSTracker()
+        historyButton.layer.cornerRadius = 3
+        historyButton.layer.borderWidth = 1
+        historyButton.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        let gpsTracker = GPSTracker()
  
     }
 
