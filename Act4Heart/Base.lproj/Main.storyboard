@@ -81,6 +81,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="3"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="historyClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5oI-e3-JIW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -128,14 +131,14 @@
                                 <exclude reference="UJl-bq-45y"/>
                                 <exclude reference="u9C-bo-4iw"/>
                                 <exclude reference="yxb-Nf-7Vb"/>
-                                <exclude reference="Aa7-YI-O9x"/>
-                                <exclude reference="EfM-sa-C3k"/>
-                                <exclude reference="R3j-XK-NUz"/>
-                                <exclude reference="vGS-I6-Qkf"/>
                                 <exclude reference="06k-yg-4qp"/>
                                 <exclude reference="jrw-cJ-fQ1"/>
                                 <exclude reference="BMX-tp-JuQ"/>
                                 <exclude reference="FAg-6b-eAi"/>
+                                <exclude reference="Aa7-YI-O9x"/>
+                                <exclude reference="EfM-sa-C3k"/>
+                                <exclude reference="R3j-XK-NUz"/>
+                                <exclude reference="vGS-I6-Qkf"/>
                                 <exclude reference="2Xu-6V-16A"/>
                             </mask>
                         </variation>
@@ -146,6 +149,7 @@
                         <outlet property="gameButton" destination="Goq-cG-3oH" id="bOh-Mh-o2e"/>
                         <outlet property="historyButton" destination="MQm-WH-g1g" id="LbR-aS-8MO"/>
                         <outlet property="informationButton" destination="5Y8-DJ-0mb" id="ntd-S6-Dnp"/>
+                        <segue destination="VSG-pm-f5A" kind="presentation" identifier="menuToHistory" modalTransitionStyle="crossDissolve" id="MCn-Sf-9Of"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -155,7 +159,7 @@
         <!--Game-->
         <scene sceneID="0Pm-c2-9ew">
             <objects>
-                <viewController id="laM-4E-l3b" customClass="Game" customModule="Act4Heart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Game" useStoryboardIdentifierAsRestorationIdentifier="YES" id="laM-4E-l3b" customClass="Game" customModule="Act4Heart" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dx5-bq-RYe"/>
                         <viewControllerLayoutGuide type="bottom" id="A5A-gX-1sX"/>
@@ -181,8 +185,8 @@
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="z1p-8O-KKd"/>
                                                 <exclude reference="g6d-lg-boW"/>
+                                                <exclude reference="z1p-8O-KKd"/>
                                             </mask>
                                         </variation>
                                     </label>
@@ -234,13 +238,13 @@
                         <constraints>
                             <constraint firstItem="kyF-QA-qPv" firstAttribute="top" secondItem="Tae-rs-hls" secondAttribute="bottom" constant="10" id="0Oc-Ql-AhV"/>
                             <constraint firstItem="Tae-rs-hls" firstAttribute="leading" secondItem="h96-Kv-TRS" secondAttribute="leading" id="0g1-PI-ajV"/>
+                            <constraint firstItem="Tae-rs-hls" firstAttribute="top" secondItem="dx5-bq-RYe" secondAttribute="bottom" id="AJg-IY-VZ1"/>
                             <constraint firstItem="FqT-di-kzT" firstAttribute="leading" secondItem="h96-Kv-TRS" secondAttribute="leading" id="Ke1-6H-m6u"/>
                             <constraint firstItem="kyF-QA-qPv" firstAttribute="leading" secondItem="h96-Kv-TRS" secondAttribute="leadingMargin" id="LRS-zl-bcT"/>
                             <constraint firstItem="FqT-di-kzT" firstAttribute="top" secondItem="h96-Kv-TRS" secondAttribute="top" id="YQl-XO-MQ7"/>
-                            <constraint firstItem="Tae-rs-hls" firstAttribute="top" secondItem="dx5-bq-RYe" secondAttribute="bottom" id="chx-pO-lRz"/>
                             <constraint firstAttribute="trailing" secondItem="FqT-di-kzT" secondAttribute="trailing" id="ec1-lm-hlV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kyF-QA-qPv" secondAttribute="trailing" id="n4x-ag-jIm"/>
-                            <constraint firstItem="A5A-gX-1sX" firstAttribute="top" secondItem="FqT-di-kzT" secondAttribute="bottom" id="v3u-lA-z6M"/>
+                            <constraint firstItem="A5A-gX-1sX" firstAttribute="top" secondItem="FqT-di-kzT" secondAttribute="bottom" id="ve3-Yd-C1K"/>
                             <constraint firstAttribute="trailing" secondItem="Tae-rs-hls" secondAttribute="trailing" id="zCf-sZ-shZ"/>
                         </constraints>
                     </view>
@@ -249,6 +253,109 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0yY-LC-vF9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="359.5" y="1221.5"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="LfX-Hz-ta5">
+            <objects>
+                <viewController storyboardIdentifier="History" title="History" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VSG-pm-f5A" customClass="History" customModule="Act4Heart" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cv1-3A-CRu"/>
+                        <viewControllerLayoutGuide type="bottom" id="jxA-Kz-8WR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b87-6B-UQ6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="jtz-Ym-kWC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tr1-in-8bc" userLabel="Breadcrumb">
+                                <rect key="frame" x="16" y="74" width="343" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAh-Su-A61">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Historik" id="H68-WD-uDX">
+                                        <barButtonItem key="leftBarButtonItem" image="ic_home_white_36pt" id="czT-Un-2QJ">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="menuClicked:" destination="VSG-pm-f5A" id="kJM-8r-KV5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nn1-3J-uAx">
+                                <rect key="frame" x="16" y="84" width="343" height="583"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="1" green="1" blue="1" alpha="0.25" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextCell" textLabel="XGe-om-oSo" style="IBUITableViewCellStyleDefault" id="AM3-lh-Bpc">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AM3-lh-Bpc" id="tJh-TT-5TK">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XGe-om-oSo">
+                                                    <rect key="frame" x="15" y="0.0" width="313" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="nn1-3J-uAx" secondAttribute="trailing" id="0tg-Au-0Ba"/>
+                            <constraint firstItem="vAh-Su-A61" firstAttribute="top" secondItem="Cv1-3A-CRu" secondAttribute="bottom" id="14f-eY-5eM"/>
+                            <constraint firstItem="vAh-Su-A61" firstAttribute="leading" secondItem="b87-6B-UQ6" secondAttribute="leading" id="1ls-MB-ood"/>
+                            <constraint firstAttribute="trailing" secondItem="jtz-Ym-kWC" secondAttribute="trailing" id="7ac-81-96N"/>
+                            <constraint firstItem="jtz-Ym-kWC" firstAttribute="leading" secondItem="b87-6B-UQ6" secondAttribute="leading" id="AmD-cI-vEi"/>
+                            <constraint firstItem="jxA-Kz-8WR" firstAttribute="top" secondItem="nn1-3J-uAx" secondAttribute="bottom" id="I7W-q4-Kct"/>
+                            <constraint firstAttribute="trailing" secondItem="tr1-in-8bc" secondAttribute="trailing" constant="16" id="JgX-O9-VSn"/>
+                            <constraint firstItem="nn1-3J-uAx" firstAttribute="top" secondItem="tr1-in-8bc" secondAttribute="bottom" constant="10" id="Li5-FO-WHz"/>
+                            <constraint firstItem="tr1-in-8bc" firstAttribute="leading" secondItem="b87-6B-UQ6" secondAttribute="leading" constant="16" id="Rre-bB-M8n"/>
+                            <constraint firstAttribute="trailing" secondItem="vAh-Su-A61" secondAttribute="trailing" id="UrW-NO-5Bv"/>
+                            <constraint firstItem="tr1-in-8bc" firstAttribute="top" secondItem="Cv1-3A-CRu" secondAttribute="bottom" constant="100" id="fYp-RP-3ZS"/>
+                            <constraint firstItem="vAh-Su-A61" firstAttribute="top" secondItem="b87-6B-UQ6" secondAttribute="top" constant="100" id="nQ0-iX-FGF"/>
+                            <constraint firstItem="tr1-in-8bc" firstAttribute="top" secondItem="vAh-Su-A61" secondAttribute="bottom" constant="10" id="qNs-uQ-Bmt"/>
+                            <constraint firstItem="jxA-Kz-8WR" firstAttribute="top" secondItem="jtz-Ym-kWC" secondAttribute="bottom" id="szj-CJ-QcT"/>
+                            <constraint firstItem="jtz-Ym-kWC" firstAttribute="top" secondItem="b87-6B-UQ6" secondAttribute="top" id="ubl-eY-YiE"/>
+                            <constraint firstItem="nn1-3J-uAx" firstAttribute="leading" secondItem="b87-6B-UQ6" secondAttribute="leadingMargin" id="zSx-mz-N3m"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nQ0-iX-FGF"/>
+                                <exclude reference="fYp-RP-3ZS"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="navBar" destination="vAh-Su-A61" id="OkH-3e-pmD"/>
+                        <outlet property="tableView" destination="nn1-3J-uAx" id="VHU-6s-2YO"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="historyToMenu" modalTransitionStyle="crossDissolve" id="awH-C7-ZxC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2JF-eL-gQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="829.5" y="1221.5"/>
         </scene>
         <!--Emergency-->
         <scene sceneID="wRh-AW-goR">
@@ -322,16 +429,16 @@ Ring 112 direkt!</string>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="Rpw-Zk-NE5"/>
                                         <exclude reference="cCg-2G-Mub"/>
                                         <exclude reference="q9P-3T-Pib"/>
-                                        <exclude reference="Rpw-Zk-NE5"/>
                                     </mask>
                                 </variation>
                                 <connections>
                                     <action selector="continueToStep2:" destination="SeH-bM-0Pu" eventType="touchUpInside" id="aRN-91-RLI"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guP-pC-EbG" userLabel="stillEmergency">
+                            <button hidden="YES" opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guP-pC-EbG" userLabel="stillEmergency">
                                 <rect key="frame" x="46" y="457" width="283" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3Ag-wx-o9k"/>
@@ -345,16 +452,16 @@ Ring 112 direkt!</string>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="Yfe-Yu-dSB"/>
                                         <exclude reference="TWZ-jf-v7M"/>
+                                        <exclude reference="Yfe-Yu-dSB"/>
                                         <exclude reference="aT7-gg-4A3"/>
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="continueToStep2:" destination="SeH-bM-0Pu" eventType="touchUpInside" id="dA6-Rt-291"/>
+                                    <action selector="stillEmergencyClicked:" destination="SeH-bM-0Pu" eventType="touchUpInside" id="E76-Fv-I0G"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBd-x0-tMB" userLabel="noEmergency">
+                            <button hidden="YES" opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBd-x0-tMB" userLabel="noEmergency">
                                 <rect key="frame" x="46" y="537" width="283" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="CF9-Ar-vm9"/>
@@ -368,13 +475,13 @@ Ring 112 direkt!</string>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="CF9-Ar-vm9"/>
                                         <exclude reference="Ycg-BD-KsC"/>
                                         <exclude reference="pmo-Gq-dp3"/>
-                                        <exclude reference="CF9-Ar-vm9"/>
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="continueToStep2:" destination="SeH-bM-0Pu" eventType="touchUpInside" id="wdB-uE-NVh"/>
+                                    <action selector="noEmergencyClicked:" destination="SeH-bM-0Pu" eventType="touchUpInside" id="69f-2O-Kuh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRH-kx-hsK" userLabel="SOS button">
@@ -407,8 +514,8 @@ Ring 112 direkt!</string>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="rGb-WR-UBY"/>
                                         <exclude reference="Ndl-tr-6mA"/>
+                                        <exclude reference="rGb-WR-UBY"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -507,7 +614,7 @@ Akut - Ring 112</string>
                                         <rect key="frame" x="0.0" y="334" width="375" height="333"/>
                                         <subviews>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Annars ta en Nitroglycerin och" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkL-UU-rPF">
-                                                <rect key="frame" x="0.0" y="140" width="375" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="140" width="375" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -586,7 +693,7 @@ Akut - Ring 112</string>
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeO-l4-zvG" userLabel="SOS-text">
-                                        <rect key="frame" x="0.0" y="120" width="375" height="59.5"/>
+                                        <rect key="frame" x="0.0" y="120" width="375" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="187.5" id="FBz-9q-OI1"/>
                                             <constraint firstAttribute="height" constant="20.5" id="qmz-zq-eK5"/>
@@ -605,7 +712,7 @@ ringa 112 efter ambulans!</string>
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mw-9G-rlB">
-                                        <rect key="frame" x="137" y="209" width="100" height="100"/>
+                                        <rect key="frame" x="137" y="210" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="Lij-ih-l4k"/>
                                             <constraint firstAttribute="width" constant="100" id="ONI-rI-qQg"/>
@@ -624,7 +731,7 @@ ringa 112 efter ambulans!</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7g6-yw-UZN" userLabel="Click text">
-                                        <rect key="frame" x="0.0" y="329" width="375" height="120.5"/>
+                                        <rect key="frame" x="0.0" y="330" width="375" height="121"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="187.5" id="nNc-fu-Pei"/>
                                             <constraint firstAttribute="height" constant="20.5" id="xH2-L3-NUl"/>
@@ -646,7 +753,7 @@ Din nuvarande position:</string>
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adess:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26H-Hk-8VA" userLabel="SOS Address">
-                                        <rect key="frame" x="0.0" y="459" width="375" height="20"/>
+                                        <rect key="frame" x="0.0" y="461" width="375" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.5" id="BtV-Tr-Wa2"/>
                                             <constraint firstAttribute="width" constant="187.5" id="RLw-sc-c3e"/>
@@ -656,8 +763,8 @@ Din nuvarande position:</string>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="RLw-sc-c3e"/>
                                                 <exclude reference="BtV-Tr-Wa2"/>
+                                                <exclude reference="RLw-sc-c3e"/>
                                             </mask>
                                         </variation>
                                     </label>
@@ -819,7 +926,7 @@ Din nuvarande position:</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIy-Lm-1oq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="827.5" y="461.5"/>
+            <point key="canvasLocation" x="829.5" y="447.5"/>
         </scene>
     </scenes>
     <resources>
@@ -829,4 +936,7 @@ Din nuvarande position:</string>
         <image name="ic_volume_up_white_36pt" width="36" height="36"/>
         <image name="logo" width="640" height="555"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="awH-C7-ZxC"/>
+    </inferredMetricsTieBreakers>
 </document>

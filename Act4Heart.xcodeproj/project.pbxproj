@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		208C84D11C75E3DC003ED0F1 /* GPSTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C84D01C75E3DC003ED0F1 /* GPSTracker.swift */; };
+		5D0E8DFA1C7F08BD00FBA9E7 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E8DF91C7F08BD00FBA9E7 /* History.swift */; };
 		5D11935D1C58F72B0033B541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D11935C1C58F72B0033B541 /* AppDelegate.swift */; };
 		5D11935F1C58F72B0033B541 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D11935E1C58F72B0033B541 /* ViewController.swift */; };
 		5D1193621C58F72B0033B541 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1193601C58F72B0033B541 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		208C84D01C75E3DC003ED0F1 /* GPSTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSTracker.swift; sourceTree = "<group>"; };
+		5D0E8DF91C7F08BD00FBA9E7 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		5D1193591C58F72A0033B541 /* Act4Heart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Act4Heart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D11935C1C58F72B0033B541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D11935E1C58F72B0033B541 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				5DC3DB181C6B6A4500297838 /* Assets.xcassets */,
 				5DD713581C621E09001A455E /* Game.swift */,
 				5D11935E1C58F72B0033B541 /* ViewController.swift */,
+				5D0E8DF91C7F08BD00FBA9E7 /* History.swift */,
 				5D1193601C58F72B0033B541 /* Main.storyboard */,
 				5D883BBB1C6C7DCC004B5BA1 /* alarm.mp3 */,
 				5D1193651C58F72B0033B541 /* LaunchScreen.storyboard */,
@@ -275,6 +278,7 @@
 			files = (
 				5DF905B01C5F6D05003CE49C /* Emergency.swift in Sources */,
 				5D11935F1C58F72B0033B541 /* ViewController.swift in Sources */,
+				5D0E8DFA1C7F08BD00FBA9E7 /* History.swift in Sources */,
 				5D11935D1C58F72B0033B541 /* AppDelegate.swift in Sources */,
 				208C84D11C75E3DC003ED0F1 /* GPSTracker.swift in Sources */,
 				5DD713591C621E09001A455E /* Game.swift in Sources */,

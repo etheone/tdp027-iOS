@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var emergencyButton: UIButton!
     @IBOutlet weak var historyButton: UIButton!
     
+    @IBAction func historyClicked(sender: AnyObject) {
+        self.performSegueWithIdentifier("menuToHistory", sender: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

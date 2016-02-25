@@ -11,7 +11,6 @@ import AVFoundation
 
 class Emergency: UIViewController {
     
-    @IBOutlet weak var topTitle: UILabel!
     @IBOutlet weak var secondMenu: UIView!
     @IBOutlet weak var sosView: UIView!
     @IBOutlet weak var blueWatch: UILabel!
@@ -41,14 +40,16 @@ class Emergency: UIViewController {
     
     var currentPage = 1
     let numberOfPages = 4
-    var blueClock: Clock?
-    var redClock: Clock?
-    var soundOn:Bool = true
+    var blueClock : Clock?
+    var redClock : Clock?
+    var soundOn : Bool = true
     var gpsTracker = GPSTracker()
     var userData = [[String: String]]()
     var currentEmergency = Dictionary<String,String>()
+    var userHistory = Dictionary<String,Dictionary<String,String>>()
     var userLocation : Dictionary<String,String> = [String: String]()
     var callInProgress : Bool = false
+    var step4Active : Bool = false
     
     // Sound variables
     var audioPlayer = AVAudioPlayer() // Needed for alert sound
@@ -68,6 +69,33 @@ class Emergency: UIViewController {
         }
     }
     
+    @IBAction func stillEmergencyClicked(sender: AnyObject) {
+        if step4Active {
+            stepOneSOSButton.hidden = false
+            relapseAddress.hidden = false
+            blueWatch.hidden = true
+            stillEmergencyButton.hidden = true
+            noEmergencyButton.hidden = true
+            topText.text = "Ring 112 efter ambulans direkt!"
+            navTitle.title = "Besvären kvarstår"
+            breadcrumb.text = "Start > Akutsituation > Besvären kvarstår"
+            let startTime = currentEmergency["Start"]!.componentsSeparatedByString(",")
+            let lastPill = currentEmergency["Third"]!.componentsSeparatedByString(",")
+            relapseAddress.text = "Nuvarande position:\n\(relapseAddress.text!)\n\n\nDin akutsituation\nAkutsituationen började: \(startTime[3]):\(startTime[4])\nSenaste nitroglycerin: \(lastPill[3]):\(lastPill[4])"
+        }
+    }
+    
+    @IBAction func noEmergencyClicked(sender: AnyObject) {
+        if step4Active {
+            blueWatch.hidden = true
+            stillEmergencyButton.hidden = true
+            noEmergencyButton.hidden = true
+            topText.text = "Det är viktigt att du är säker på att du inte har några kvarstående besvär\n\nÄr du säker på detta så är det fortfarande viktigt att du är uppmärksam på vad du känner. Du bör även berätta för en närstående eller kollega att du upplevt besvär."
+            navTitle.title = "Besvären är borta"
+            breadcrumb.text = "Start > Akutsituation > Besvären är borta"
+        }
+    }
+    
     @IBAction func continueToStep2(sender: AnyObject) {
         stepOneSOSButton.hidden = true
         relapseAddress.hidden = true
@@ -83,7 +111,7 @@ class Emergency: UIViewController {
             self.performSegueWithIdentifier("emergencyToMenu", sender: nil)
         }))
         refreshAlert.addAction(UIAlertAction(title: "Avbryt", style: .Default, handler: { (action: UIAlertAction!) in
-            print("Handle Cancel Logic here")
+            // Cancel
         }))
         presentViewController(refreshAlert, animated: true, completion: nil)
     }
@@ -105,15 +133,12 @@ class Emergency: UIViewController {
     @IBAction func sosCall(sender: AnyObject) {
         if !callInProgress {
             // Function that runs when emergencyButton is clicked
-            animation()
+            animateSOSButton()
             
             let newSOSCText = "Ringer nu till SOS\n\n\n\nDin nuvarande position:"
             sosClickText.text = newSOSCText
             secondMenu.hidden = true
             callInProgress = true
-            sosButton.setImage(UIImage(named: "calling.gif"), forState: UIControlState.Normal)
-            stepOneSOSButton.setImage(UIImage(named: "calling.gif"), forState: UIControlState.Normal)
-            
         
             NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(2), target: self, selector: "openApp", userInfo: nil, repeats: false)
             UIApplication.sharedApplication().openURL(NSURL(string: "tel://0708565661")!)
@@ -129,7 +154,11 @@ class Emergency: UIViewController {
         breadcrumb.text = "Start > Akutsituation > Återfallsprocessen \(currentPage)/\(numberOfPages)"
         navTitle.title = "Återfallsprocessen \(currentPage) av \(numberOfPages)"
         
+        currentEmergency["ID"] = String(Int(NSDate().timeIntervalSince1970)) // To get rid of decimals
         currentEmergency["Start"] = parseDate()
+        
+        userHistory[currentEmergency["ID"]!] = currentEmergency
+        NSUserDefaults.standardUserDefaults().setObject(userHistory, forKey: "userHistory")
         
         //blueClock!.play()
         redClock!.play()
@@ -137,7 +166,7 @@ class Emergency: UIViewController {
         //timerDone()
     }
     
-    func animation(){
+    func animateSOSButton(){
         var imageList = [UIImage]()
         let image0:UIImage = UIImage(named:"call-button.png")!
         let image1:UIImage = UIImage(named:"call-button-1.png")!
@@ -150,12 +179,16 @@ class Emergency: UIViewController {
         sosButton!.imageView!.animationImages = imageList
         sosButton!.imageView!.animationDuration = 2.0
         sosButton!.imageView!.startAnimating()
+        
+        stepOneSOSButton!.imageView!.animationImages = imageList
+        stepOneSOSButton!.imageView!.animationDuration = 2.0
+        stepOneSOSButton!.imageView!.startAnimating()
     }
     
     func getLocationToText() -> String {
         userLocation = gpsTracker.getLocationInformation()
         var locationString = ""
-        if (userLocation["street"] != "") {
+        if (userLocation["street"] != "" && userLocation["street"] != nil) {
             locationString += "Gata: \(userLocation["street"]!)"
         } else {
             locationString += "Plats: \(userLocation["name"]!)"
@@ -192,11 +225,12 @@ class Emergency: UIViewController {
             stillEmergencyButton.hidden = false
         }
         
-        print(currentEmergency, currentPage)
+        // Update history
+        userHistory[currentEmergency["ID"]!] = currentEmergency
+        NSUserDefaults.standardUserDefaults().setObject(userHistory, forKey: "userHistory")
+        //print(currentEmergency, currentPage)
         
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -209,8 +243,18 @@ class Emergency: UIViewController {
         if soundOn {
             playSound(alertSound)
         }
-        alertBox()
+        if(currentPage < numberOfPages) {
+            alertBox()
+        } else {
+            activateStep4Buttons()
+        }
         userLocation = gpsTracker.getLocationInformation()
+    }
+    
+    func activateStep4Buttons() {
+        step4Active = true
+        noEmergencyButton.alpha = 1.0
+        stillEmergencyButton.alpha = 1.0
     }
     
     func playSound(soundFile: NSURL) {
@@ -246,6 +290,13 @@ class Emergency: UIViewController {
         
     }
     
+    func roundedButtons(button:UIButton) {
+        button.layer.cornerRadius = 3
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.whiteColor().CGColor
+        button.clipsToBounds = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -260,6 +311,11 @@ class Emergency: UIViewController {
         // Hide the blue clock at start - call button is active
         self.blueWatch.hidden = true
         
+        // Get saved user history
+        if (NSUserDefaults.standardUserDefaults().objectForKey("userHistory") != nil) {
+            self.userHistory = NSUserDefaults.standardUserDefaults().objectForKey("userHistory") as! Dictionary<String,Dictionary<String,String>>
+        }
+        
         // Gets saved sound option and updates icon if needed
         self.soundOn = NSUserDefaults.standardUserDefaults().boolForKey("soundOn")
         changeSoundIcon()
@@ -270,7 +326,7 @@ class Emergency: UIViewController {
         self.navBar.translucent = true
         
         //imerValue: Int, clockType: String, timerLabel: UILabel)
-        self.blueClock = Clock(timerValue: (3), countDown: true, timerLabel: blueWatch, parent: self)
+        self.blueClock = Clock(timerValue: (5), countDown: true, timerLabel: blueWatch, parent: self)
         self.redClock = Clock(timerValue: (0), countDown: false, timerLabel: redWatch, parent: self)
         
         self.breadcrumb.text = "Start > Akutsituation"
@@ -300,14 +356,6 @@ class Emergency: UIViewController {
         print(userLocation);
         
     }
-    
-    func roundedButtons(button:UIButton) {
-        button.layer.cornerRadius = 3
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.whiteColor().CGColor
-        button.clipsToBounds = true
-    }
-
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
