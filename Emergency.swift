@@ -141,7 +141,7 @@ class Emergency: UIViewController {
             callInProgress = true
         
             NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(2), target: self, selector: "openApp", userInfo: nil, repeats: false)
-            UIApplication.sharedApplication().openURL(NSURL(string: "tel://0708565661")!)
+            UIApplication.sharedApplication().openURL(NSURL(string: "tel://0763080242")!)
         }
     }
     
@@ -156,6 +156,10 @@ class Emergency: UIViewController {
         
         currentEmergency["ID"] = String(Int(NSDate().timeIntervalSince1970)) // To get rid of decimals
         currentEmergency["Start"] = parseDate()
+        currentEmergency["Second"] = ""
+        currentEmergency["Third"] = ""
+        currentEmergency["SOS"] = ""
+        currentEmergency["Outcome"] = parseDate()
         
         userHistory[currentEmergency["ID"]!] = currentEmergency
         NSUserDefaults.standardUserDefaults().setObject(userHistory, forKey: "userHistory")
@@ -326,7 +330,7 @@ class Emergency: UIViewController {
         self.navBar.translucent = true
         
         //imerValue: Int, clockType: String, timerLabel: UILabel)
-        self.blueClock = Clock(timerValue: (5), countDown: true, timerLabel: blueWatch, parent: self)
+        self.blueClock = Clock(timerValue: (30), countDown: true, timerLabel: blueWatch, parent: self)
         self.redClock = Clock(timerValue: (0), countDown: false, timerLabel: redWatch, parent: self)
         
         self.breadcrumb.text = "Start > Akutsituation"

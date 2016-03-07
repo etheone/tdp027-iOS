@@ -20,11 +20,8 @@ class GPSTracker: NSObject, CLLocationManagerDelegate {
         locationManager1 = CLLocationManager()
         locationManager1.delegate = self
         locationManager1.desiredAccuracy = kCLLocationAccuracyBest
-        if #available(iOS 8.0, *) {
-            locationManager1.requestAlwaysAuthorization()
-        } else {
-            // Fallback on earlier versions
-        }
+        
+        locationManager1.requestAlwaysAuthorization()
         locationManager1.startUpdatingLocation()
     }
     
