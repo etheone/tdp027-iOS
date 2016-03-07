@@ -15,9 +15,12 @@
 		5D1193671C58F72B0033B541 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1193651C58F72B0033B541 /* LaunchScreen.storyboard */; };
 		5D1193721C58F72B0033B541 /* Act4HeartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1193711C58F72B0033B541 /* Act4HeartTests.swift */; };
 		5D11937D1C58F72B0033B541 /* Act4HeartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D11937C1C58F72B0033B541 /* Act4HeartUITests.swift */; };
+		5D36586A1C8D9F7A00D27C29 /* miscVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3658691C8D9F7A00D27C29 /* miscVC.swift */; };
+		5D36586C1C8DAB0600D27C29 /* symptomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D36586B1C8DAB0600D27C29 /* symptomVC.swift */; };
+		5D36586E1C8DAB1F00D27C29 /* appVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D36586D1C8DAB1F00D27C29 /* appVC.swift */; };
+		5D3658701C8DAB3300D27C29 /* diseaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D36586F1C8DAB3300D27C29 /* diseaseVC.swift */; };
 		5D883BBC1C6C7DCC004B5BA1 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5D883BBB1C6C7DCC004B5BA1 /* alarm.mp3 */; };
 		5DC3DB191C6B6A4500297838 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DC3DB181C6B6A4500297838 /* Assets.xcassets */; };
-		5DD713591C621E09001A455E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD713581C621E09001A455E /* Game.swift */; };
 		5DD7135B1C622287001A455E /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD7135A1C622287001A455E /* Clock.swift */; };
 		5DF905B01C5F6D05003CE49C /* Emergency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF905AF1C5F6D05003CE49C /* Emergency.swift */; };
 /* End PBXBuildFile section */
@@ -54,9 +57,12 @@
 		5D1193781C58F72B0033B541 /* Act4HeartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Act4HeartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D11937C1C58F72B0033B541 /* Act4HeartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Act4HeartUITests.swift; sourceTree = "<group>"; };
 		5D11937E1C58F72B0033B541 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D3658691C8D9F7A00D27C29 /* miscVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = miscVC.swift; sourceTree = "<group>"; };
+		5D36586B1C8DAB0600D27C29 /* symptomVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = symptomVC.swift; sourceTree = "<group>"; };
+		5D36586D1C8DAB1F00D27C29 /* appVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = appVC.swift; sourceTree = "<group>"; };
+		5D36586F1C8DAB3300D27C29 /* diseaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = diseaseVC.swift; sourceTree = "<group>"; };
 		5D883BBB1C6C7DCC004B5BA1 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 		5DC3DB181C6B6A4500297838 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5DD713581C621E09001A455E /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		5DD7135A1C622287001A455E /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		5DF905AF1C5F6D05003CE49C /* Emergency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Emergency.swift; path = ../Emergency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,13 +120,16 @@
 				5D11935C1C58F72B0033B541 /* AppDelegate.swift */,
 				5DD7135A1C622287001A455E /* Clock.swift */,
 				5DC3DB181C6B6A4500297838 /* Assets.xcassets */,
-				5DD713581C621E09001A455E /* Game.swift */,
 				5D11935E1C58F72B0033B541 /* ViewController.swift */,
 				5D0E8DF91C7F08BD00FBA9E7 /* History.swift */,
 				5D1193601C58F72B0033B541 /* Main.storyboard */,
 				5D883BBB1C6C7DCC004B5BA1 /* alarm.mp3 */,
 				5D1193651C58F72B0033B541 /* LaunchScreen.storyboard */,
 				5D1193681C58F72B0033B541 /* Info.plist */,
+				5D3658691C8D9F7A00D27C29 /* miscVC.swift */,
+				5D36586B1C8DAB0600D27C29 /* symptomVC.swift */,
+				5D36586D1C8DAB1F00D27C29 /* appVC.swift */,
+				5D36586F1C8DAB3300D27C29 /* diseaseVC.swift */,
 			);
 			path = Act4Heart;
 			sourceTree = "<group>";
@@ -280,8 +289,11 @@
 				5D11935F1C58F72B0033B541 /* ViewController.swift in Sources */,
 				5D0E8DFA1C7F08BD00FBA9E7 /* History.swift in Sources */,
 				5D11935D1C58F72B0033B541 /* AppDelegate.swift in Sources */,
+				5D36586E1C8DAB1F00D27C29 /* appVC.swift in Sources */,
+				5D3658701C8DAB3300D27C29 /* diseaseVC.swift in Sources */,
+				5D36586C1C8DAB0600D27C29 /* symptomVC.swift in Sources */,
 				208C84D11C75E3DC003ED0F1 /* GPSTracker.swift in Sources */,
-				5DD713591C621E09001A455E /* Game.swift in Sources */,
+				5D36586A1C8D9F7A00D27C29 /* miscVC.swift in Sources */,
 				5DD7135B1C622287001A455E /* Clock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

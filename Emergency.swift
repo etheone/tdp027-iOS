@@ -330,7 +330,7 @@ class Emergency: UIViewController {
         self.navBar.translucent = true
         
         //imerValue: Int, clockType: String, timerLabel: UILabel)
-        self.blueClock = Clock(timerValue: (30), countDown: true, timerLabel: blueWatch, parent: self)
+        self.blueClock = Clock(timerValue: (2), countDown: true, timerLabel: blueWatch, parent: self)
         self.redClock = Clock(timerValue: (0), countDown: false, timerLabel: redWatch, parent: self)
         
         self.breadcrumb.text = "Start > Akutsituation"

@@ -2,26 +2,22 @@
 //  ViewController.swift
 //  Act4Heart
 //
-//  Created by Joel Karlsson on 2016-01-27.
+//  Created by Joel Karlsson on 2016-03-06.
 //  Copyright © 2016 act4heart. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var miscButton: UIButton!
-    @IBOutlet weak var emergencyButton: UIButton!
+class diseaseVC: UIViewController {
     
-    @IBAction func miscButtonPressed(sender: AnyObject) {
-        self.performSegueWithIdentifier("menuToMisc", sender: nil)
-    }
+    @IBOutlet weak var navBar: UINavigationBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        roundedButton(miscButton)
-        roundedButton(emergencyButton)
+        self.navBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navBar.shadowImage = UIImage()
+        self.navBar.translucent = true
     }
     
     func roundedButton(button: UIButton) {
@@ -29,15 +25,15 @@ class ViewController: UIViewController {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.whiteColor().CGColor
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-/*
+    /*
     override func prefersStatusBarHidden() -> Bool {
-        return true
+    return true
     }
-*/
+    */
 }
 
