@@ -281,11 +281,11 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AM3-lh-Bpc" id="tJh-TT-5TK">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XGe-om-oSo">
-                                                    <rect key="frame" x="15" y="0.0" width="313" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="313" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -335,7 +335,7 @@ Meddelanden:</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SfQ-G0-P0X">
-                                        <rect key="frame" x="166.5" y="597" width="41" height="30"/>
+                                        <rect key="frame" x="167" y="597" width="41" height="30"/>
                                         <state key="normal" title="Stäng">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -522,8 +522,8 @@ Lorem ipsum..</string>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="z8Z-LU-K5V"/>
                                         <exclude reference="r68-Yc-Md5"/>
+                                        <exclude reference="z8Z-LU-K5V"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -667,7 +667,7 @@ Lorem ipsum..</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4J-Wu-092" userLabel="Text">
-                                <rect key="frame" x="112.5" y="100" width="150" height="82"/>
+                                <rect key="frame" x="113" y="100" width="150" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="esH-Aq-ba6"/>
                                     <constraint firstAttribute="width" constant="120" id="nxT-Jo-zLW"/>
@@ -681,8 +681,8 @@ Lorem ipsum..</string>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="nxT-Jo-zLW"/>
                                         <exclude reference="esH-Aq-ba6"/>
+                                        <exclude reference="nxT-Jo-zLW"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -1147,7 +1147,7 @@ Din nuvarande position:</string>
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Adess:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26H-Hk-8VA" userLabel="SOS Address">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adess:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26H-Hk-8VA" userLabel="SOS Address">
                                         <rect key="frame" x="0.0" y="461" width="375" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.5" id="BtV-Tr-Wa2"/>
