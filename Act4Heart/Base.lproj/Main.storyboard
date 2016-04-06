@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -102,12 +102,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="359.5" y="447.5"/>
+            <point key="canvasLocation" x="791.5" y="391.5"/>
         </scene>
         <!--MiscVC-->
         <scene sceneID="rJn-qf-ciK">
             <objects>
-                <viewController id="so6-lu-eUH" customClass="miscVC" customModule="Act4Heart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="miscVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="so6-lu-eUH" customClass="miscVC" customModule="Act4Heart" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qge-CZ-XJh"/>
                         <viewControllerLayoutGuide type="bottom" id="Loq-fc-wTx"/>
@@ -246,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZO-EU-70z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="359.5" y="1221.5"/>
+            <point key="canvasLocation" x="-208.5" y="1285.5"/>
         </scene>
         <!--History-->
         <scene sceneID="LfX-Hz-ta5">
@@ -454,7 +454,7 @@ Meddelanden:</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2JF-eL-gQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1785.5" y="1221.5"/>
+            <point key="canvasLocation" x="-14.5" y="2173.5"/>
         </scene>
         <!--AppVC-->
         <scene sceneID="Vul-er-tJk">
@@ -561,7 +561,7 @@ Lorem ipsum..</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fz7-1f-nrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2261.5" y="1221.5"/>
+            <point key="canvasLocation" x="493.5" y="2173.5"/>
         </scene>
         <!--DiseaseVC-->
         <scene sceneID="oRW-Bm-50y">
@@ -649,7 +649,7 @@ Lorem ipsum..</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2df-qR-dmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="829.5" y="1221.5"/>
+            <point key="canvasLocation" x="-1066.5" y="2149.5"/>
         </scene>
         <!--SymptomVC-->
         <scene sceneID="QFf-wX-yYV">
@@ -750,7 +750,7 @@ Lorem ipsum..</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="81Z-9M-k1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1301.5" y="1221.5"/>
+            <point key="canvasLocation" x="-514.5" y="2165.5"/>
         </scene>
         <!--Emergency-->
         <scene sceneID="wRh-AW-goR">
@@ -1321,7 +1321,7 @@ Din nuvarande position:</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIy-Lm-1oq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="829.5" y="447.5"/>
+            <point key="canvasLocation" x="2353.5" y="575.5"/>
         </scene>
     </scenes>
     <resources>
@@ -1332,6 +1332,6 @@ Din nuvarande position:</string>
         <image name="logo" width="640" height="555"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="47N-id-PeC"/>
+        <segue reference="iyV-Z5-MCq"/>
     </inferredMetricsTieBreakers>
 </document>
