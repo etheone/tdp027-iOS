@@ -10,6 +10,7 @@ import UIKit
 
 class TableViewCellController : UITableViewCell {
     
+    var frameAdded = false
     
     @IBOutlet var titleLabel: UILabel!
     
@@ -21,5 +22,29 @@ class TableViewCellController : UITableViewCell {
     func checkHeight() {
         textField.hidden = (frame.size.height < TableViewCellController.expandableHeight)
     }
+    
+    func watchFrameChanges() {
+        if(!frameAdded) {
+            addObserver(self, forKeyPath: "frame", options: .New, context: nil)
+            frameAdded = true
+            checkHeight()
+        }
+    }
+    
+    func ignoreFrameChanges() {
+        if(frameAdded){
+            removeObserver(self, forKeyPath: "frame")
+            frameAdded = false
+        }
+    
+    }
+    
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        if keyPath == "frame" {
+            checkHeight()
+        }
+    }
+    
+    
     
 }
