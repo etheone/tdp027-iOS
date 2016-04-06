@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		201CB26A1CB5098F00E0C367 /* TableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201CB2691CB5098F00E0C367 /* TableViewCellController.swift */; };
+		201CB26C1CB50CCB00E0C367 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201CB26B1CB50CCB00E0C367 /* TableViewController.swift */; };
 		208C84D11C75E3DC003ED0F1 /* GPSTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C84D01C75E3DC003ED0F1 /* GPSTracker.swift */; };
 		5D0E8DFA1C7F08BD00FBA9E7 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E8DF91C7F08BD00FBA9E7 /* History.swift */; };
 		5D11935D1C58F72B0033B541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D11935C1C58F72B0033B541 /* AppDelegate.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		201CB2691CB5098F00E0C367 /* TableViewCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellController.swift; sourceTree = "<group>"; };
+		201CB26B1CB50CCB00E0C367 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		208C84D01C75E3DC003ED0F1 /* GPSTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSTracker.swift; sourceTree = "<group>"; };
 		5D0E8DF91C7F08BD00FBA9E7 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		5D1193591C58F72A0033B541 /* Act4Heart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Act4Heart.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +125,7 @@
 				5DD7135A1C622287001A455E /* Clock.swift */,
 				5DC3DB181C6B6A4500297838 /* Assets.xcassets */,
 				5D11935E1C58F72B0033B541 /* ViewController.swift */,
+				201CB2691CB5098F00E0C367 /* TableViewCellController.swift */,
 				5D0E8DF91C7F08BD00FBA9E7 /* History.swift */,
 				5D1193601C58F72B0033B541 /* Main.storyboard */,
 				5D883BBB1C6C7DCC004B5BA1 /* alarm.mp3 */,
@@ -130,6 +135,7 @@
 				5D36586B1C8DAB0600D27C29 /* symptomVC.swift */,
 				5D36586D1C8DAB1F00D27C29 /* appVC.swift */,
 				5D36586F1C8DAB3300D27C29 /* diseaseVC.swift */,
+				201CB26B1CB50CCB00E0C367 /* TableViewController.swift */,
 			);
 			path = Act4Heart;
 			sourceTree = "<group>";
@@ -287,10 +293,12 @@
 			files = (
 				5DF905B01C5F6D05003CE49C /* Emergency.swift in Sources */,
 				5D11935F1C58F72B0033B541 /* ViewController.swift in Sources */,
+				201CB26A1CB5098F00E0C367 /* TableViewCellController.swift in Sources */,
 				5D0E8DFA1C7F08BD00FBA9E7 /* History.swift in Sources */,
 				5D11935D1C58F72B0033B541 /* AppDelegate.swift in Sources */,
 				5D36586E1C8DAB1F00D27C29 /* appVC.swift in Sources */,
 				5D3658701C8DAB3300D27C29 /* diseaseVC.swift in Sources */,
+				201CB26C1CB50CCB00E0C367 /* TableViewController.swift in Sources */,
 				5D36586C1C8DAB0600D27C29 /* symptomVC.swift in Sources */,
 				208C84D11C75E3DC003ED0F1 /* GPSTracker.swift in Sources */,
 				5D36586A1C8D9F7A00D27C29 /* miscVC.swift in Sources */,

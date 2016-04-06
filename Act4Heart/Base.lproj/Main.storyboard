@@ -666,26 +666,6 @@ Lorem ipsum..</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="k08-Tp-S5p" userLabel="bg-with-logo">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4J-Wu-092" userLabel="Text">
-                                <rect key="frame" x="113" y="100" width="150" height="82"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="esH-Aq-ba6"/>
-                                    <constraint firstAttribute="width" constant="120" id="nxT-Jo-zLW"/>
-                                </constraints>
-                                <string key="text">Här kan du
-läsa olika symptom.
-
-Lorem ipsum..</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="esH-Aq-ba6"/>
-                                        <exclude reference="nxT-Jo-zLW"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qKw-G3-byp">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <textAttributes key="titleTextAttributes">
@@ -709,43 +689,48 @@ Lorem ipsum..</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTB-Ng-0hp">
-                                <rect key="frame" x="66" y="597" width="243" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="BER-S2-9vR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
-                                <state key="normal" title="Har du besvär?">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="116" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZVq-CZ-lrw">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="116" id="UKR-pL-lWQ" customClass="TableViewCellController" customModule="Act4Heart" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="116"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UKR-pL-lWQ" id="Ra7-vU-bWo">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eck-RJ-RYC">
+                                                    <rect key="frame" x="8" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qjd-Vk-3Kp">
+                                                    <rect key="frame" x="8" y="40" width="359" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textField" destination="Qjd-Vk-3Kp" id="6gR-ru-yCi"/>
+                                            <outlet property="titleLabel" destination="eck-RJ-RYC" id="oNN-TY-HFi"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="PTB-Ng-0hp" secondAttribute="trailing" constant="50" id="YQm-JG-cls"/>
                             <constraint firstItem="qKw-G3-byp" firstAttribute="leading" secondItem="KWq-5c-pYQ" secondAttribute="leading" id="ZRi-XL-MDE"/>
-                            <constraint firstItem="PTB-Ng-0hp" firstAttribute="leading" secondItem="KWq-5c-pYQ" secondAttribute="leadingMargin" constant="50" id="aWD-vo-5pw"/>
                             <constraint firstItem="qKw-G3-byp" firstAttribute="top" secondItem="Xj9-gn-Ha0" secondAttribute="bottom" id="azO-Nh-9vc"/>
-                            <constraint firstItem="d4J-Wu-092" firstAttribute="centerX" secondItem="KWq-5c-pYQ" secondAttribute="centerX" id="bgI-52-7Pz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="d4J-Wu-092" secondAttribute="trailing" constant="50" id="cKr-SC-3c1"/>
-                            <constraint firstItem="d4J-Wu-092" firstAttribute="leading" secondItem="KWq-5c-pYQ" secondAttribute="leadingMargin" constant="-50" id="kgB-G9-Mj6"/>
-                            <constraint firstItem="4uj-e5-QdN" firstAttribute="top" secondItem="PTB-Ng-0hp" secondAttribute="bottom" constant="20" id="mxG-Ut-zBP"/>
                             <constraint firstAttribute="trailing" secondItem="qKw-G3-byp" secondAttribute="trailing" id="n8k-vX-cGF"/>
-                            <constraint firstItem="PTB-Ng-0hp" firstAttribute="top" secondItem="qKw-G3-byp" secondAttribute="bottom" constant="100" id="zWR-25-gPd"/>
-                            <constraint firstItem="d4J-Wu-092" firstAttribute="top" secondItem="KWq-5c-pYQ" secondAttribute="topMargin" constant="100" id="zwH-7q-kJs"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="cKr-SC-3c1"/>
-                                <exclude reference="kgB-G9-Mj6"/>
-                                <exclude reference="zWR-25-gPd"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="navBar" destination="qKw-G3-byp" id="2At-BZ-org"/>
-                        <outlet property="troubleButton" destination="PTB-Ng-0hp" id="M0n-63-MCC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="81Z-9M-k1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1332,6 +1317,6 @@ Din nuvarande position:</string>
         <image name="logo" width="640" height="555"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iyV-Z5-MCq"/>
+        <segue reference="t80-07-aaW"/>
     </inferredMetricsTieBreakers>
 </document>

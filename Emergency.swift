@@ -190,6 +190,7 @@ class Emergency: UIViewController {
     }
     
     func getLocationToText() -> String {
+        
         userLocation = gpsTracker.getLocationInformation()
         var locationString = ""
         if (userLocation["street"] != "" && userLocation["street"] != nil) {

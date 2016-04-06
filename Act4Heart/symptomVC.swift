@@ -16,7 +16,7 @@ class symptomVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        roundedButton(troubleButton)
+        //roundedButton(troubleButton)
         
         self.navBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navBar.shadowImage = UIImage()
