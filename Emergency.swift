@@ -71,17 +71,7 @@ class Emergency: UIViewController {
     
     @IBAction func stillEmergencyClicked(sender: AnyObject) {
         if step4Active {
-            stepOneSOSButton.hidden = false
-            relapseAddress.hidden = false
-            blueWatch.hidden = true
-            stillEmergencyButton.hidden = true
-            noEmergencyButton.hidden = true
-            topText.text = "Ring 112 efter ambulans direkt!"
-            navTitle.title = "Besvären kvarstår"
-            breadcrumb.text = "Start > Akutsituation > Besvären kvarstår"
-            let startTime = currentEmergency["Start"]!.componentsSeparatedByString(",")
-            let lastPill = currentEmergency["Third"]!.componentsSeparatedByString(",")
-            relapseAddress.text = "Nuvarande position:\n\(relapseAddress.text!)\n\n\nDin akutsituation\nAkutsituationen började: \(startTime[3]):\(startTime[4])\nSenaste nitroglycerin: \(lastPill[3]):\(lastPill[4])"
+            self.performSegueWithIdentifier("startSOS", sender: nil)
         }
     }
     
@@ -117,10 +107,7 @@ class Emergency: UIViewController {
     }
     
     @IBAction func sosStart(sender: AnyObject) {
-        breadcrumb.text = "Start > Akutsituation > Första gången"
-        navTitle.title = "Första gången"
-        sosView.hidden = false
-        sosLocation.text = getLocationToText()
+        self.performSegueWithIdentifier("startSOS", sender: nil)
     }
     
     @IBAction func soundChanger(sender: AnyObject) {
@@ -130,25 +117,8 @@ class Emergency: UIViewController {
         changeSoundIcon()
     }
     
-    @IBAction func sosCall(sender: AnyObject) {
-        if !callInProgress {
-            // Function that runs when emergencyButton is clicked
-            animateSOSButton()
-            
-            let newSOSCText = "Ringer nu till SOS\n\n\n\nDin nuvarande position:"
-            sosClickText.text = newSOSCText
-            secondMenu.hidden = true
-            callInProgress = true
-        
-            NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(2), target: self, selector: "openApp", userInfo: nil, repeats: false)
-            UIApplication.sharedApplication().openURL(NSURL(string: "tel://0763080242")!)
-        }
-    }
-    
     @IBAction func relapseStart(sender: AnyObject) {
         // Function that runs when relapseButton is clicked
-        
-        relapseAddress.text = getLocationToText()
         
         secondMenu.hidden = true
         breadcrumb.text = "Start > Akutsituation > Återfallsprocessen \(currentPage)/\(numberOfPages)"
@@ -170,39 +140,6 @@ class Emergency: UIViewController {
         //timerDone()
     }
     
-    func animateSOSButton(){
-        var imageList = [UIImage]()
-        let image0:UIImage = UIImage(named:"call-button.png")!
-        let image1:UIImage = UIImage(named:"call-button-1.png")!
-        let image2:UIImage = UIImage(named:"call-button-2.png")!
-        let image3:UIImage = UIImage(named:"call-button-3.png")!
-        
-        //animationButtonscreenButton = screenButton
-        imageList = [image0, image1, image2, image3]
-        
-        sosButton!.imageView!.animationImages = imageList
-        sosButton!.imageView!.animationDuration = 2.0
-        sosButton!.imageView!.startAnimating()
-        
-        stepOneSOSButton!.imageView!.animationImages = imageList
-        stepOneSOSButton!.imageView!.animationDuration = 2.0
-        stepOneSOSButton!.imageView!.startAnimating()
-    }
-    
-    func getLocationToText() -> String {
-        
-        userLocation = gpsTracker.getLocationInformation()
-        var locationString = ""
-        if (userLocation["street"] != "" && userLocation["street"] != nil) {
-            locationString += "Gata: \(userLocation["street"]!)"
-        } else {
-            locationString += "Plats: \(userLocation["name"]!)"
-        }
-        locationString += "\nStad: \(userLocation["city"]!)"
-        locationString += "\nPostnummer: \(userLocation["zip"]!)"
-        return locationString
-    }
-    
     func parseDate() -> String {
         let formatter = NSDateFormatter()
         formatter.dateFormat = "yyyy,MM,dd,HH,mm,ss"
@@ -211,7 +148,7 @@ class Emergency: UIViewController {
     
     func continueToNextStep() {
         
-        currentPage++
+        currentPage += 1
         if(currentPage <= numberOfPages) {
             blueClock!.reset()
             blueClock!.play()
@@ -355,10 +292,6 @@ class Emergency: UIViewController {
         continueButton.layer.cornerRadius = 3
         continueButton.layer.borderWidth = 1
         continueButton.layer.borderColor = UIColor.whiteColor().CGColor
-        
-        gpsTracker.startTracking()
-        userLocation = gpsTracker.getLocationInformation()
-        print(userLocation);
         
     }
     
