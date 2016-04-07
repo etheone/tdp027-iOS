@@ -581,32 +581,12 @@ Lorem ipsum..</string>
                         <viewControllerLayoutGuide type="bottom" id="hHM-2r-zlf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sZh-Fz-zZb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Vbq-DY-MCk" userLabel="bg-with-logo">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0V-QS-1Gf" userLabel="Text">
-                                <rect key="frame" x="66" y="114" width="243" height="82"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="1If-lc-afv"/>
-                                    <constraint firstAttribute="height" constant="50" id="vP1-bG-fxG"/>
-                                </constraints>
-                                <string key="text">Här kan du
-läsa om hjärtinfarkt.
-
-Lorem ipsum..</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="1If-lc-afv"/>
-                                        <exclude reference="vP1-bG-fxG"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8S-xf-gQV">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <textAttributes key="titleTextAttributes">
@@ -630,35 +610,135 @@ Lorem ipsum..</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PvX-9e-nFY">
+                                <rect key="frame" x="0.0" y="64" width="375" height="936"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNH-j0-YHo">
+                                        <rect key="frame" x="8" y="10" width="98" height="23"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Hjärtinfarkt">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.98470163990000004" green="1" blue="0.95170405579999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="19" name="HelveticaNeue-Medium"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZw-ZO-kCO">
+                                        <rect key="frame" x="10" y="38" width="355" height="325"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="355" id="85C-oj-JAg"/>
+                                        </constraints>
+                                        <mutableString key="text">En hjärtinfarkt beror oftast på att en blodpropp har bildats som helt eller delvis täpper till hjärtats kranskärl så att blodet inte kan passera som det brukar. Den del av hjärtat som skulle ha tagit emot blodet från det tilltäppta kärlet drabbas av syrebrist och hjärtmuskeln skadas.Vid en hjärtinfarkt kan en skada uppkomma som gör att hjärtat inte klarar att arbeta lika bra som innan. Hjärtinfarkt kan vara en livshotande sjukdom och kräver omedelbar sjukhusvård. Ju tidigare du får vård desto större är möjligheten att behandla och påverka hjärtinfarktens utveckling.Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.98470163990000004" green="1" blue="0.95170405579999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-UJ-oNg">
+                                        <rect key="frame" x="8" y="374" width="329" height="23"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Vaga symptom kan också vara infarkt">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.98470163990000004" green="1" blue="0.95170405579999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="19" name="HelveticaNeue-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pu8-b8-TXs">
+                                        <rect key="frame" x="10" y="404" width="355" height="115"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="355" id="rGo-Ii-Wxf"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="355" id="sIK-Pr-vJd"/>
+                                        </constraints>
+                                        <string key="text">Om du är äldre eller har diabetes och får hjärtinfarkt, är det inte säkert att du får ont i bröstet. Symtomen kan då vara diffusa, som andnöd eller stark trötthet. Smärtan kan vara mindre intensiv och kan misstolkas som mindre allvarlig.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.98470163990000004" green="1" blue="0.95170405579999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="sIK-Pr-vJd"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kq8-Lt-RH8">
+                                        <rect key="frame" x="8" y="531" width="337" height="23"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Bröstsmärtor kan vara annat än infarkt">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.98470163990000004" green="1" blue="0.95170405579999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="19" name="HelveticaNeue-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klR-mH-wcy">
+                                        <rect key="frame" x="8" y="560" width="355" height="230"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="355" id="PDV-4I-4tR"/>
+                                        </constraints>
+                                        <string key="text">Bröstsmärtor är en av de vanligaste anledningarna att söka akut sjukhusvård. Att du har ont i bröstet behöver inte betyda att du har ett hjärtproblem. De kan uppstå på grund av många andra orsaker, såsom:
+
+Irritation av slemhinnan i nedre delen av matstrupen
+Sjukdomar i magsäck och gallblåseväggen
+Sjukdomar i lungan
+Besvär i bröstkorgen eller överkroppens muskler
+Infektioner.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.98470163990000004" green="1" blue="0.95170405579999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pu8-b8-TXs" firstAttribute="top" secondItem="bwK-UJ-oNg" secondAttribute="bottom" constant="6" id="1eJ-ZL-AW4"/>
+                                    <constraint firstItem="klR-mH-wcy" firstAttribute="leading" secondItem="PvX-9e-nFY" secondAttribute="leading" constant="8" id="2Ph-lH-XjE"/>
+                                    <constraint firstItem="kNH-j0-YHo" firstAttribute="leading" secondItem="PvX-9e-nFY" secondAttribute="leading" constant="8" id="3nq-Ap-yla"/>
+                                    <constraint firstItem="bwK-UJ-oNg" firstAttribute="top" secondItem="SZw-ZO-kCO" secondAttribute="bottom" constant="12" id="7wC-B1-akb"/>
+                                    <constraint firstItem="pu8-b8-TXs" firstAttribute="centerX" secondItem="PvX-9e-nFY" secondAttribute="centerX" id="Eu5-Tk-GZT"/>
+                                    <constraint firstItem="kNH-j0-YHo" firstAttribute="top" secondItem="PvX-9e-nFY" secondAttribute="top" constant="10" id="KbC-kC-ozy"/>
+                                    <constraint firstItem="klR-mH-wcy" firstAttribute="top" secondItem="Kq8-Lt-RH8" secondAttribute="bottom" constant="6" id="UZF-VC-VgD"/>
+                                    <constraint firstItem="bwK-UJ-oNg" firstAttribute="leading" secondItem="PvX-9e-nFY" secondAttribute="leading" constant="8" id="ZuR-Wp-fN2"/>
+                                    <constraint firstItem="pu8-b8-TXs" firstAttribute="top" secondItem="kNH-j0-YHo" secondAttribute="bottom" constant="1000" id="bwf-C6-FrP"/>
+                                    <constraint firstItem="SZw-ZO-kCO" firstAttribute="top" secondItem="kNH-j0-YHo" secondAttribute="bottom" constant="5" id="e8s-Fx-AJ0"/>
+                                    <constraint firstItem="klR-mH-wcy" firstAttribute="centerX" secondItem="PvX-9e-nFY" secondAttribute="centerX" id="hdy-tH-YYM"/>
+                                    <constraint firstItem="SZw-ZO-kCO" firstAttribute="centerX" secondItem="PvX-9e-nFY" secondAttribute="centerX" id="lZ7-Il-Tkx"/>
+                                    <constraint firstItem="Kq8-Lt-RH8" firstAttribute="leading" secondItem="PvX-9e-nFY" secondAttribute="leading" constant="8" id="n61-qI-Xnh"/>
+                                    <constraint firstItem="Kq8-Lt-RH8" firstAttribute="top" secondItem="pu8-b8-TXs" secondAttribute="bottom" constant="12" id="wy1-XZ-Jdl"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bwf-C6-FrP"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="t8S-xf-gQV" secondAttribute="trailing" constant="50" id="JIS-Z6-HDx"/>
-                            <constraint firstItem="t8S-xf-gQV" firstAttribute="top" secondItem="J9D-jd-RhM" secondAttribute="bottom" id="QWa-vi-LWA"/>
-                            <constraint firstItem="N0V-QS-1Gf" firstAttribute="top" secondItem="sZh-Fz-zZb" secondAttribute="topMargin" constant="100" id="UME-tW-DpL"/>
-                            <constraint firstItem="N0V-QS-1Gf" firstAttribute="leading" secondItem="sZh-Fz-zZb" secondAttribute="leadingMargin" constant="50" id="fzK-d3-ddN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="N0V-QS-1Gf" secondAttribute="trailing" constant="50" id="jXD-0i-ImM"/>
-                            <constraint firstItem="N0V-QS-1Gf" firstAttribute="top" secondItem="t8S-xf-gQV" secondAttribute="bottom" constant="50" id="mVa-fj-hys"/>
-                            <constraint firstItem="t8S-xf-gQV" firstAttribute="leading" secondItem="sZh-Fz-zZb" secondAttribute="leading" id="n7L-ZR-3cS"/>
-                            <constraint firstItem="t8S-xf-gQV" firstAttribute="leading" secondItem="sZh-Fz-zZb" secondAttribute="leadingMargin" constant="50" id="t13-SV-8jX"/>
-                            <constraint firstAttribute="trailing" secondItem="t8S-xf-gQV" secondAttribute="trailing" id="tWe-CT-vup"/>
+                            <constraint firstAttribute="trailing" secondItem="t8S-xf-gQV" secondAttribute="trailing" id="JRT-qR-VYM"/>
+                            <constraint firstItem="t8S-xf-gQV" firstAttribute="leading" secondItem="sZh-Fz-zZb" secondAttribute="leading" id="Pyd-Zh-1YR"/>
+                            <constraint firstItem="PvX-9e-nFY" firstAttribute="width" secondItem="sZh-Fz-zZb" secondAttribute="width" id="Xfl-16-PZ3"/>
+                            <constraint firstItem="hHM-2r-zlf" firstAttribute="top" secondItem="PvX-9e-nFY" secondAttribute="bottom" id="Z1e-6r-Exh"/>
+                            <constraint firstItem="t8S-xf-gQV" firstAttribute="top" secondItem="sZh-Fz-zZb" secondAttribute="top" constant="20" id="ZHQ-aH-M53"/>
+                            <constraint firstItem="PvX-9e-nFY" firstAttribute="centerX" secondItem="sZh-Fz-zZb" secondAttribute="centerX" id="ajW-Bo-pcm"/>
+                            <constraint firstItem="PvX-9e-nFY" firstAttribute="top" secondItem="t8S-xf-gQV" secondAttribute="bottom" id="w4R-EW-bqq"/>
+                            <constraint firstItem="PvX-9e-nFY" firstAttribute="top" secondItem="t8S-xf-gQV" secondAttribute="bottom" id="xUT-ji-PTp"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="JIS-Z6-HDx"/>
-                                <exclude reference="t13-SV-8jX"/>
-                                <exclude reference="UME-tW-DpL"/>
-                            </mask>
-                        </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="navBar" destination="t8S-xf-gQV" id="yGh-8n-gap"/>
+                        <outlet property="scrollView" destination="PvX-9e-nFY" id="Eka-cz-SZa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2df-qR-dmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1066.5" y="2149.5"/>
+            <point key="canvasLocation" x="-1066.5" y="2149"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="QFf-wX-yYV">
@@ -717,13 +797,14 @@ Lorem ipsum..</string>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0nb-I3-WZf">
                                                     <rect key="frame" x="0.0" y="34" width="375" height="94"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="textView" destination="0nb-I3-WZf" id="h8E-Gp-3Q7"/>
                                             <outlet property="titleLabel" destination="eck-RJ-RYC" id="T7M-fM-cEl"/>
@@ -1383,6 +1464,6 @@ Akut - Ring 112</string>
         <image name="logo" width="640" height="555"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="t80-07-aaW"/>
+        <segue reference="1fn-CH-LG1"/>
     </inferredMetricsTieBreakers>
 </document>

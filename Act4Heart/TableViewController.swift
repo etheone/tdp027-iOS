@@ -26,6 +26,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
 
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.backgroundColor = UIColor.clearColor()
         
         //roundedButton(troubleButton)
         

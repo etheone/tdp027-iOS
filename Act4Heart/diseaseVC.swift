@@ -12,12 +12,15 @@ class diseaseVC: UIViewController {
     
     @IBOutlet weak var navBar: UINavigationBar!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navBar.shadowImage = UIImage()
         self.navBar.translucent = true
+        scrollView.contentSize.height = 800
     }
     
     func roundedButton(button: UIButton) {
