@@ -17,12 +17,16 @@ class GPSTracker: NSObject, CLLocationManagerDelegate {
     
     func startTracking() {
         
-        locationManager1 = CLLocationManager()
-        locationManager1.delegate = self
-        locationManager1.desiredAccuracy = kCLLocationAccuracyBest
-        
-        locationManager1.requestAlwaysAuthorization()
-        locationManager1.startUpdatingLocation()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager1 = CLLocationManager()
+            locationManager1.delegate = self
+            locationManager1.desiredAccuracy = kCLLocationAccuracyBest
+            
+            locationManager1.requestAlwaysAuthorization()
+            locationManager1.startUpdatingLocation()
+        } else {
+            print("No GPS-service available")
+        }
     }
     
     func getLocationInformation() -> Dictionary<String,String> {

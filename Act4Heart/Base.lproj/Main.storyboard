@@ -814,7 +814,7 @@ för att kontakta SOS
 
 
 
-Din nuvarande position:</string>
+Din nuvarande position</string>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1252,120 +1252,6 @@ Akut - Ring 112</string>
                                     </mask>
                                 </variation>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bch-UN-nWG" userLabel="SOS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="krY-G9-Cpm">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeO-l4-zvG" userLabel="SOS-text">
-                                        <rect key="frame" x="0.0" y="120" width="375" height="59.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="187.5" id="FBz-9q-OI1"/>
-                                            <constraint firstAttribute="height" constant="20.5" id="qmz-zq-eK5"/>
-                                        </constraints>
-                                        <string key="text">När en person drabbas av hjärtinfarkt
-för första gången är det akut att
-ringa 112 efter ambulans!</string>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="FBz-9q-OI1"/>
-                                                <exclude reference="qmz-zq-eK5"/>
-                                            </mask>
-                                        </variation>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mw-9G-rlB">
-                                        <rect key="frame" x="137" y="209" width="100" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="Lij-ih-l4k"/>
-                                            <constraint firstAttribute="width" constant="100" id="ONI-rI-qQg"/>
-                                            <constraint firstAttribute="height" constant="50" id="SMH-XB-q7s"/>
-                                        </constraints>
-                                        <state key="normal" image="call-button">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="SMH-XB-q7s"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <action selector="sosCall:" destination="SeH-bM-0Pu" eventType="touchUpInside" id="dpq-30-JvG"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7g6-yw-UZN" userLabel="Click text">
-                                        <rect key="frame" x="0.0" y="329" width="375" height="120.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="187.5" id="nNc-fu-Pei"/>
-                                            <constraint firstAttribute="height" constant="20.5" id="xH2-L3-NUl"/>
-                                        </constraints>
-                                        <string key="text">Tryck på den gröna knappen 
-för att kontakta SOS
-
-
-
-Din nuvarande position:</string>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="nNc-fu-Pei"/>
-                                                <exclude reference="xH2-L3-NUl"/>
-                                            </mask>
-                                        </variation>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adess:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26H-Hk-8VA" userLabel="SOS Address">
-                                        <rect key="frame" x="0.0" y="460" width="375" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20.5" id="BtV-Tr-Wa2"/>
-                                            <constraint firstAttribute="width" constant="187.5" id="RLw-sc-c3e"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="BtV-Tr-Wa2"/>
-                                                <exclude reference="RLw-sc-c3e"/>
-                                            </mask>
-                                        </variation>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="7g6-yw-UZN" firstAttribute="top" secondItem="8mw-9G-rlB" secondAttribute="bottom" constant="20" id="0qI-a2-5fp"/>
-                                    <constraint firstItem="7g6-yw-UZN" firstAttribute="leading" secondItem="Bch-UN-nWG" secondAttribute="leading" id="34f-dG-ut8"/>
-                                    <constraint firstItem="8mw-9G-rlB" firstAttribute="top" secondItem="KeO-l4-zvG" secondAttribute="bottom" constant="30" id="5Bf-Y0-The"/>
-                                    <constraint firstItem="26H-Hk-8VA" firstAttribute="top" secondItem="7g6-yw-UZN" secondAttribute="bottom" constant="10" id="B5V-fB-xzP"/>
-                                    <constraint firstItem="7g6-yw-UZN" firstAttribute="top" secondItem="KeO-l4-zvG" secondAttribute="bottom" constant="20" id="BA9-Y7-T9J"/>
-                                    <constraint firstItem="KeO-l4-zvG" firstAttribute="leading" secondItem="Bch-UN-nWG" secondAttribute="leading" id="E00-6u-pjG"/>
-                                    <constraint firstItem="8mw-9G-rlB" firstAttribute="centerX" secondItem="Bch-UN-nWG" secondAttribute="centerX" id="HIR-Fs-AcW"/>
-                                    <constraint firstAttribute="trailing" secondItem="7g6-yw-UZN" secondAttribute="trailing" id="L6Q-eg-UhV"/>
-                                    <constraint firstAttribute="bottom" secondItem="krY-G9-Cpm" secondAttribute="bottom" id="Lcp-5J-r8d"/>
-                                    <constraint firstAttribute="trailing" secondItem="krY-G9-Cpm" secondAttribute="trailing" id="Re2-xV-dK6"/>
-                                    <constraint firstItem="8mw-9G-rlB" firstAttribute="top" secondItem="KeO-l4-zvG" secondAttribute="bottom" constant="30" id="Ycn-Vl-c9j"/>
-                                    <constraint firstItem="26H-Hk-8VA" firstAttribute="leading" secondItem="Bch-UN-nWG" secondAttribute="leading" id="huE-xN-PET"/>
-                                    <constraint firstItem="krY-G9-Cpm" firstAttribute="leading" secondItem="Bch-UN-nWG" secondAttribute="leading" id="lcf-BP-4Da"/>
-                                    <constraint firstItem="krY-G9-Cpm" firstAttribute="top" secondItem="Bch-UN-nWG" secondAttribute="top" id="meC-4k-xmz"/>
-                                    <constraint firstAttribute="trailing" secondItem="KeO-l4-zvG" secondAttribute="trailing" id="raK-l9-gqg"/>
-                                    <constraint firstAttribute="bottom" secondItem="26H-Hk-8VA" secondAttribute="bottom" constant="10" id="s2f-mM-1lR"/>
-                                    <constraint firstAttribute="trailing" secondItem="26H-Hk-8VA" secondAttribute="trailing" id="xYI-QA-etv"/>
-                                    <constraint firstItem="KeO-l4-zvG" firstAttribute="top" secondItem="Bch-UN-nWG" secondAttribute="top" constant="120" id="xZF-l0-CEh"/>
-                                    <constraint firstItem="8mw-9G-rlB" firstAttribute="top" secondItem="7g6-yw-UZN" secondAttribute="bottom" constant="20" id="xi2-na-kMA"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Ycn-Vl-c9j"/>
-                                        <exclude reference="xi2-na-kMA"/>
-                                        <exclude reference="BA9-Y7-T9J"/>
-                                        <exclude reference="s2f-mM-1lR"/>
-                                    </mask>
-                                </variation>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPs-Sb-cXH" userLabel="Breadcrumb">
                                 <rect key="frame" x="16" y="74" width="343" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -1420,10 +1306,8 @@ Din nuvarande position:</string>
                             <constraint firstItem="vRH-kx-hsK" firstAttribute="top" secondItem="4eX-wk-Hbm" secondAttribute="bottom" constant="30" id="L5p-Ja-PS7"/>
                             <constraint firstItem="qO7-22-BMP" firstAttribute="leading" secondItem="NS3-2q-dkJ" secondAttribute="leadingMargin" constant="50" id="OsC-Qp-19c"/>
                             <constraint firstAttribute="bottomMargin" secondItem="y3E-tq-EUK" secondAttribute="bottom" constant="10" id="RJ4-Hx-umk"/>
-                            <constraint firstAttribute="trailing" secondItem="Bch-UN-nWG" secondAttribute="trailing" id="Rjk-NB-MnE"/>
                             <constraint firstItem="vRH-kx-hsK" firstAttribute="centerX" secondItem="NS3-2q-dkJ" secondAttribute="centerX" id="Ts4-Ea-0ZS"/>
                             <constraint firstItem="lBd-x0-tMB" firstAttribute="top" secondItem="guP-pC-EbG" secondAttribute="bottom" constant="30" id="Udr-ii-gjK"/>
-                            <constraint firstItem="Bch-UN-nWG" firstAttribute="leading" secondItem="NS3-2q-dkJ" secondAttribute="leading" id="VAJ-4g-2A0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YSe-5I-SPY" secondAttribute="trailing" constant="50" id="VSr-fa-eLo"/>
                             <constraint firstItem="o8g-AV-1s3" firstAttribute="top" secondItem="n7b-Xm-td8" secondAttribute="bottom" constant="10" id="WAF-4U-jey"/>
                             <constraint firstAttribute="trailingMargin" secondItem="y3E-tq-EUK" secondAttribute="trailing" constant="100" id="XRt-Tm-1Ng"/>
@@ -1441,10 +1325,8 @@ Din nuvarande position:</string>
                             <constraint firstAttribute="trailing" secondItem="T4l-BL-sdt" secondAttribute="trailing" id="moQ-A3-mUn"/>
                             <constraint firstItem="y3E-tq-EUK" firstAttribute="centerX" secondItem="NS3-2q-dkJ" secondAttribute="centerX" id="nSh-7D-Oqg"/>
                             <constraint firstItem="T4l-BL-sdt" firstAttribute="top" secondItem="NS3-2q-dkJ" secondAttribute="top" id="pBu-gM-w93"/>
-                            <constraint firstItem="Bch-UN-nWG" firstAttribute="top" secondItem="NS3-2q-dkJ" secondAttribute="top" id="pZL-hr-1Tf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="guP-pC-EbG" secondAttribute="trailing" constant="30" id="qOR-5l-nZR"/>
                             <constraint firstItem="T4l-BL-sdt" firstAttribute="top" secondItem="NS3-2q-dkJ" secondAttribute="topMargin" constant="100" id="qzE-qZ-b5x"/>
-                            <constraint firstAttribute="bottom" secondItem="Bch-UN-nWG" secondAttribute="bottom" id="rkU-g4-htR"/>
                             <constraint firstItem="n7b-Xm-td8" firstAttribute="top" secondItem="vRH-kx-hsK" secondAttribute="bottom" constant="30" id="vLv-0g-FNc"/>
                             <constraint firstItem="cPs-Sb-cXH" firstAttribute="top" secondItem="NS3-2q-dkJ" secondAttribute="topMargin" constant="300" id="yC0-He-Se5"/>
                             <constraint firstAttribute="bottom" secondItem="8vu-2w-ESQ" secondAttribute="bottom" id="yRD-74-E67"/>
@@ -1479,10 +1361,6 @@ Din nuvarande position:</string>
                         <outlet property="redWatch" destination="y3E-tq-EUK" id="xuh-Np-Ljm"/>
                         <outlet property="relapseAddress" destination="n7b-Xm-td8" id="ZgO-yP-fCF"/>
                         <outlet property="secondMenu" destination="8vu-2w-ESQ" id="BsU-sC-DaO"/>
-                        <outlet property="sosButton" destination="8mw-9G-rlB" id="Di4-fE-6iW"/>
-                        <outlet property="sosClickText" destination="7g6-yw-UZN" id="7dD-Cy-2MU"/>
-                        <outlet property="sosLocation" destination="26H-Hk-8VA" id="oCa-kF-vDu"/>
-                        <outlet property="sosView" destination="Bch-UN-nWG" id="Goc-wj-wkK"/>
                         <outlet property="soundIcon" destination="X90-3G-66F" id="Yha-d5-Px4"/>
                         <outlet property="stepOneSOSButton" destination="vRH-kx-hsK" id="ckR-bT-VwM"/>
                         <outlet property="stillEmergencyButton" destination="guP-pC-EbG" id="p2k-Dt-UmH"/>

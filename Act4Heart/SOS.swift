@@ -69,13 +69,14 @@ class SOS: UIViewController {
     
     func checkCallState() {
         self.callCenter.callEventHandler = { (call: CTCall) -> () in
-            
-            print(call.callState)
             if call.callState == "CTCallStadeDialing" {
                 
             } else if call.callState == "CTCallStateDisconnected" {
+                // Call ended. Stop call animation and reset boolean.
+                self.sosButton!.imageView!.stopAnimating()
+                self.sosButton!.setImage(UIImage(named:"call-button.png"), forState: UIControlState.Normal)
+                self.callInProgress = false
             }
-            
         }
         NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(1), target: self, selector: #selector(SOS.checkCallState), userInfo: nil, repeats: false)
     }
@@ -96,7 +97,7 @@ class SOS: UIViewController {
     }
     
     func getLocationToText() -> String {
-        
+
         userLocation = gpsTracker.getLocationInformation()
         var locationString = ""
         if (userLocation["street"] != "" && userLocation["street"] != nil) {
@@ -105,7 +106,6 @@ class SOS: UIViewController {
             locationString += "Plats: \(userLocation["name"]!)"
         }
         locationString += "\nStad: \(userLocation["city"]!)"
-        locationString += "\nPostnummer: \(userLocation["zip"]!)"
         return locationString
     }
     
