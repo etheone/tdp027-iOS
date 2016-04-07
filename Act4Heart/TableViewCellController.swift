@@ -14,13 +14,14 @@ class TableViewCellController : UITableViewCell {
     
     @IBOutlet var titleLabel: UILabel!
     
-    @IBOutlet var textField: UITextField!
     
-    class var expandableHeight: CGFloat { get { return 200 } }
+    @IBOutlet weak var textView: UITextView!
+    
+    class var expandableHeight: CGFloat { get { return 150 } }
     class var defaultHeight: CGFloat    { get { return 44 } }
     
     func checkHeight() {
-        textField.hidden = (frame.size.height < TableViewCellController.expandableHeight)
+        textView.hidden = (frame.size.height < TableViewCellController.expandableHeight)
     }
     
     func watchFrameChanges() {
