@@ -33,6 +33,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.navBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navBar.shadowImage = UIImage()
         self.navBar.translucent = true
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
     }
     
     func roundedButton(button: UIButton) {
