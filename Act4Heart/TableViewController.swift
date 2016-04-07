@@ -18,7 +18,8 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBOutlet var titleLabel: UILabel!
     
-    @IBOutlet var textField: UITextField!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +61,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as! TableViewCellController
         cell.titleLabel.text = "Test title"
-        cell.textField.text = "Lorem ipsum hejsan svejsanLorem ipsum hejsan svejsanLorem ipsum hejsan svejsanLorem ipsum hejsan svejsanLorem ipsum hejsan svejsanLorem ipsum hejsan svejsanLorem ipsum hejsan svejsanLorem ipsum hejsan svejsanLorem ipsum hejsan svejsanLorem ipsum hejsan svejsan"
+        cell.textView.text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
         print("hej")
         return cell
     }
