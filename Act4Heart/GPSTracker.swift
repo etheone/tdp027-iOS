@@ -18,6 +18,7 @@ class GPSTracker: NSObject, CLLocationManagerDelegate {
     func startTracking() {
         
         if CLLocationManager.locationServicesEnabled() {
+            print("trackar")
             locationManager1 = CLLocationManager()
             locationManager1.delegate = self
             locationManager1.desiredAccuracy = kCLLocationAccuracyBest
@@ -27,6 +28,11 @@ class GPSTracker: NSObject, CLLocationManagerDelegate {
         } else {
             print("No GPS-service available")
         }
+    }
+    
+    func stopTracking() {
+        locationManager1.stopUpdatingLocation()
+        locationManager1.stopMonitoringSignificantLocationChanges()
     }
     
     func getLocationInformation() -> Dictionary<String,String> {

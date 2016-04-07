@@ -33,8 +33,6 @@ class History: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleTop.text = "Hej Tommy"
-        
         // Get saved user history
         if (NSUserDefaults.standardUserDefaults().objectForKey("userHistory") != nil) {
             self.userHistory = NSUserDefaults.standardUserDefaults().objectForKey("userHistory") as! Dictionary<String,Dictionary<String,String>>
@@ -108,17 +106,17 @@ class History: UIViewController, UITableViewDataSource, UITableViewDelegate {
             start = userHistory[historyArray[row]]!["Start"]!
             date = getDateFromString(start, outType: "date")
             start = getDateFromString(start, outType: "clock")
-            total++
+            total += 1
         }
         if userHistory[historyArray[row]]!["Second"]! != "" {
             second = userHistory[historyArray[row]]!["Second"]!
             second = getDateFromString(second, outType: "clock")
-            total++
+            total += 1
         }
         if userHistory[historyArray[row]]!["Third"]! != "" {
             third = userHistory[historyArray[row]]!["Third"]!
             third = getDateFromString(third, outType: "clock")
-            total++
+            total += 1
         }
         
         sos = "-" // Fix later
