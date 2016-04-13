@@ -17,6 +17,7 @@ class Emergency: UIViewController {
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var navTitle: UINavigationItem!
     @IBOutlet weak var topText: UILabel!
+    @IBOutlet weak var clockLabel: UILabel!
     
     @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var processStartButton: UIButton!
@@ -67,6 +68,7 @@ class Emergency: UIViewController {
         if step4Active {
             blueWatch.hidden = true
             noEmergencyButton.hidden = true
+            clockLabel.hidden = true
             topText.text = "Det är viktigt att du är säker på att du inte har några kvarstående besvär\n\nÄr du säker på detta så är det fortfarande viktigt att du är uppmärksam på vad du känner. Du bör även berätta för en närstående eller kollega att du upplevt besvär."
             navTitle.title = "Besvären är borta"
         }
@@ -106,6 +108,7 @@ class Emergency: UIViewController {
         if(currentPage <= numberOfPages) {
             blueClock!.reset()
             blueClock!.play()
+            pushNavigation("Återfall - Steg \(currentPage)")
         }
         
         if currentPage == 2 {
@@ -113,8 +116,8 @@ class Emergency: UIViewController {
         } else if currentPage == 3 {
             currentEmergency["Third"] = parseDate()
         } else {
-            topText.text = "När den blå klockan når 00:00\nvälj något av alternativen nedan"
             noEmergencyButton.hidden = false
+            pushNavigation("Återfall - Besvären är borta")
         }
         
         // Update history
@@ -158,10 +161,11 @@ class Emergency: UIViewController {
     }
     
     func alertBox() {
-        let alertTitle = "Ta en Nitroglycerin"
-        var alertMessage = "5 minuter har gått. Tryck OK för att gå vidare till nästa steg."
-        if (currentPage == 1) {
-            alertMessage = "Tryck OK för att gå vidare till nästa steg."
+        var alertTitle = "Ta nästa dos Nitroglycerin"
+        var alertMessage = "5 minuter har gått."
+        if currentPage == 1 {
+            alertTitle = "Ta en dos Nitroglycerin"
+            alertMessage = "Den blå klockan räknar ned tills du ska ta nästa dos"
         }
         let alertCloseText = "OK"
         let alertController = UIAlertController(title: alertTitle, message:
@@ -175,7 +179,6 @@ class Emergency: UIViewController {
         }
         
         alertController.addAction(confirmAction)
-        
         
     }
     
@@ -242,8 +245,11 @@ class Emergency: UIViewController {
         userHistory[currentEmergency["ID"]!] = currentEmergency
         NSUserDefaults.standardUserDefaults().setObject(userHistory, forKey: "userHistory")
         
-        blueClock!.play()
         redClock!.play()
+        
+        performSelector(#selector(Emergency.alertBox), withObject: nil, afterDelay: 0.1)
+        
+        pushNavigation("Återfall - Start")
         
     }
     

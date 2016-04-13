@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -279,11 +279,11 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AM3-lh-Bpc" id="tJh-TT-5TK">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XGe-om-oSo">
-                                                    <rect key="frame" x="15" y="0.0" width="313" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="313" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -789,7 +789,7 @@ Infektioner.</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UKR-pL-lWQ" id="Ra7-vU-bWo">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eck-RJ-RYC">
@@ -916,7 +916,7 @@ Ring 112 efter en ambulans!</string>
                                             <action selector="sosCall:" destination="siD-ZO-fNb" eventType="touchUpInside" id="Q2N-x9-UiJ"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4h9-ct-Vie" userLabel="Click text">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4h9-ct-Vie" userLabel="Click text">
                                         <rect key="frame" x="0.0" y="310" width="375" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="187.5" id="0lw-B0-LoP"/>
@@ -938,7 +938,7 @@ Din nuvarande position</string>
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Adess:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12H-cE-JuX" userLabel="SOS Address">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adess:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12H-cE-JuX" userLabel="SOS Address">
                                         <rect key="frame" x="0.0" y="440" width="375" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.5" id="QWD-sL-jWZ"/>
@@ -1098,11 +1098,11 @@ Din nuvarande position</string>
                                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wDJ-Xw-3ZD" id="i5X-lY-dI0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A0C-Js-GTq">
-                                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1354,7 +1354,7 @@ tidigare?</string>
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVf-XZ-Ou4" userLabel="Question">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVf-XZ-Ou4" userLabel="Question">
                                         <rect key="frame" x="77" y="84" width="222" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.5" id="50q-Jh-zMj"/>
@@ -1478,7 +1478,7 @@ tidigare?</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSe-5I-SPY">
-                                <rect key="frame" x="127" y="273" width="120" height="120"/>
+                                <rect key="frame" x="127" y="144.5" width="120" height="120"/>
                                 <color key="backgroundColor" red="0.062745098039215685" green="0.56862745098039214" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="blp-uz-o7s"/>
@@ -1498,15 +1498,12 @@ tidigare?</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eX-wk-Hbm" userLabel="Top Text">
-                                <rect key="frame" x="36" y="114" width="303" height="82"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eX-wk-Hbm" userLabel="Top Text">
+                                <rect key="frame" x="36" y="94" width="303" height="0.0"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="0qC-VE-SRA"/>
                                     <constraint firstAttribute="height" constant="50" id="cnG-yx-yMY"/>
                                 </constraints>
-                                <string key="text">Ta en dos Nitroglycerin nu direkt!
-
-Ta sedan en ny dos när den blå klockan når 00:00.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1514,6 +1511,22 @@ Ta sedan en ny dos när den blå klockan når 00:00.</string>
                                     <mask key="constraints">
                                         <exclude reference="0qC-VE-SRA"/>
                                         <exclude reference="cnG-yx-yMY"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tid till nästa dos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtH-Jz-pZ8" userLabel="Clock label">
+                                <rect key="frame" x="46" y="275" width="283" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="D87-gJ-25U"/>
+                                    <constraint firstAttribute="height" constant="50" id="L7y-yQ-wle"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="D87-gJ-25U"/>
+                                        <exclude reference="L7y-yQ-wle"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -1588,6 +1601,7 @@ Ta sedan en ny dos när den blå klockan når 00:00.</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="GtH-Jz-pZ8" secondAttribute="trailing" constant="30" id="1k0-b4-y2V"/>
                             <constraint firstAttribute="trailing" secondItem="KSP-5x-oRr" secondAttribute="trailing" id="3wm-It-ALd"/>
                             <constraint firstItem="T4l-BL-sdt" firstAttribute="top" secondItem="NS3-2q-dkJ" secondAttribute="topMargin" id="5A2-hH-Ctz"/>
                             <constraint firstItem="KSP-5x-oRr" firstAttribute="top" secondItem="NS3-2q-dkJ" secondAttribute="top" id="5DV-Bx-GIH"/>
@@ -1601,23 +1615,28 @@ Ta sedan en ny dos när den blå klockan når 00:00.</string>
                             <constraint firstAttribute="bottom" secondItem="KSP-5x-oRr" secondAttribute="bottom" id="FW6-GY-aLU"/>
                             <constraint firstItem="o8g-AV-1s3" firstAttribute="top" secondItem="lBd-x0-tMB" secondAttribute="bottom" constant="280" id="HA4-9K-YZ3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qO7-22-BMP" secondAttribute="trailing" constant="30" id="HyB-5e-tNi"/>
+                            <constraint firstItem="YSe-5I-SPY" firstAttribute="top" secondItem="4eX-wk-Hbm" secondAttribute="bottom" constant="30" id="L19-ld-m42"/>
                             <constraint firstItem="qO7-22-BMP" firstAttribute="leading" secondItem="NS3-2q-dkJ" secondAttribute="leadingMargin" constant="30" id="OsC-Qp-19c"/>
+                            <constraint firstItem="YSe-5I-SPY" firstAttribute="top" secondItem="T4l-BL-sdt" secondAttribute="bottom" constant="80" id="Qrz-mg-DJe"/>
                             <constraint firstAttribute="bottomMargin" secondItem="y3E-tq-EUK" secondAttribute="bottom" constant="10" id="RJ4-Hx-umk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YSe-5I-SPY" secondAttribute="trailing" constant="50" id="VSr-fa-eLo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="y3E-tq-EUK" secondAttribute="trailing" constant="100" id="XRt-Tm-1Ng"/>
                             <constraint firstItem="YSe-5I-SPY" firstAttribute="centerX" secondItem="NS3-2q-dkJ" secondAttribute="centerX" id="ZnH-wu-ZlH"/>
                             <constraint firstItem="y3E-tq-EUK" firstAttribute="centerX" secondItem="NS3-2q-dkJ" secondAttribute="centerX" id="a2r-74-ZjT"/>
-                            <constraint firstItem="4eX-wk-Hbm" firstAttribute="top" secondItem="T4l-BL-sdt" secondAttribute="bottom" constant="50" id="bQJ-UK-Hr3"/>
+                            <constraint firstItem="4eX-wk-Hbm" firstAttribute="top" secondItem="T4l-BL-sdt" secondAttribute="bottom" constant="30" id="bQJ-UK-Hr3"/>
                             <constraint firstItem="lBd-x0-tMB" firstAttribute="leading" secondItem="NS3-2q-dkJ" secondAttribute="leadingMargin" constant="30" id="br5-pa-5dx"/>
                             <constraint firstItem="qO7-22-BMP" firstAttribute="top" secondItem="lBd-x0-tMB" secondAttribute="bottom" constant="30" id="ffx-IK-1Tm"/>
                             <constraint firstItem="y3E-tq-EUK" firstAttribute="leading" secondItem="NS3-2q-dkJ" secondAttribute="leadingMargin" constant="100" id="fje-1s-lmf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4eX-wk-Hbm" secondAttribute="trailing" constant="20" id="jla-1b-fvb"/>
                             <constraint firstItem="KSP-5x-oRr" firstAttribute="leading" secondItem="NS3-2q-dkJ" secondAttribute="leading" id="kYK-Kk-6Jk"/>
+                            <constraint firstItem="GtH-Jz-pZ8" firstAttribute="top" secondItem="YSe-5I-SPY" secondAttribute="bottom" constant="10" id="lAa-3e-ySt"/>
                             <constraint firstItem="T4l-BL-sdt" firstAttribute="leading" secondItem="NS3-2q-dkJ" secondAttribute="leading" id="mae-o8-01j"/>
+                            <constraint firstItem="GtH-Jz-pZ8" firstAttribute="top" secondItem="4eX-wk-Hbm" secondAttribute="bottom" constant="200" id="mme-z2-K9h"/>
                             <constraint firstAttribute="trailing" secondItem="T4l-BL-sdt" secondAttribute="trailing" id="moQ-A3-mUn"/>
                             <constraint firstItem="y3E-tq-EUK" firstAttribute="centerX" secondItem="NS3-2q-dkJ" secondAttribute="centerX" id="nSh-7D-Oqg"/>
                             <constraint firstItem="T4l-BL-sdt" firstAttribute="top" secondItem="NS3-2q-dkJ" secondAttribute="top" id="pBu-gM-w93"/>
                             <constraint firstItem="T4l-BL-sdt" firstAttribute="top" secondItem="NS3-2q-dkJ" secondAttribute="topMargin" constant="100" id="qzE-qZ-b5x"/>
+                            <constraint firstItem="GtH-Jz-pZ8" firstAttribute="leading" secondItem="NS3-2q-dkJ" secondAttribute="leadingMargin" constant="30" id="yci-GJ-K3f"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -1625,7 +1644,10 @@ Ta sedan en ny dos när den blå klockan når 00:00.</string>
                                 <exclude reference="pBu-gM-w93"/>
                                 <exclude reference="qzE-qZ-b5x"/>
                                 <exclude reference="5kM-Vh-5HF"/>
+                                <exclude reference="BfU-QX-WqL"/>
+                                <exclude reference="L19-ld-m42"/>
                                 <exclude reference="VSr-fa-eLo"/>
+                                <exclude reference="mme-z2-K9h"/>
                                 <exclude reference="DBZ-9b-WHr"/>
                                 <exclude reference="XRt-Tm-1Ng"/>
                                 <exclude reference="fje-1s-lmf"/>
@@ -1637,6 +1659,7 @@ Ta sedan en ny dos när den blå klockan når 00:00.</string>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="blueWatch" destination="YSe-5I-SPY" id="Py9-Nx-nW5"/>
+                        <outlet property="clockLabel" destination="GtH-Jz-pZ8" id="6pa-bU-0EB"/>
                         <outlet property="continueButton" destination="qO7-22-BMP" id="hbc-eY-snL"/>
                         <outlet property="navBar" destination="T4l-BL-sdt" id="kO5-ax-qIN"/>
                         <outlet property="navTitle" destination="OgC-kI-s7n" id="3dG-5H-t76"/>
