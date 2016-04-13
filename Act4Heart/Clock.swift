@@ -34,9 +34,10 @@ class Clock : NSObject {
     func updateTimer() {
         // Determine if the clock ticks up or down
         if countDown {
-            time = time - 1
+            time -= 1
         } else {
-            time = time + 1
+            time += 1
+
         }
         // Only display hours if needed
         if time < 3600 {
@@ -55,7 +56,7 @@ class Clock : NSObject {
     }
     
     func play() {
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(Clock.updateTimer), userInfo: nil, repeats: true)
     }
     
     func pause() {

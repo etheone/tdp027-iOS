@@ -11,11 +11,9 @@ import AVFoundation
 
 class Emergency: UIViewController {
     
-    @IBOutlet weak var secondMenu: UIView!
     @IBOutlet weak var sosView: UIView!
     @IBOutlet weak var blueWatch: UILabel!
     @IBOutlet weak var redWatch: UILabel!
-    @IBOutlet weak var breadcrumb: UILabel!
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var navTitle: UINavigationItem!
     @IBOutlet weak var topText: UILabel!
@@ -24,8 +22,6 @@ class Emergency: UIViewController {
     @IBOutlet weak var processStartButton: UIButton!
     @IBOutlet weak var soundIcon: UIBarButtonItem!
     @IBOutlet weak var continueButton: UIButton!
-    @IBOutlet weak var stepOneSOSButton: UIButton!
-    @IBOutlet weak var relapseAddress: UILabel!
     
     // SOS
     @IBOutlet weak var sosLocation: UILabel!
@@ -34,7 +30,6 @@ class Emergency: UIViewController {
     
     // Step 4
     @IBOutlet weak var noEmergencyButton: UIButton!
-    @IBOutlet weak var stillEmergencyButton: UIButton!
     
     
     
@@ -47,7 +42,6 @@ class Emergency: UIViewController {
     var userData = [[String: String]]()
     var currentEmergency = Dictionary<String,String>()
     var userHistory = Dictionary<String,Dictionary<String,String>>()
-    var userLocation : Dictionary<String,String> = [String: String]()
     var callInProgress : Bool = false
     var step4Active : Bool = false
     
@@ -69,30 +63,13 @@ class Emergency: UIViewController {
         }
     }
     
-    @IBAction func stillEmergencyClicked(sender: AnyObject) {
-        if step4Active {
-            self.performSegueWithIdentifier("startSOS", sender: nil)
-        }
-    }
-    
     @IBAction func noEmergencyClicked(sender: AnyObject) {
         if step4Active {
             blueWatch.hidden = true
-            stillEmergencyButton.hidden = true
             noEmergencyButton.hidden = true
             topText.text = "Det är viktigt att du är säker på att du inte har några kvarstående besvär\n\nÄr du säker på detta så är det fortfarande viktigt att du är uppmärksam på vad du känner. Du bör även berätta för en närstående eller kollega att du upplevt besvär."
             navTitle.title = "Besvären är borta"
-            breadcrumb.text = "Start > Akutsituation > Besvären är borta"
         }
-    }
-    
-    @IBAction func continueToStep2(sender: AnyObject) {
-        stepOneSOSButton.hidden = true
-        relapseAddress.hidden = true
-        continueButton.hidden = true
-        blueWatch.hidden = false
-        topText.text = "Ta en ny Nitroglycerin när \nden blå klockan når 00:00"
-        continueToNextStep()
     }
     
     @IBAction func backToMenu(sender: AnyObject) {
@@ -117,29 +94,6 @@ class Emergency: UIViewController {
         changeSoundIcon()
     }
     
-    @IBAction func relapseStart(sender: AnyObject) {
-        // Function that runs when relapseButton is clicked
-        
-        secondMenu.hidden = true
-        breadcrumb.text = "Start > Akutsituation > Återfallsprocessen \(currentPage)/\(numberOfPages)"
-        navTitle.title = "Återfallsprocessen \(currentPage) av \(numberOfPages)"
-        
-        currentEmergency["ID"] = String(Int(NSDate().timeIntervalSince1970)) // To get rid of decimals
-        currentEmergency["Start"] = parseDate()
-        currentEmergency["Second"] = ""
-        currentEmergency["Third"] = ""
-        currentEmergency["SOS"] = ""
-        currentEmergency["Outcome"] = parseDate()
-        
-        userHistory[currentEmergency["ID"]!] = currentEmergency
-        NSUserDefaults.standardUserDefaults().setObject(userHistory, forKey: "userHistory")
-        
-        //blueClock!.play()
-        redClock!.play()
-        
-        //timerDone()
-    }
-    
     func parseDate() -> String {
         let formatter = NSDateFormatter()
         formatter.dateFormat = "yyyy,MM,dd,HH,mm,ss"
@@ -154,9 +108,6 @@ class Emergency: UIViewController {
             blueClock!.play()
         }
         
-        breadcrumb.text = "Start > Akutsituation > Återfallsprocessen \(currentPage)/\(numberOfPages)"
-        navTitle.title = "Återfallsprocessen \(currentPage) av \(numberOfPages)"
-        
         if currentPage == 2 {
             currentEmergency["Second"] = parseDate()
         } else if currentPage == 3 {
@@ -164,13 +115,11 @@ class Emergency: UIViewController {
         } else {
             topText.text = "När den blå klockan når 00:00\nvälj något av alternativen nedan"
             noEmergencyButton.hidden = false
-            stillEmergencyButton.hidden = false
         }
         
         // Update history
         userHistory[currentEmergency["ID"]!] = currentEmergency
         NSUserDefaults.standardUserDefaults().setObject(userHistory, forKey: "userHistory")
-        //print(currentEmergency, currentPage)
         
     }
     
@@ -190,13 +139,11 @@ class Emergency: UIViewController {
         } else {
             activateStep4Buttons()
         }
-        userLocation = gpsTracker.getLocationInformation()
     }
     
     func activateStep4Buttons() {
         step4Active = true
         noEmergencyButton.alpha = 1.0
-        stillEmergencyButton.alpha = 1.0
     }
     
     func playSound(soundFile: NSURL) {
@@ -250,9 +197,6 @@ class Emergency: UIViewController {
             print(error)
         }
         
-        // Hide the blue clock at start - call button is active
-        self.blueWatch.hidden = true
-        
         // Get saved user history
         if (NSUserDefaults.standardUserDefaults().objectForKey("userHistory") != nil) {
             self.userHistory = NSUserDefaults.standardUserDefaults().objectForKey("userHistory") as! Dictionary<String,Dictionary<String,String>>
@@ -271,12 +215,7 @@ class Emergency: UIViewController {
         self.blueClock = Clock(timerValue: (2), countDown: true, timerLabel: blueWatch, parent: self)
         self.redClock = Clock(timerValue: (0), countDown: false, timerLabel: redWatch, parent: self)
         
-        self.breadcrumb.text = "Start > Akutsituation"
-        
-        roundedButtons(callButton)
-        roundedButtons(processStartButton)
         roundedButtons(continueButton)
-        roundedButtons(stillEmergencyButton)
         roundedButtons(noEmergencyButton)
         
         redWatch.layer.cornerRadius = 3
@@ -292,6 +231,19 @@ class Emergency: UIViewController {
         continueButton.layer.cornerRadius = 3
         continueButton.layer.borderWidth = 1
         continueButton.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        currentEmergency["ID"] = String(Int(NSDate().timeIntervalSince1970)) // To get rid of decimals
+        currentEmergency["Start"] = parseDate()
+        currentEmergency["Second"] = ""
+        currentEmergency["Third"] = ""
+        currentEmergency["SOS"] = ""
+        currentEmergency["Outcome"] = parseDate()
+        
+        userHistory[currentEmergency["ID"]!] = currentEmergency
+        NSUserDefaults.standardUserDefaults().setObject(userHistory, forKey: "userHistory")
+        
+        blueClock!.play()
+        redClock!.play()
         
     }
     

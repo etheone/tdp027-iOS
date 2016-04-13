@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var miscButton: UIButton!
     @IBOutlet weak var emergencyButton: UIButton!
     
+    var gpsTracker = GPSTracker()
+    
     @IBAction func miscButtonPressed(sender: AnyObject) {
         self.performSegueWithIdentifier("menuToMisc", sender: nil)
     }
@@ -22,6 +24,16 @@ class ViewController: UIViewController {
         
         roundedButton(miscButton)
         roundedButton(emergencyButton)
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if ( !defaults.boolForKey("acceptedTerms") ) {
+            print("first")
+            gpsTracker.startTracking()
+            gpsTracker.stopTracking()
+            defaults.setBool(true, forKey: "acceptedTerms")
+        }
+        
     }
     
     func roundedButton(button: UIButton) {

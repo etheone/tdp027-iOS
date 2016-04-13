@@ -16,10 +16,12 @@ class SOS: UIViewController {
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var sosButton: UIButton!
     @IBOutlet weak var sosText: UILabel!
+    @IBOutlet weak var sosAddress: UILabel!
     
     var gpsTracker = GPSTracker()
     var userLocation : Dictionary<String,String> = [String: String]()
     var callInProgress : Bool = false
+    var gpsCounter = 0
     let callCenter = CTCallCenter()
     
     override func viewDidLoad() {
@@ -33,6 +35,9 @@ class SOS: UIViewController {
         
         gpsTracker.startTracking()
         userLocation = gpsTracker.getLocationInformation()
+        
+        updateLocation();
+        
         
         self.checkCallState()
         
@@ -73,9 +78,15 @@ class SOS: UIViewController {
                 
             } else if call.callState == "CTCallStateDisconnected" {
                 // Call ended. Stop call animation and reset boolean.
-                self.sosButton!.imageView!.stopAnimating()
-                self.sosButton!.setImage(UIImage(named:"call-button.png"), forState: UIControlState.Normal)
-                self.callInProgress = false
+                // Use UI thread with dispatch_async
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.sosButton!.imageView!.stopAnimating()
+                    self.sosButton!.highlighted = false
+                    self.sosButton!.layer.removeAllAnimations()
+                    self.sosButton!.setImage(UIImage(named:"call-button.png"), forState: UIControlState.Normal)
+                    self.callInProgress = false
+                    self.sosText.text = "Tryck på den gröna knappen\nför att kontakta SOS\n\n\n\nDin nuvarande position"
+                })
             }
         }
         NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(1), target: self, selector: #selector(SOS.checkCallState), userInfo: nil, repeats: false)
@@ -91,9 +102,20 @@ class SOS: UIViewController {
         //animationButtonscreenButton = screenButton
         imageList = [image0, image1, image2, image3]
         
-        sosButton!.imageView!.animationImages = imageList
-        sosButton!.imageView!.animationDuration = 2.0
-        sosButton!.imageView!.startAnimating()
+        self.sosButton!.imageView!.animationImages = imageList
+        self.sosButton!.imageView!.animationDuration = 2.0
+        self.sosButton!.imageView!.startAnimating()
+    }
+    
+    func updateLocation() {
+        print(gpsCounter)
+        self.sosAddress.text = getLocationToText()
+        if (gpsCounter < 5) {
+            NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(1), target: self, selector: #selector(SOS.updateLocation), userInfo: nil, repeats: false)
+        } else {
+            gpsTracker.stopTracking()
+        }
+        gpsCounter += 1
     }
     
     func getLocationToText() -> String {
@@ -102,10 +124,13 @@ class SOS: UIViewController {
         var locationString = ""
         if (userLocation["street"] != "" && userLocation["street"] != nil) {
             locationString += "Gata: \(userLocation["street"]!)"
-        } else {
+        } else if (userLocation["name"] != "" && userLocation["name"] != nil) {
             locationString += "Plats: \(userLocation["name"]!)"
         }
-        locationString += "\nStad: \(userLocation["city"]!)"
+        if (userLocation["city"] != "" && userLocation["city"] != nil) {
+            locationString += "\nStad: \(userLocation["city"]!)"
+        }
+        
         return locationString
     }
     
