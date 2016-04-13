@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -279,11 +279,11 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AM3-lh-Bpc" id="tJh-TT-5TK">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XGe-om-oSo">
-                                                    <rect key="frame" x="15" y="0.0" width="313" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="313" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -789,7 +789,7 @@ Infektioner.</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UKR-pL-lWQ" id="Ra7-vU-bWo">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eck-RJ-RYC">
@@ -817,21 +817,6 @@ Infektioner.</string>
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-<<<<<<< HEAD
-=======
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nb-I3-WZf">
-                                                    <rect key="frame" x="0.0" y="34" width="375" height="94"/>
-                                                    <attributedString key="attributedText">
-                                                        <fragment>
-                                                            <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
-                                                            <attributes>
-                                                                <font key="NSFont" size="18" name="HelveticaNeue"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
->>>>>>> f6d0bf654b5a46895546f092c18b3ab7f1b22c11
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -931,7 +916,7 @@ Ring 112 efter en ambulans!</string>
                                             <action selector="sosCall:" destination="siD-ZO-fNb" eventType="touchUpInside" id="Q2N-x9-UiJ"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4h9-ct-Vie" userLabel="Click text">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4h9-ct-Vie" userLabel="Click text">
                                         <rect key="frame" x="0.0" y="310" width="375" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="187.5" id="0lw-B0-LoP"/>
@@ -953,7 +938,7 @@ Din nuvarande position</string>
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adess:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12H-cE-JuX" userLabel="SOS Address">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Adess:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12H-cE-JuX" userLabel="SOS Address">
                                         <rect key="frame" x="0.0" y="440" width="375" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.5" id="QWD-sL-jWZ"/>
@@ -1113,11 +1098,11 @@ Din nuvarande position</string>
                                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wDJ-Xw-3ZD" id="i5X-lY-dI0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A0C-Js-GTq">
-                                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1369,7 +1354,7 @@ tidigare?</string>
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVf-XZ-Ou4" userLabel="Question">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVf-XZ-Ou4" userLabel="Question">
                                         <rect key="frame" x="77" y="84" width="222" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.5" id="50q-Jh-zMj"/>
@@ -1514,7 +1499,7 @@ tidigare?</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eX-wk-Hbm" userLabel="Top Text">
-                                <rect key="frame" x="36" y="114" width="303" height="81.5"/>
+                                <rect key="frame" x="36" y="114" width="303" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="0qC-VE-SRA"/>
                                     <constraint firstAttribute="height" constant="50" id="cnG-yx-yMY"/>
@@ -1676,7 +1661,7 @@ Ta sedan en ny dos när den blå klockan når 00:00.</string>
         <image name="logo" width="640" height="555"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2FG-Ot-6ZO"/>
+        <segue reference="t80-07-aaW"/>
         <segue reference="2Sg-g8-CLL"/>
     </inferredMetricsTieBreakers>
 </document>

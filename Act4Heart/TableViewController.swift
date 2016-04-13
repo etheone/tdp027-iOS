@@ -112,4 +112,8 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
+    
 }
