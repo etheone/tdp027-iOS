@@ -34,9 +34,9 @@ class Clock : NSObject {
     func updateTimer() {
         // Determine if the clock ticks up or down
         if countDown {
-            time--
+            time = time - 1
         } else {
-            time++
+            time = time + 1
         }
         // Only display hours if needed
         if time < 3600 {

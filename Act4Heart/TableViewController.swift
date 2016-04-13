@@ -16,10 +16,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet var tableView: UITableView!
     @IBOutlet var navBar: UINavigationBar!
     
-    @IBOutlet var titleLabel: UILabel!
-    
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,13 +53,17 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return symptoms.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath) as! TableViewCellController
-        cell.titleLabel.text = "Test title"
-        cell.textView.text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        cell.titleLabel.text = symptoms[indexPath.row]
+        cell.titleLabel.textColor = UIColor.whiteColor()
+        cell.textLabel2.text = symptomsInfo[indexPath.row]
+        cell.textLabel2.textColor = UIColor.whiteColor()
+        
+        
         print("hej")
         return cell
     }

@@ -639,8 +639,8 @@ Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</st
                                         <color key="textColor" red="0.98470163990000004" green="1" blue="0.95170405579999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-UJ-oNg">
-                                        <rect key="frame" x="8" y="374" width="329" height="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-UJ-oNg">
+                                        <rect key="frame" x="8" y="375" width="329" height="23"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Vaga symptom kan också vara infarkt">
                                                 <attributes>
@@ -793,24 +793,52 @@ Infektioner.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lablele" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eck-RJ-RYC">
-                                                    <rect key="frame" x="8" y="11" width="102" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                    <color key="textColor" red="0.059864208939999997" green="0.082098614089999994" blue="0.43574416040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eck-RJ-RYC">
+                                                    <rect key="frame" x="8" y="18" width="359" height="26"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Lablele">
+                                                            <attributes>
+                                                                <color key="NSColor" red="1" green="0.94961545215093968" blue="0.93119531604954253" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <font key="NSFont" size="21" name="HelveticaNeue-Medium"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nb-I3-WZf">
-                                                    <rect key="frame" x="0.0" y="34" width="375" height="94"/>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S80-eX-KHr">
+                                                    <rect key="frame" x="8" y="46" width="359" height="82"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment>
+                                                            <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+                                                            <attributes>
+                                                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <font key="NSFont" size="17" name="HelveticaNeue-Medium"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="S80-eX-KHr" firstAttribute="trailing" secondItem="Ra7-vU-bWo" secondAttribute="trailingMargin" id="4K7-oQ-PVh"/>
+                                                <constraint firstItem="eck-RJ-RYC" firstAttribute="top" secondItem="Ra7-vU-bWo" secondAttribute="topMargin" constant="10" id="C1N-6n-cln"/>
+                                                <constraint firstItem="S80-eX-KHr" firstAttribute="top" secondItem="Ra7-vU-bWo" secondAttribute="topMargin" constant="100" id="DVO-5t-SsG"/>
+                                                <constraint firstItem="eck-RJ-RYC" firstAttribute="leading" secondItem="Ra7-vU-bWo" secondAttribute="leadingMargin" id="Fh7-bl-UtR"/>
+                                                <constraint firstItem="eck-RJ-RYC" firstAttribute="trailing" secondItem="Ra7-vU-bWo" secondAttribute="trailingMargin" id="fsi-pL-SFd"/>
+                                                <constraint firstItem="S80-eX-KHr" firstAttribute="top" secondItem="eck-RJ-RYC" secondAttribute="bottom" constant="2" id="ikK-cj-1yY"/>
+                                                <constraint firstItem="S80-eX-KHr" firstAttribute="leading" secondItem="Ra7-vU-bWo" secondAttribute="leadingMargin" id="pfD-Hh-AIF"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="DVO-5t-SsG"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <outlet property="textView" destination="0nb-I3-WZf" id="h8E-Gp-3Q7"/>
+                                            <outlet property="textLabel" destination="S80-eX-KHr" id="JRn-mz-17M"/>
+                                            <outlet property="textLabel2" destination="S80-eX-KHr" id="pMM-iE-YpY"/>
                                             <outlet property="titleLabel" destination="eck-RJ-RYC" id="T7M-fM-cEl"/>
                                         </connections>
                                     </tableViewCell>
