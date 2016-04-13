@@ -21,6 +21,8 @@ class diseaseVC: UIViewController {
         self.navBar.shadowImage = UIImage()
         self.navBar.translucent = true
         scrollView.contentSize.height = 800
+        
+        pushNavigation("Om hjärtinfarkt")
     }
     
     func roundedButton(button: UIButton) {

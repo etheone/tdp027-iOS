@@ -9,6 +9,7 @@
 import CoreTelephony
 import UIKit
 
+
 class SOS: UIViewController {
     
     
@@ -40,6 +41,8 @@ class SOS: UIViewController {
         
         
         self.checkCallState()
+        
+        pushNavigation("SOS")
         
     }
     

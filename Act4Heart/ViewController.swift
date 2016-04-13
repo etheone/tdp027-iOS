@@ -6,7 +6,11 @@
 //  Copyright © 2016 act4heart. All rights reserved.
 //
 
+
+
 import UIKit
+
+let user = UIDevice.currentDevice().identifierForVendor!.UUIDString
 
 class ViewController: UIViewController {
 
@@ -21,6 +25,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         roundedButton(miscButton)
         roundedButton(emergencyButton)

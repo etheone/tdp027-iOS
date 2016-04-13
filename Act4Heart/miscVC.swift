@@ -41,6 +41,8 @@ class miscVC: UIViewController {
         self.navBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navBar.shadowImage = UIImage()
         self.navBar.translucent = true
+        
+        pushNavigation("Övrigt")
     }
     
     func roundedButton(button: UIButton) {

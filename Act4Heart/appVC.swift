@@ -23,6 +23,8 @@ class appVC: UIViewController {
         self.navBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navBar.shadowImage = UIImage()
         self.navBar.translucent = true
+        
+        pushNavigation("Om appen")
     }
     
     func roundedButton(button: UIButton) {
