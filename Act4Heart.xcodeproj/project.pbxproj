@@ -20,7 +20,6 @@
 		5D1193721C58F72B0033B541 /* Act4HeartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1193711C58F72B0033B541 /* Act4HeartTests.swift */; };
 		5D11937D1C58F72B0033B541 /* Act4HeartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D11937C1C58F72B0033B541 /* Act4HeartUITests.swift */; };
 		5D36586A1C8D9F7A00D27C29 /* miscVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3658691C8D9F7A00D27C29 /* miscVC.swift */; };
-		5D36586C1C8DAB0600D27C29 /* symptomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D36586B1C8DAB0600D27C29 /* symptomVC.swift */; };
 		5D36586E1C8DAB1F00D27C29 /* appVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D36586D1C8DAB1F00D27C29 /* appVC.swift */; };
 		5D3658701C8DAB3300D27C29 /* diseaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D36586F1C8DAB3300D27C29 /* diseaseVC.swift */; };
 		5D7C01961CB65212006ED9CD /* currentSymptomsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7C01951CB65212006ED9CD /* currentSymptomsVC.swift */; };
@@ -70,7 +69,6 @@
 		5D11937C1C58F72B0033B541 /* Act4HeartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Act4HeartUITests.swift; sourceTree = "<group>"; };
 		5D11937E1C58F72B0033B541 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D3658691C8D9F7A00D27C29 /* miscVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = miscVC.swift; sourceTree = "<group>"; };
-		5D36586B1C8DAB0600D27C29 /* symptomVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = symptomVC.swift; sourceTree = "<group>"; };
 		5D36586D1C8DAB1F00D27C29 /* appVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = appVC.swift; sourceTree = "<group>"; };
 		5D36586F1C8DAB3300D27C29 /* diseaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = diseaseVC.swift; sourceTree = "<group>"; };
 		5D7C01951CB65212006ED9CD /* currentSymptomsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = currentSymptomsVC.swift; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 				5D7C01971CB66E94006ED9CD /* seriousSymptomVC.swift */,
 				5D1193681C58F72B0033B541 /* Info.plist */,
 				5D3658691C8D9F7A00D27C29 /* miscVC.swift */,
-				5D36586B1C8DAB0600D27C29 /* symptomVC.swift */,
 				5D36586D1C8DAB1F00D27C29 /* appVC.swift */,
 				5D36586F1C8DAB3300D27C29 /* diseaseVC.swift */,
 				201CB26B1CB50CCB00E0C367 /* TableViewController.swift */,
@@ -321,7 +318,6 @@
 				5D3658701C8DAB3300D27C29 /* diseaseVC.swift in Sources */,
 				201CB26C1CB50CCB00E0C367 /* TableViewController.swift in Sources */,
 				5D7C01961CB65212006ED9CD /* currentSymptomsVC.swift in Sources */,
-				5D36586C1C8DAB0600D27C29 /* symptomVC.swift in Sources */,
 				208C84D11C75E3DC003ED0F1 /* GPSTracker.swift in Sources */,
 				5D7C01981CB66E94006ED9CD /* seriousSymptomVC.swift in Sources */,
 				5D36586A1C8D9F7A00D27C29 /* miscVC.swift in Sources */,

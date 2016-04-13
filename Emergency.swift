@@ -44,7 +44,6 @@ class Emergency: UIViewController {
     var currentEmergency = Dictionary<String,String>()
     var userHistory = Dictionary<String,Dictionary<String,String>>()
     var callInProgress : Bool = false
-    var step4Active : Bool = false
     
     // Sound variables
     var audioPlayer = AVAudioPlayer() // Needed for alert sound
@@ -65,13 +64,12 @@ class Emergency: UIViewController {
     }
     
     @IBAction func noEmergencyClicked(sender: AnyObject) {
-        if step4Active {
-            blueWatch.hidden = true
-            noEmergencyButton.hidden = true
-            clockLabel.hidden = true
-            topText.text = "Det är viktigt att du är säker på att du inte har några kvarstående besvär\n\nÄr du säker på detta så är det fortfarande viktigt att du är uppmärksam på vad du känner. Du bör även berätta för en närstående eller kollega att du upplevt besvär."
-            navTitle.title = "Besvären är borta"
-        }
+        blueWatch.hidden = true
+        noEmergencyButton.hidden = true
+        clockLabel.hidden = true
+        topText.text = "Det är viktigt att du är säker på att du inte har några kvarstående besvär\n\nÄr du säker på detta så är det fortfarande viktigt att du är uppmärksam på vad du känner. Du bör även berätta för en närstående eller kollega att du upplevt besvär."
+        navTitle.title = "Besvären är borta"
+        pushNavigation("Återfall - Besvären är borta")
     }
     
     @IBAction func backToMenu(sender: AnyObject) {
@@ -115,9 +113,6 @@ class Emergency: UIViewController {
             currentEmergency["Second"] = parseDate()
         } else if currentPage == 3 {
             currentEmergency["Third"] = parseDate()
-        } else {
-            noEmergencyButton.hidden = false
-            pushNavigation("Återfall - Besvären är borta")
         }
         
         // Update history
@@ -140,13 +135,9 @@ class Emergency: UIViewController {
         if(currentPage < numberOfPages) {
             alertBox()
         } else {
-            activateStep4Buttons()
+            noEmergencyButton.hidden = false
+            clockLabel.hidden = true
         }
-    }
-    
-    func activateStep4Buttons() {
-        step4Active = true
-        noEmergencyButton.alpha = 1.0
     }
     
     func playSound(soundFile: NSURL) {
@@ -165,7 +156,7 @@ class Emergency: UIViewController {
         var alertMessage = "5 minuter har gått."
         if currentPage == 1 {
             alertTitle = "Ta en dos Nitroglycerin"
-            alertMessage = "Den blå klockan räknar ned tills du ska ta nästa dos"
+            alertMessage = "Den runda klockan räknar ned tills du ska ta nästa dos"
         }
         let alertCloseText = "OK"
         let alertController = UIAlertController(title: alertTitle, message:
@@ -215,7 +206,7 @@ class Emergency: UIViewController {
         self.navBar.translucent = true
         
         //imerValue: Int, clockType: String, timerLabel: UILabel)
-        self.blueClock = Clock(timerValue: (2), countDown: true, timerLabel: blueWatch, parent: self)
+        self.blueClock = Clock(timerValue: (5), countDown: true, timerLabel: blueWatch, parent: self)
         self.redClock = Clock(timerValue: (0), countDown: false, timerLabel: redWatch, parent: self)
         
         roundedButtons(continueButton)

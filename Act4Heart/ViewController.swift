@@ -39,6 +39,8 @@ class ViewController: UIViewController {
             defaults.setBool(true, forKey: "acceptedTerms")
         }
         
+        pushNavigation("Start")
+        
     }
     
     func roundedButton(button: UIButton) {

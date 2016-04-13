@@ -13,7 +13,7 @@ class CurrentSymptoms: UIViewController, UITableViewDataSource, UITableViewDeleg
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var symptomsArray = ["Bröstsmärtor", "Oro", "Ont i käken", "Ont i lilltån"]
+    var symptomsArray = symptoms
     let textCellIdentifier = "TextCell"
     
     
@@ -26,6 +26,9 @@ class CurrentSymptoms: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
+        pushNavigation("Välj symptom")
     }
     
     func roundedButton(button: UIButton) {
