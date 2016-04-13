@@ -630,7 +630,11 @@ Lorem ipsum..</string>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="355" id="85C-oj-JAg"/>
                                         </constraints>
-                                        <mutableString key="text">En hjärtinfarkt beror oftast på att en blodpropp har bildats som helt eller delvis täpper till hjärtats kranskärl så att blodet inte kan passera som det brukar. Den del av hjärtat som skulle ha tagit emot blodet från det tilltäppta kärlet drabbas av syrebrist och hjärtmuskeln skadas.Vid en hjärtinfarkt kan en skada uppkomma som gör att hjärtat inte klarar att arbeta lika bra som innan. Hjärtinfarkt kan vara en livshotande sjukdom och kräver omedelbar sjukhusvård. Ju tidigare du får vård desto större är möjligheten att behandla och påverka hjärtinfarktens utveckling.Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</mutableString>
+                                        <string key="text">En hjärtinfarkt beror oftast på att en blodpropp har bildats som helt eller delvis täpper till hjärtats kranskärl så att blodet inte kan passera som det brukar. Den del av hjärtat som skulle ha tagit emot blodet från det tilltäppta kärlet drabbas av syrebrist och hjärtmuskeln skadas.
+
+Vid en hjärtinfarkt kan en skada uppkomma som gör att hjärtat inte klarar att arbeta lika bra som innan. Hjärtinfarkt kan vara en livshotande sjukdom och kräver omedelbar sjukhusvård. Ju tidigare du får vård desto större är möjligheten att behandla och påverka hjärtinfarktens utveckling.
+
+Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="0.98470163990000004" green="1" blue="0.95170405579999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -795,7 +799,7 @@ Infektioner.</string>
                                                     <color key="textColor" red="0.059864208939999997" green="0.082098614089999994" blue="0.43574416040000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0nb-I3-WZf">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nb-I3-WZf">
                                                     <rect key="frame" x="0.0" y="34" width="375" height="94"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
