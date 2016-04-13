@@ -31,6 +31,8 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.navBar.shadowImage = UIImage()
         self.navBar.translucent = true
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
+        pushNavigation("Om symptom")
     }
     
     func roundedButton(button: UIButton) {
@@ -65,7 +67,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.textLabel2.textColor = UIColor.whiteColor()
         
         
-        print("hej")
+        //print("hej")
         return cell
     }
     
@@ -90,8 +92,8 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
             tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Automatic)
         }
         
-        print(indexPaths)
-        print("above")
+        //print(indexPaths)
+        //print("above")
     }
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -103,8 +105,8 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        print(" tja")
-        print(indexPath)
+        //print(" tja")
+        //print(indexPath)
         if indexPath == selectedIndexPath {
             return TableViewCellController.expandableHeight
         } else {

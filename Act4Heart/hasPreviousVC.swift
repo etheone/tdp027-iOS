@@ -17,12 +17,16 @@ class HasPrevious: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         self.navBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navBar.shadowImage = UIImage()
         self.navBar.translucent = true
         
         roundedButton(miscButton)
         roundedButton(emergencyButton)
+        
+        pushNavigation("Har haft infarkt tidigare")
     }
     
     func roundedButton(button: UIButton) {

@@ -48,6 +48,8 @@ class History: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.navBar.shadowImage = UIImage()
         self.navBar.translucent = true
         
+        pushNavigation("Historik")
+        
         // Do any additional setup after loading the view.
     }
     
