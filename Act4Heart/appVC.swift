@@ -11,20 +11,43 @@ import UIKit
 class appVC: UIViewController {
     
     
-    @IBOutlet weak var buttonCredits: UIButton!
     @IBOutlet weak var navBar: UINavigationBar!
     
+    
+    @IBOutlet var imageVIew: UIImageView!
+    
+    @IBOutlet var nextButtonWidthConstraint: NSLayoutConstraint!
+    
+    @IBOutlet var backButtonWidthConstraint: NSLayoutConstraint!
+    
+    @IBOutlet var backButton: UIButton!
+    @IBOutlet var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        roundedButton(buttonCredits)
+    
+        imageVIew.image = UIImage(named: "guideImage1")
+        
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        let sizeToSet = screenSize.width * 0.45
+        nextButtonWidthConstraint.constant = sizeToSet
+        
+        imageVIew.layer.borderWidth = 1.0
+        //imageVIew.layer.masksToBounds = false
+        imageVIew.layer.borderColor = UIColor.whiteColor().CGColor
+        imageVIew.layer.cornerRadius = 2.0
+        
+        backButtonWidthConstraint.constant = sizeToSet
         
         self.navBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navBar.shadowImage = UIImage()
         self.navBar.translucent = true
         
         pushNavigation("Om appen")
+        
+        roundedButton(nextButton)
+        roundedButton(backButton)
     }
     
     func roundedButton(button: UIButton) {
