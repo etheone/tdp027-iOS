@@ -636,6 +636,7 @@ Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</st
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="0.98470163990000004" green="1" blue="0.95170405579999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <mutableString key="userLabel">En hjärtinfarkt beror oftast på att en blodpropp har bildats som helt eller delvis täpper till hjärtats kranskärl så att blodet inte kan passera som det brukar. Den del av hjärtat som skulle ha tagit emot blodet från det tilltäppta kärlet drabbas av syrebrist och hjärtmuskeln skadas.  Vid en hjärtinfarkt kan en skada uppkomma som gör att hjärtat inte klarar att arbeta lika bra som innan. Hjärtinfarkt kan vara en livshotande sjukdom och kräver omedelbar sjukhusvård. Ju tidigare du får vård desto större är möjligheten att behandla och påverka hjärtinfarktens utveckling.  Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</mutableString>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-UJ-oNg">
                                         <rect key="frame" x="8" y="375" width="329" height="23"/>
@@ -1055,6 +1056,30 @@ Din nuvarande position</string>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="9ZG-bj-hPg">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WH2-11-CRR" userLabel="SOS - button">
+                                        <rect key="frame" x="30" y="597" width="315" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="AUL-Fa-BMT"/>
+                                            <constraint firstAttribute="height" constant="100" id="X2o-VU-dUq"/>
+                                            <constraint firstAttribute="height" constant="50" id="lBv-ti-Q1B"/>
+                                            <constraint firstAttribute="width" constant="100" id="nke-Wg-8fw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="Fortsätt">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="nke-Wg-8fw"/>
+                                                <exclude reference="X2o-VU-dUq"/>
+                                                <exclude reference="lBv-ti-Q1B"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="continueToSeriousSymptom:" destination="Pw4-KA-Hu1" eventType="touchUpInside" id="9mo-rk-5nE"/>
+                                            <action selector="sosStart:" destination="SeH-bM-0Pu" eventType="touchUpInside" id="dDD-pn-dcw"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejt-Up-WTN" userLabel="SOS-text">
                                         <rect key="frame" x="20" y="74" width="335" height="65"/>
                                         <constraints>
@@ -1063,10 +1088,10 @@ Din nuvarande position</string>
                                             <constraint firstAttribute="height" constant="20.5" id="gyk-yj-MYH"/>
                                         </constraints>
                                         <attributedString key="attributedText">
-                                            <fragment content="Känner du något av följande symptom?">
+                                            <fragment content="Markera om du känner du något av följande symptom">
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="26" name="HelveticaNeue-Medium"/>
+                                                    <font key="NSFont" size="24" name="HelveticaNeue-Medium"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -1080,7 +1105,7 @@ Din nuvarande position</string>
                                         </variation>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fqL-sf-KKE">
-                                        <rect key="frame" x="0.0" y="159" width="375" height="508"/>
+                                        <rect key="frame" x="0.0" y="159" width="375" height="428"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="separatorColor" red="1" green="1" blue="1" alpha="0.25" colorSpace="calibratedRGB"/>
                                         <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1094,15 +1119,19 @@ Din nuvarande position</string>
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A0C-Js-GTq">
+                                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="icon-unchecked" translatesAutoresizingMaskIntoConstraints="NO" id="odH-Dz-U1T">
+                                                            <rect key="frame" x="67" y="-42" width="39" height="36"/>
+                                                        </imageView>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" tag="1" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A0C-Js-GTq">
                                                             <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <edgeInsets key="layoutMargins" top="12" left="8" bottom="12" right="8"/>
                                                             <attributedString key="attributedText">
-                                                                <fragment content="Title">
+                                                                <fragment content=" ">
                                                                     <attributes>
                                                                         <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <font key="NSFont" size="20" name="HelveticaNeue-Medium"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
                                                                 </fragment>
                                                             </attributedString>
@@ -1136,20 +1165,23 @@ Din nuvarande position</string>
                                     <constraint firstItem="fqL-sf-KKE" firstAttribute="top" secondItem="2wp-Rn-19Z" secondAttribute="bottom" constant="150" id="HLg-e5-4JB"/>
                                     <constraint firstItem="fqL-sf-KKE" firstAttribute="top" secondItem="ejt-Up-WTN" secondAttribute="bottom" constant="20" id="Khm-V1-JzV"/>
                                     <constraint firstItem="2wp-Rn-19Z" firstAttribute="top" secondItem="fqL-sf-KKE" secondAttribute="bottom" id="VHU-CX-8kH"/>
-                                    <constraint firstAttribute="bottom" secondItem="fqL-sf-KKE" secondAttribute="bottom" id="VPM-R9-zyC"/>
+                                    <constraint firstAttribute="bottom" secondItem="fqL-sf-KKE" secondAttribute="bottom" constant="80" id="VPM-R9-zyC"/>
                                     <constraint firstAttribute="trailing" secondItem="ejt-Up-WTN" secondAttribute="trailing" constant="20" id="Vd4-Fr-Pl9"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="2wp-Rn-19Z" secondAttribute="trailing" id="XTV-On-rkf"/>
                                     <constraint firstItem="9ZG-bj-hPg" firstAttribute="top" secondItem="BH6-Eb-pUz" secondAttribute="top" id="ZIR-jd-Gjb"/>
                                     <constraint firstAttribute="trailing" secondItem="2wp-Rn-19Z" secondAttribute="trailing" id="d7p-qe-Nmw"/>
                                     <constraint firstItem="fqL-sf-KKE" firstAttribute="leading" secondItem="BH6-Eb-pUz" secondAttribute="leading" id="dFf-LK-8PL"/>
+                                    <constraint firstAttribute="trailing" secondItem="WH2-11-CRR" secondAttribute="trailing" constant="30" id="eGL-il-LqW"/>
                                     <constraint firstItem="2wp-Rn-19Z" firstAttribute="top" secondItem="BH6-Eb-pUz" secondAttribute="top" constant="20" id="fOh-02-b9H"/>
                                     <constraint firstItem="ejt-Up-WTN" firstAttribute="leading" secondItem="BH6-Eb-pUz" secondAttribute="leading" constant="20" id="g5S-sd-goe"/>
                                     <constraint firstAttribute="trailing" secondItem="fqL-sf-KKE" secondAttribute="trailing" id="kG8-By-WKr"/>
+                                    <constraint firstItem="WH2-11-CRR" firstAttribute="leading" secondItem="BH6-Eb-pUz" secondAttribute="leading" constant="30" id="l3b-IQ-ih8"/>
                                     <constraint firstAttribute="bottom" secondItem="9ZG-bj-hPg" secondAttribute="bottom" id="ofl-1U-99L"/>
                                     <constraint firstItem="ejt-Up-WTN" firstAttribute="top" secondItem="2wp-Rn-19Z" secondAttribute="bottom" constant="10" id="p0m-b5-VO3"/>
                                     <constraint firstItem="2wp-Rn-19Z" firstAttribute="top" secondItem="BH6-Eb-pUz" secondAttribute="topMargin" id="qMP-kl-S3i"/>
                                     <constraint firstItem="fqL-sf-KKE" firstAttribute="top" secondItem="BH6-Eb-pUz" secondAttribute="top" constant="130" id="rH4-ZW-kgp"/>
                                     <constraint firstItem="2wp-Rn-19Z" firstAttribute="leading" secondItem="BH6-Eb-pUz" secondAttribute="leading" id="sge-v0-Tv4"/>
+                                    <constraint firstAttribute="bottom" secondItem="WH2-11-CRR" secondAttribute="bottom" constant="10" id="ufk-PY-YDn"/>
                                     <constraint firstItem="2wp-Rn-19Z" firstAttribute="leading" secondItem="BH6-Eb-pUz" secondAttribute="leadingMargin" id="v3H-UY-cCp"/>
                                     <constraint firstAttribute="trailing" secondItem="9ZG-bj-hPg" secondAttribute="trailing" id="v7v-tc-Rik"/>
                                     <constraint firstItem="9ZG-bj-hPg" firstAttribute="leading" secondItem="BH6-Eb-pUz" secondAttribute="leading" id="x0r-cd-iyI"/>
@@ -1176,6 +1208,7 @@ Din nuvarande position</string>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="continueButton" destination="WH2-11-CRR" id="zJW-85-KjN"/>
                         <outlet property="navBar" destination="2wp-Rn-19Z" id="2M1-Oa-9mf"/>
                         <outlet property="tableView" destination="fqL-sf-KKE" id="1x7-qN-4DI"/>
                         <segue destination="Aec-6v-Xqo" kind="presentation" identifier="segueToSeriousSymptom" modalTransitionStyle="crossDissolve" id="u4O-Em-SYl"/>
@@ -1487,13 +1520,13 @@ tidigare?</string>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:05" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSe-5I-SPY">
                                 <rect key="frame" x="87" y="144" width="200" height="200"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.062745098040000002" green="0.56862745100000001" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="blp-uz-o7s"/>
                                     <constraint firstAttribute="width" constant="200" id="mrP-Uc-RN3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="31"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3E-tq-EUK" userLabel="Red Watch">
@@ -1689,10 +1722,11 @@ tidigare?</string>
         <image name="call-button" width="256" height="256"/>
         <image name="ic_home_white_36pt" width="36" height="36"/>
         <image name="ic_volume_up_white_36pt" width="36" height="36"/>
+        <image name="icon-unchecked" width="512" height="512"/>
         <image name="logo" width="640" height="555"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2FG-Ot-6ZO"/>
+        <segue reference="t80-07-aaW"/>
         <segue reference="2Sg-g8-CLL"/>
     </inferredMetricsTieBreakers>
 </document>

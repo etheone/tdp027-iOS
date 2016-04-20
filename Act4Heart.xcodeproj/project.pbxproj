@@ -26,6 +26,7 @@
 		5D7C01981CB66E94006ED9CD /* seriousSymptomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7C01971CB66E94006ED9CD /* seriousSymptomVC.swift */; };
 		5D7C019A1CB6709C006ED9CD /* hasPreviousVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7C01991CB6709B006ED9CD /* hasPreviousVC.swift */; };
 		5D883BBC1C6C7DCC004B5BA1 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5D883BBB1C6C7DCC004B5BA1 /* alarm.mp3 */; };
+		5DC319371CC7A8460015DB30 /* CheckboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC319361CC7A8460015DB30 /* CheckboxController.swift */; };
 		5DC3DB191C6B6A4500297838 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DC3DB181C6B6A4500297838 /* Assets.xcassets */; };
 		5DD7135B1C622287001A455E /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD7135A1C622287001A455E /* Clock.swift */; };
 		5DF905B01C5F6D05003CE49C /* Emergency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF905AF1C5F6D05003CE49C /* Emergency.swift */; };
@@ -75,6 +76,7 @@
 		5D7C01971CB66E94006ED9CD /* seriousSymptomVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = seriousSymptomVC.swift; sourceTree = "<group>"; };
 		5D7C01991CB6709B006ED9CD /* hasPreviousVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hasPreviousVC.swift; sourceTree = "<group>"; };
 		5D883BBB1C6C7DCC004B5BA1 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
+		5DC319361CC7A8460015DB30 /* CheckboxController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxController.swift; sourceTree = "<group>"; };
 		5DC3DB181C6B6A4500297838 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DD7135A1C622287001A455E /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		5DF905AF1C5F6D05003CE49C /* Emergency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Emergency.swift; path = ../Emergency.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				5D7C01951CB65212006ED9CD /* currentSymptomsVC.swift */,
 				208C84D01C75E3DC003ED0F1 /* GPSTracker.swift */,
 				5D11935C1C58F72B0033B541 /* AppDelegate.swift */,
+				5DC319361CC7A8460015DB30 /* CheckboxController.swift */,
 				5DD7135A1C622287001A455E /* Clock.swift */,
 				5DC3DB181C6B6A4500297838 /* Assets.xcassets */,
 				5D11935E1C58F72B0033B541 /* ViewController.swift */,
@@ -306,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DC319371CC7A8460015DB30 /* CheckboxController.swift in Sources */,
 				5D7C019A1CB6709C006ED9CD /* hasPreviousVC.swift in Sources */,
 				5DF905B01C5F6D05003CE49C /* Emergency.swift in Sources */,
 				20D49B131CBE232F00DA5879 /* symptomInfo.swift in Sources */,

@@ -12,8 +12,11 @@ class CurrentSymptoms: UIViewController, UITableViewDataSource, UITableViewDeleg
     
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var continueButton: UIButton!
     
     var symptomsArray = symptoms
+    var selectedRows = [Int]()
+    var checkboxArray = [UITableViewCell]()
     let textCellIdentifier = "TextCell"
     
     
@@ -27,6 +30,8 @@ class CurrentSymptoms: UIViewController, UITableViewDataSource, UITableViewDeleg
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
+        roundedButton(continueButton)
         
         pushNavigation("Välj symptom")
     }
@@ -48,6 +53,10 @@ class CurrentSymptoms: UIViewController, UITableViewDataSource, UITableViewDeleg
         presentViewController(refreshAlert, animated: true, completion: nil)
     }
     
+    @IBAction func continueToSeriousSymptom(sender: AnyObject) {
+        self.performSegueWithIdentifier("segueToSeriousSymptom", sender: nil)
+    }
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -59,11 +68,15 @@ class CurrentSymptoms: UIViewController, UITableViewDataSource, UITableViewDeleg
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath)
-        
-        
         let row = indexPath.row
-
         cell.textLabel?.text = symptomsArray[row]
+        checkboxArray.append(cell)
+        
+        if self.selectedRows.contains(row) {
+            cell.imageView?.image = UIImage(named: "icon-checked")
+        } else {
+            cell.imageView?.image = UIImage(named: "icon-unchecked")
+        }
         
         return cell
     }
@@ -71,11 +84,15 @@ class CurrentSymptoms: UIViewController, UITableViewDataSource, UITableViewDeleg
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        //let row = indexPath.row
+        let row = indexPath.row
         
-        self.performSegueWithIdentifier("segueToSeriousSymptom", sender: nil)
-        
-
+        if self.selectedRows.contains(row) {
+            checkboxArray[row].imageView?.image = UIImage(named: "icon-unchecked")
+            selectedRows.removeAtIndex(selectedRows.indexOf(row)!)
+        } else {
+            checkboxArray[row].imageView?.image = UIImage(named: "icon-checked")
+            selectedRows.append(row)
+        }
     }
     
     override func didReceiveMemoryWarning() {
