@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -28,11 +28,11 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vI5-cD-Nhp">
-                                <rect key="frame" x="36" y="312" width="303" height="75"/>
+                                <rect key="frame" x="46" y="312" width="283" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="y2I-Rx-vC9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Känner du besvär?">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -48,7 +48,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Oee-f0-WhG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <state key="normal" title="Övrigt">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -59,10 +59,10 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="5Y8-DJ-0mb" firstAttribute="top" secondItem="vI5-cD-Nhp" secondAttribute="bottom" constant="80" id="06k-yg-4qp"/>
-                            <constraint firstItem="vI5-cD-Nhp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="0x1-sy-BZI"/>
+                            <constraint firstItem="vI5-cD-Nhp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="0x1-sy-BZI"/>
                             <constraint firstItem="NQa-eV-3RN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="6um-6j-G6g"/>
                             <constraint firstAttribute="bottomMargin" secondItem="oXI-f8-qXv" secondAttribute="bottom" id="6zX-0V-Uvg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vI5-cD-Nhp" secondAttribute="trailing" constant="20" id="Bdw-gE-UX5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vI5-cD-Nhp" secondAttribute="trailing" constant="30" id="Bdw-gE-UX5"/>
                             <constraint firstAttribute="trailing" secondItem="oXI-f8-qXv" secondAttribute="trailing" id="Evd-E1-ZwW"/>
                             <constraint firstAttribute="trailing" secondItem="NQa-eV-3RN" secondAttribute="trailing" id="T3k-5l-QWp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NQa-eV-3RN" secondAttribute="trailing" id="UJl-bq-45y"/>
@@ -122,7 +122,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="0zc-Ba-bvZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <state key="normal" title="Om hjärtinfarkt">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -136,7 +136,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="O0I-PV-66p"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <state key="normal" title="Vanliga symptom">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -150,7 +150,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="lz9-5K-g7j"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <state key="normal" title="Historik">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -164,7 +164,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="0Jq-hz-ikc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <state key="normal" title="Guide - Beslutsstöd vid besvär">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -261,14 +261,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="jtz-Ym-kWC">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tr1-in-8bc" userLabel="Breadcrumb">
-                                <rect key="frame" x="16" y="74" width="343" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nn1-3J-uAx">
-                                <rect key="frame" x="16" y="84" width="343" height="583"/>
+                                <rect key="frame" x="16" y="74" width="343" height="593"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="1" green="1" blue="1" alpha="0.25" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -279,13 +273,13 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AM3-lh-Bpc" id="tJh-TT-5TK">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XGe-om-oSo">
-                                                    <rect key="frame" x="15" y="0.0" width="313" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="313" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -303,18 +297,18 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0E-wz-a7w">
                                         <rect key="frame" x="187" y="100" width="0.0" height="0.0"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tagna Nitroglycerin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9i-Np-xpF">
-                                        <rect key="frame" x="114" y="140" width="146" height="20"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <rect key="frame" x="101.5" y="140" width="171.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Od-oI-q0C" userLabel="Info Left">
-                                        <rect key="frame" x="20" y="200" width="167" height="139"/>
+                                        <rect key="frame" x="20" y="203.5" width="167" height="147"/>
                                         <string key="text">Första:
 Andra:
 Tredje:
@@ -322,18 +316,22 @@ Tredje:
 Totalt:
 SOS:
 Meddelanden:</string>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwz-gg-FvF" userLabel="Info Right">
-                                        <rect key="frame" x="188" y="200" width="167" height="0.0"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <rect key="frame" x="188" y="203.5" width="167" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SfQ-G0-P0X">
-                                        <rect key="frame" x="167" y="597" width="41" height="30"/>
+                                        <rect key="frame" x="30" y="567" width="315" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Uqg-zQ-IwZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Stäng">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -359,6 +357,7 @@ Meddelanden:</string>
                                     <constraint firstItem="G9i-Np-xpF" firstAttribute="centerX" secondItem="Y2q-3t-V2I" secondAttribute="centerX" id="J9n-fF-rzI"/>
                                     <constraint firstItem="kwz-gg-FvF" firstAttribute="leading" secondItem="SnV-rT-VPf" secondAttribute="trailing" id="MNd-C2-FYt"/>
                                     <constraint firstItem="5Od-oI-q0C" firstAttribute="leading" secondItem="Y2q-3t-V2I" secondAttribute="leading" constant="20" id="MZF-Rr-s86"/>
+                                    <constraint firstItem="SfQ-G0-P0X" firstAttribute="leading" secondItem="Y2q-3t-V2I" secondAttribute="leading" constant="30" id="VSR-c1-YqQ"/>
                                     <constraint firstAttribute="bottom" secondItem="SnV-rT-VPf" secondAttribute="bottom" id="Whh-a9-FtL"/>
                                     <constraint firstAttribute="bottom" secondItem="MLH-pp-TvU" secondAttribute="bottom" id="dL8-FY-CbO"/>
                                     <constraint firstItem="SnV-rT-VPf" firstAttribute="centerX" secondItem="Y2q-3t-V2I" secondAttribute="centerX" id="eEV-kb-lgc"/>
@@ -370,12 +369,14 @@ Meddelanden:</string>
                                     <constraint firstAttribute="trailing" secondItem="kwz-gg-FvF" secondAttribute="trailing" constant="20" id="ooG-s8-wXU"/>
                                     <constraint firstItem="SnV-rT-VPf" firstAttribute="leading" secondItem="5Od-oI-q0C" secondAttribute="trailing" id="sPL-fM-gcE"/>
                                     <constraint firstItem="MLH-pp-TvU" firstAttribute="leading" secondItem="Y2q-3t-V2I" secondAttribute="leading" id="tbU-5K-CxY"/>
+                                    <constraint firstAttribute="trailing" secondItem="SfQ-G0-P0X" secondAttribute="trailing" constant="30" id="wMC-ET-JfT"/>
                                     <constraint firstAttribute="trailing" secondItem="MLH-pp-TvU" secondAttribute="trailing" id="xKe-6D-CJa"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="oER-sP-XEz"/>
                                         <exclude reference="hC4-FZ-xpY"/>
+                                        <exclude reference="44N-Tc-QTA"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -406,20 +407,14 @@ Meddelanden:</string>
                             <constraint firstItem="jtz-Ym-kWC" firstAttribute="leading" secondItem="b87-6B-UQ6" secondAttribute="leading" id="AmD-cI-vEi"/>
                             <constraint firstItem="Y2q-3t-V2I" firstAttribute="top" secondItem="b87-6B-UQ6" secondAttribute="topMargin" constant="100" id="FB5-1q-Wbr"/>
                             <constraint firstItem="jxA-Kz-8WR" firstAttribute="top" secondItem="nn1-3J-uAx" secondAttribute="bottom" id="I7W-q4-Kct"/>
-                            <constraint firstAttribute="trailing" secondItem="tr1-in-8bc" secondAttribute="trailing" constant="16" id="JgX-O9-VSn"/>
-                            <constraint firstItem="nn1-3J-uAx" firstAttribute="top" secondItem="tr1-in-8bc" secondAttribute="bottom" constant="10" id="Li5-FO-WHz"/>
-                            <constraint firstItem="tr1-in-8bc" firstAttribute="leading" secondItem="b87-6B-UQ6" secondAttribute="leading" constant="16" id="Rre-bB-M8n"/>
                             <constraint firstAttribute="trailing" secondItem="vAh-Su-A61" secondAttribute="trailing" id="UrW-NO-5Bv"/>
                             <constraint firstAttribute="trailing" secondItem="Y2q-3t-V2I" secondAttribute="trailing" id="ay8-FC-tn2"/>
                             <constraint firstItem="Y2q-3t-V2I" firstAttribute="leading" secondItem="b87-6B-UQ6" secondAttribute="leadingMargin" id="bjP-eW-L1v"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Y2q-3t-V2I" secondAttribute="trailing" id="egC-HU-9sn"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Y2q-3t-V2I" secondAttribute="bottom" id="fDL-hc-inW"/>
-                            <constraint firstItem="tr1-in-8bc" firstAttribute="top" secondItem="Cv1-3A-CRu" secondAttribute="bottom" constant="100" id="fYp-RP-3ZS"/>
                             <constraint firstItem="vAh-Su-A61" firstAttribute="top" secondItem="Cv1-3A-CRu" secondAttribute="bottom" id="gMc-Qd-bld"/>
-                            <constraint firstItem="tr1-in-8bc" firstAttribute="top" secondItem="vAh-Su-A61" secondAttribute="bottom" constant="10" id="htx-qt-jE5"/>
+                            <constraint firstItem="nn1-3J-uAx" firstAttribute="top" secondItem="vAh-Su-A61" secondAttribute="bottom" constant="10" id="iN7-BS-ren"/>
                             <constraint firstItem="vAh-Su-A61" firstAttribute="top" secondItem="b87-6B-UQ6" secondAttribute="top" constant="100" id="nQ0-iX-FGF"/>
-                            <constraint firstItem="nn1-3J-uAx" firstAttribute="top" secondItem="tr1-in-8bc" secondAttribute="bottom" constant="10" id="nft-Cc-a7J"/>
-                            <constraint firstItem="tr1-in-8bc" firstAttribute="top" secondItem="vAh-Su-A61" secondAttribute="bottom" constant="10" id="qNs-uQ-Bmt"/>
                             <constraint firstItem="Y2q-3t-V2I" firstAttribute="top" secondItem="vAh-Su-A61" secondAttribute="bottom" id="qsd-L1-OK5"/>
                             <constraint firstItem="jxA-Kz-8WR" firstAttribute="top" secondItem="jtz-Ym-kWC" secondAttribute="bottom" id="szj-CJ-QcT"/>
                             <constraint firstItem="jtz-Ym-kWC" firstAttribute="top" secondItem="b87-6B-UQ6" secondAttribute="top" id="ubl-eY-YiE"/>
@@ -434,13 +429,12 @@ Meddelanden:</string>
                                 <exclude reference="egC-HU-9sn"/>
                                 <exclude reference="qsd-L1-OK5"/>
                                 <exclude reference="nQ0-iX-FGF"/>
-                                <exclude reference="fYp-RP-3ZS"/>
-                                <exclude reference="qNs-uQ-Bmt"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="closeButton" destination="SfQ-G0-P0X" id="8xJ-uU-g0X"/>
                         <outlet property="emergencyModal" destination="Y2q-3t-V2I" id="yT4-xv-eq7"/>
                         <outlet property="infoLeft" destination="5Od-oI-q0C" id="nYy-aE-8t9"/>
                         <outlet property="infoRight" destination="kwz-gg-FvF" id="2cz-B4-5RN"/>
@@ -563,9 +557,9 @@ Meddelanden:</string>
                                 <exclude reference="dj5-pL-hoU"/>
                                 <exclude reference="dvw-n8-M08"/>
                                 <exclude reference="kJv-jR-AJc"/>
+                                <exclude reference="j8m-UK-3il"/>
                                 <exclude reference="aGp-Dc-Ryg"/>
                                 <exclude reference="wPa-Ml-7cB"/>
-                                <exclude reference="j8m-UK-3il"/>
                             </mask>
                         </variation>
                     </view>
@@ -625,7 +619,7 @@ Meddelanden:</string>
                                 <rect key="frame" x="0.0" y="64" width="375" height="936"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNH-j0-YHo">
-                                        <rect key="frame" x="8" y="10" width="98" height="23"/>
+                                        <rect key="frame" x="10" y="10" width="98" height="23"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Hjärtinfarkt">
                                                 <attributes>
@@ -649,10 +643,10 @@ Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</st
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="0.98470163990000004" green="1" blue="0.95170405579999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
-                                        <mutableString key="userLabel">En hjärtinfarkt beror oftast på att en blodpropp har bildats som helt eller delvis täpper till hjärtats kranskärl så att blodet inte kan passera som det brukar. Den del av hjärtat som skulle ha tagit emot blodet från det tilltäppta kärlet drabbas av syrebrist och hjärtmuskeln skadas.  Vid en hjärtinfarkt kan en skada uppkomma som gör att hjärtat inte klarar att arbeta lika bra som innan. Hjärtinfarkt kan vara en livshotande sjukdom och kräver omedelbar sjukhusvård. Ju tidigare du får vård desto större är möjligheten att behandla och påverka hjärtinfarktens utveckling.  Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</mutableString>
+                                        <string key="userLabel">En hjärtinfarkt beror oftast på att en blodpropp har bildats som helt eller delvis täpper till hjärtats kranskärl så att blodet inte kan passera som det brukar. Den del av hjärtat som skulle ha tagit emot blodet från det tilltäppta kärlet drabbas av syrebrist och hjärtmuskeln skadas.  Vid en hjärtinfarkt kan en skada uppkomma som gör att hjärtat inte klarar att arbeta lika bra som innan. Hjärtinfarkt kan vara en livshotande sjukdom och kräver omedelbar sjukhusvård. Ju tidigare du får vård desto större är möjligheten att behandla och påverka hjärtinfarktens utveckling.  Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</string>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-UJ-oNg">
-                                        <rect key="frame" x="8" y="375" width="329" height="23"/>
+                                        <rect key="frame" x="10" y="393" width="329" height="23"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Vaga symptom kan också vara infarkt">
                                                 <attributes>
@@ -665,7 +659,7 @@ Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</st
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pu8-b8-TXs">
-                                        <rect key="frame" x="10" y="404" width="355" height="115"/>
+                                        <rect key="frame" x="10" y="422" width="355" height="115"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="355" id="rGo-Ii-Wxf"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="355" id="sIK-Pr-vJd"/>
@@ -681,7 +675,7 @@ Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</st
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kq8-Lt-RH8">
-                                        <rect key="frame" x="8" y="531" width="337" height="23"/>
+                                        <rect key="frame" x="10" y="567" width="337" height="23"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Bröstsmärtor kan vara annat än infarkt">
                                                 <attributes>
@@ -694,17 +688,21 @@ Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</st
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klR-mH-wcy">
-                                        <rect key="frame" x="10" y="560" width="355" height="230"/>
+                                        <rect key="frame" x="10" y="596" width="355" height="325"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="355" id="PDV-4I-4tR"/>
                                         </constraints>
                                         <string key="text">Bröstsmärtor är en av de vanligaste anledningarna att söka akut sjukhusvård. Att du har ont i bröstet behöver inte betyda att du har ett hjärtproblem. De kan uppstå på grund av många andra orsaker, såsom:
 
-Irritation av slemhinnan i nedre delen av matstrupen
-Sjukdomar i magsäck och gallblåseväggen
-Sjukdomar i lungan
-Besvär i bröstkorgen eller överkroppens muskler
-Infektioner.</string>
+- Irritation av slemhinnan i nedre delen av matstrupen
+
+- Sjukdomar i magsäck och gallblåseväggen
+
+- Sjukdomar i lungan
+
+- Besvär i bröstkorgen eller överkroppens muskler
+
+- Infektioner</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="0.98470163990000004" green="1" blue="0.95170405579999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -713,18 +711,18 @@ Infektioner.</string>
                                 <constraints>
                                     <constraint firstItem="pu8-b8-TXs" firstAttribute="top" secondItem="bwK-UJ-oNg" secondAttribute="bottom" constant="6" id="1eJ-ZL-AW4"/>
                                     <constraint firstItem="klR-mH-wcy" firstAttribute="leading" secondItem="PvX-9e-nFY" secondAttribute="leading" constant="8" id="2Ph-lH-XjE"/>
-                                    <constraint firstItem="kNH-j0-YHo" firstAttribute="leading" secondItem="PvX-9e-nFY" secondAttribute="leading" constant="8" id="3nq-Ap-yla"/>
-                                    <constraint firstItem="bwK-UJ-oNg" firstAttribute="top" secondItem="SZw-ZO-kCO" secondAttribute="bottom" constant="12" id="7wC-B1-akb"/>
+                                    <constraint firstItem="kNH-j0-YHo" firstAttribute="leading" secondItem="PvX-9e-nFY" secondAttribute="leading" constant="10" id="3nq-Ap-yla"/>
+                                    <constraint firstItem="bwK-UJ-oNg" firstAttribute="top" secondItem="SZw-ZO-kCO" secondAttribute="bottom" constant="30" id="7wC-B1-akb"/>
                                     <constraint firstItem="pu8-b8-TXs" firstAttribute="centerX" secondItem="PvX-9e-nFY" secondAttribute="centerX" id="Eu5-Tk-GZT"/>
                                     <constraint firstItem="kNH-j0-YHo" firstAttribute="top" secondItem="PvX-9e-nFY" secondAttribute="top" constant="10" id="KbC-kC-ozy"/>
                                     <constraint firstItem="klR-mH-wcy" firstAttribute="top" secondItem="Kq8-Lt-RH8" secondAttribute="bottom" constant="6" id="UZF-VC-VgD"/>
-                                    <constraint firstItem="bwK-UJ-oNg" firstAttribute="leading" secondItem="PvX-9e-nFY" secondAttribute="leading" constant="8" id="ZuR-Wp-fN2"/>
+                                    <constraint firstItem="bwK-UJ-oNg" firstAttribute="leading" secondItem="PvX-9e-nFY" secondAttribute="leading" constant="10" id="ZuR-Wp-fN2"/>
                                     <constraint firstItem="pu8-b8-TXs" firstAttribute="top" secondItem="kNH-j0-YHo" secondAttribute="bottom" constant="1000" id="bwf-C6-FrP"/>
                                     <constraint firstItem="SZw-ZO-kCO" firstAttribute="top" secondItem="kNH-j0-YHo" secondAttribute="bottom" constant="5" id="e8s-Fx-AJ0"/>
                                     <constraint firstItem="klR-mH-wcy" firstAttribute="centerX" secondItem="PvX-9e-nFY" secondAttribute="centerX" id="hdy-tH-YYM"/>
                                     <constraint firstItem="SZw-ZO-kCO" firstAttribute="centerX" secondItem="PvX-9e-nFY" secondAttribute="centerX" id="lZ7-Il-Tkx"/>
-                                    <constraint firstItem="Kq8-Lt-RH8" firstAttribute="leading" secondItem="PvX-9e-nFY" secondAttribute="leading" constant="8" id="n61-qI-Xnh"/>
-                                    <constraint firstItem="Kq8-Lt-RH8" firstAttribute="top" secondItem="pu8-b8-TXs" secondAttribute="bottom" constant="12" id="wy1-XZ-Jdl"/>
+                                    <constraint firstItem="Kq8-Lt-RH8" firstAttribute="leading" secondItem="PvX-9e-nFY" secondAttribute="leading" constant="10" id="n61-qI-Xnh"/>
+                                    <constraint firstItem="Kq8-Lt-RH8" firstAttribute="top" secondItem="pu8-b8-TXs" secondAttribute="bottom" constant="30" id="wy1-XZ-Jdl"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -803,7 +801,7 @@ Infektioner.</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UKR-pL-lWQ" id="Ra7-vU-bWo">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eck-RJ-RYC">
@@ -894,14 +892,14 @@ Infektioner.</string>
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTV-O0-xSj" userLabel="SOS-text">
-                                        <rect key="frame" x="0.0" y="120" width="375" height="40"/>
+                                        <rect key="frame" x="0.0" y="120" width="375" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.5" id="Cuf-vc-rUy"/>
                                             <constraint firstAttribute="width" constant="187.5" id="WmV-ZO-gqG"/>
                                         </constraints>
                                         <string key="text">Det är möjligt att du har en hjärtinfarkt.
 Ring 112 efter en ambulans!</string>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
@@ -912,7 +910,7 @@ Ring 112 efter en ambulans!</string>
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Dq-f3-b3L">
-                                        <rect key="frame" x="137" y="190" width="100" height="100"/>
+                                        <rect key="frame" x="137" y="198" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="c2D-L5-sq0"/>
                                             <constraint firstAttribute="width" constant="100" id="dbn-kn-gJ7"/>
@@ -930,8 +928,8 @@ Ring 112 efter en ambulans!</string>
                                             <action selector="sosCall:" destination="siD-ZO-fNb" eventType="touchUpInside" id="Q2N-x9-UiJ"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4h9-ct-Vie" userLabel="Click text">
-                                        <rect key="frame" x="0.0" y="310" width="375" height="120"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4h9-ct-Vie" userLabel="Click text">
+                                        <rect key="frame" x="0.0" y="318" width="375" height="118"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="187.5" id="0lw-B0-LoP"/>
                                             <constraint firstAttribute="height" constant="20.5" id="rC1-EC-fUW"/>
@@ -940,9 +938,8 @@ Ring 112 efter en ambulans!</string>
 för att kontakta SOS
 
 
-
 Din nuvarande position</string>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
@@ -952,13 +949,13 @@ Din nuvarande position</string>
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Adess:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12H-cE-JuX" userLabel="SOS Address">
-                                        <rect key="frame" x="0.0" y="440" width="375" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adess:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12H-cE-JuX" userLabel="SOS Address">
+                                        <rect key="frame" x="0.0" y="446" width="375" height="23.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.5" id="QWD-sL-jWZ"/>
                                             <constraint firstAttribute="width" constant="187.5" id="Uge-8Y-qFL"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
@@ -1083,9 +1080,9 @@ Din nuvarande position</string>
                                         </state>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="nke-Wg-8fw"/>
                                                 <exclude reference="X2o-VU-dUq"/>
                                                 <exclude reference="lBv-ti-Q1B"/>
+                                                <exclude reference="nke-Wg-8fw"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -1129,7 +1126,7 @@ Din nuvarande position</string>
                                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wDJ-Xw-3ZD" id="i5X-lY-dI0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="icon-unchecked" translatesAutoresizingMaskIntoConstraints="NO" id="odH-Dz-U1T">
@@ -1266,15 +1263,13 @@ Din nuvarande position</string>
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xw-T1-hZr" userLabel="Question">
-                                        <rect key="frame" x="103" y="84" width="171" height="40"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Har du haft hjärtinfarkt tidigare?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xw-T1-hZr" userLabel="Question">
+                                        <rect key="frame" x="30" y="84" width="315" height="57.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.5" id="hTn-RS-OFA"/>
                                             <constraint firstAttribute="width" constant="187.5" id="yE6-1i-Cgq"/>
                                         </constraints>
-                                        <string key="text">Har du haft hjärtinfarkt
-tidigare?</string>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
@@ -1285,11 +1280,11 @@ tidigare?</string>
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ort-wC-M3e">
-                                        <rect key="frame" x="58" y="289" width="259" height="50"/>
+                                        <rect key="frame" x="38" y="289" width="299" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="E4S-SQ-hoE"/>
+                                            <constraint firstAttribute="height" constant="60" id="E4S-SQ-hoE"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                         <state key="normal" title="Nej">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1299,11 +1294,11 @@ tidigare?</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfL-94-OrI">
-                                        <rect key="frame" x="58" y="184" width="259" height="75"/>
+                                        <rect key="frame" x="38" y="184" width="299" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="cqX-6P-eUt"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <state key="normal" title="Ja">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -1326,20 +1321,22 @@ tidigare?</string>
                                     <constraint firstItem="aTD-KV-L6U" firstAttribute="top" secondItem="MvH-1E-dU2" secondAttribute="top" id="P1l-wY-Qod"/>
                                     <constraint firstItem="aTD-KV-L6U" firstAttribute="top" secondItem="MvH-1E-dU2" secondAttribute="top" id="Q7z-oo-CKk"/>
                                     <constraint firstItem="HJC-Di-1Ol" firstAttribute="top" secondItem="MvH-1E-dU2" secondAttribute="top" constant="20" id="QE5-dw-ZDK"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="XfL-94-OrI" secondAttribute="trailing" constant="50" id="UUK-gw-jnt"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="XfL-94-OrI" secondAttribute="trailing" constant="30" id="UUK-gw-jnt"/>
+                                    <constraint firstItem="8Xw-T1-hZr" firstAttribute="leading" secondItem="MvH-1E-dU2" secondAttribute="leading" constant="30" id="W4W-PS-YgO"/>
                                     <constraint firstAttribute="bottom" secondItem="aTD-KV-L6U" secondAttribute="bottom" id="c4y-zS-acL"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="aTD-KV-L6U" secondAttribute="bottom" id="dSJ-fV-3fj"/>
                                     <constraint firstItem="8Xw-T1-hZr" firstAttribute="top" secondItem="HJC-Di-1Ol" secondAttribute="bottom" constant="20" id="f52-TL-EHw"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="aTD-KV-L6U" secondAttribute="trailing" id="fF4-Kb-vFN"/>
                                     <constraint firstItem="Ort-wC-M3e" firstAttribute="top" secondItem="XfL-94-OrI" secondAttribute="bottom" constant="30" id="gBu-Oz-nsG"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Xw-T1-hZr" secondAttribute="trailing" constant="30" id="hwK-UW-5lx"/>
                                     <constraint firstItem="XfL-94-OrI" firstAttribute="centerX" secondItem="MvH-1E-dU2" secondAttribute="centerX" id="iaA-qd-qdu"/>
                                     <constraint firstItem="XfL-94-OrI" firstAttribute="top" secondItem="HJC-Di-1Ol" secondAttribute="bottom" constant="120" id="j3S-Te-Kpy"/>
-                                    <constraint firstItem="XfL-94-OrI" firstAttribute="leading" secondItem="MvH-1E-dU2" secondAttribute="leadingMargin" constant="50" id="kXt-vn-lQL"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="Ort-wC-M3e" secondAttribute="trailing" constant="50" id="nIg-3M-Djw"/>
+                                    <constraint firstItem="XfL-94-OrI" firstAttribute="leading" secondItem="MvH-1E-dU2" secondAttribute="leadingMargin" constant="30" id="kXt-vn-lQL"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Ort-wC-M3e" secondAttribute="trailing" constant="30" id="nIg-3M-Djw"/>
                                     <constraint firstItem="HJC-Di-1Ol" firstAttribute="leading" secondItem="MvH-1E-dU2" secondAttribute="leading" id="oCQ-0J-XDz"/>
                                     <constraint firstItem="8Xw-T1-hZr" firstAttribute="centerX" secondItem="MvH-1E-dU2" secondAttribute="centerX" id="xCV-El-TpL"/>
                                     <constraint firstItem="aTD-KV-L6U" firstAttribute="leading" secondItem="MvH-1E-dU2" secondAttribute="leading" id="xQV-zK-M8F"/>
-                                    <constraint firstItem="Ort-wC-M3e" firstAttribute="leading" secondItem="MvH-1E-dU2" secondAttribute="leadingMargin" constant="50" id="yWT-Fa-prW"/>
+                                    <constraint firstItem="Ort-wC-M3e" firstAttribute="leading" secondItem="MvH-1E-dU2" secondAttribute="leadingMargin" constant="30" id="yWT-Fa-prW"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -1348,6 +1345,7 @@ tidigare?</string>
                                         <exclude reference="Q7z-oo-CKk"/>
                                         <exclude reference="dSJ-fV-3fj"/>
                                         <exclude reference="fF4-Kb-vFN"/>
+                                        <exclude reference="xCV-El-TpL"/>
                                         <exclude reference="3yA-W6-B0Z"/>
                                         <exclude reference="Aba-CS-f2U"/>
                                     </mask>
@@ -1408,15 +1406,15 @@ tidigare?</string>
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVf-XZ-Ou4" userLabel="Question">
-                                        <rect key="frame" x="77" y="84" width="222" height="40"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVf-XZ-Ou4" userLabel="Question">
+                                        <rect key="frame" x="25.5" y="84" width="325.5" height="57.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.5" id="50q-Jh-zMj"/>
                                             <constraint firstAttribute="width" constant="187.5" id="l12-3X-59W"/>
                                         </constraints>
                                         <string key="text">Har du utskriven nitroglycerin
 åtkomligt?</string>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
@@ -1427,11 +1425,11 @@ tidigare?</string>
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyD-Pd-c5p">
-                                        <rect key="frame" x="58" y="289" width="259" height="50"/>
+                                        <rect key="frame" x="38" y="289" width="299" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="0Ll-Lv-eqm"/>
+                                            <constraint firstAttribute="height" constant="60" id="0Ll-Lv-eqm"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                         <state key="normal" title="Nej">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1441,11 +1439,11 @@ tidigare?</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fs6-f4-OnW">
-                                        <rect key="frame" x="58" y="184" width="259" height="75"/>
+                                        <rect key="frame" x="38" y="184" width="299" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="AXN-9v-a74"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <state key="normal" title="Ja">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -1458,17 +1456,17 @@ tidigare?</string>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailingMargin" secondItem="EyD-Pd-c5p" secondAttribute="trailing" constant="50" id="0g0-pk-8WJ"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="EyD-Pd-c5p" secondAttribute="trailing" constant="30" id="0g0-pk-8WJ"/>
                                     <constraint firstItem="EyD-Pd-c5p" firstAttribute="top" secondItem="fs6-f4-OnW" secondAttribute="bottom" constant="80" id="30I-xR-k4e"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="fs6-f4-OnW" secondAttribute="trailing" constant="50" id="3op-az-iFd"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="fs6-f4-OnW" secondAttribute="trailing" constant="30" id="3op-az-iFd"/>
                                     <constraint firstItem="2pt-yb-E5h" firstAttribute="leading" secondItem="SGn-kr-wSx" secondAttribute="leading" id="Anq-ty-nZ2"/>
-                                    <constraint firstItem="EyD-Pd-c5p" firstAttribute="leading" secondItem="SGn-kr-wSx" secondAttribute="leadingMargin" constant="50" id="EGy-zR-nJ6"/>
+                                    <constraint firstItem="EyD-Pd-c5p" firstAttribute="leading" secondItem="SGn-kr-wSx" secondAttribute="leadingMargin" constant="30" id="EGy-zR-nJ6"/>
                                     <constraint firstItem="EyD-Pd-c5p" firstAttribute="top" secondItem="fs6-f4-OnW" secondAttribute="bottom" constant="80" id="FsT-V1-6Qw"/>
                                     <constraint firstItem="fs6-f4-OnW" firstAttribute="centerX" secondItem="SGn-kr-wSx" secondAttribute="centerX" id="Jwz-Wb-Bvb"/>
                                     <constraint firstItem="fs6-f4-OnW" firstAttribute="top" secondItem="ZLv-dE-W4q" secondAttribute="bottom" constant="120" id="PhJ-MQ-OOZ"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="2pt-yb-E5h" secondAttribute="trailing" id="Qqe-fd-2Mu"/>
                                     <constraint firstItem="2pt-yb-E5h" firstAttribute="leading" secondItem="SGn-kr-wSx" secondAttribute="leadingMargin" id="Tw2-pg-h5k"/>
-                                    <constraint firstItem="fs6-f4-OnW" firstAttribute="leading" secondItem="SGn-kr-wSx" secondAttribute="leadingMargin" constant="50" id="U1x-cb-oJG"/>
+                                    <constraint firstItem="fs6-f4-OnW" firstAttribute="leading" secondItem="SGn-kr-wSx" secondAttribute="leadingMargin" constant="30" id="U1x-cb-oJG"/>
                                     <constraint firstAttribute="trailing" secondItem="ZLv-dE-W4q" secondAttribute="trailing" id="Wge-aa-g0m"/>
                                     <constraint firstItem="ZLv-dE-W4q" firstAttribute="leading" secondItem="SGn-kr-wSx" secondAttribute="leading" id="XHh-1O-OlA"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="2pt-yb-E5h" secondAttribute="bottom" id="Yl0-yZ-8tg"/>
@@ -1574,7 +1572,7 @@ tidigare?</string>
                                     <constraint firstAttribute="width" constant="120" id="D87-gJ-25U"/>
                                     <constraint firstAttribute="height" constant="50" id="L7y-yQ-wle"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="19"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
@@ -1739,7 +1737,7 @@ tidigare?</string>
         <image name="logo" width="640" height="555"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="t80-07-aaW"/>
+        <segue reference="iyV-Z5-MCq"/>
         <segue reference="2Sg-g8-CLL"/>
     </inferredMetricsTieBreakers>
 </document>

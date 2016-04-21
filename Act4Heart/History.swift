@@ -21,6 +21,7 @@ class History: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var emergencyModal: UIView!
     @IBOutlet weak var infoLeft: UILabel!
     @IBOutlet weak var infoRight: UILabel!
+    @IBOutlet weak var closeButton: UIButton!
     
     @IBAction func closeModalClicked(sender: AnyObject) {
         emergencyModal.hidden = true
@@ -29,6 +30,8 @@ class History: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBAction func menuClicked(sender: AnyObject) {
         self.performSegueWithIdentifier("historyToMenu", sender: nil)
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,14 +51,22 @@ class History: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.navBar.shadowImage = UIImage()
         self.navBar.translucent = true
         
+        roundedButton(closeButton)
+        
         pushNavigation("Historik")
         
         // Do any additional setup after loading the view.
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func roundedButton(button: UIButton) {
+        button.layer.cornerRadius = 3
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.whiteColor().CGColor
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
