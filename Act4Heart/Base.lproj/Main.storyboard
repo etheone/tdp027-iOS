@@ -1541,7 +1541,7 @@ Din nuvarande position</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="KSP-5x-oRr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:05" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSe-5I-SPY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSe-5I-SPY">
                                 <rect key="frame" x="87" y="144" width="200" height="200"/>
                                 <color key="backgroundColor" red="0.062745098040000002" green="0.56862745100000001" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1750,7 +1750,7 @@ Din nuvarande position</string>
         <image name="logo" width="640" height="555"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sla-MD-UUd"/>
-        <segue reference="jLj-dW-2T6"/>
+        <segue reference="2FG-Ot-6ZO"/>
+        <segue reference="2Sg-g8-CLL"/>
     </inferredMetricsTieBreakers>
 </document>

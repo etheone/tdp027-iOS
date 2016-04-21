@@ -104,6 +104,7 @@ class Emergency: UIViewController {
         currentPage += 1
         if(currentPage <= numberOfPages) {
             blueClock!.reset()
+            blueWatch.text = "00:30"
             blueClock!.play()
             pushNavigation("Återfall - Steg \(currentPage)")
         }
@@ -198,7 +199,7 @@ class Emergency: UIViewController {
         self.navBar.translucent = true
         
         //imerValue: Int, clockType: String, timerLabel: UILabel)
-        self.blueClock = Clock(timerValue: (5), countDown: true, timerLabel: blueWatch, parent: self)
+        self.blueClock = Clock(timerValue: (30), countDown: true, timerLabel: blueWatch, parent: self)
         self.redClock = Clock(timerValue: (0), countDown: false, timerLabel: redWatch, parent: self)
         
         roundedButton(continueButton)
