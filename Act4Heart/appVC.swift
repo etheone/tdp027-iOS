@@ -55,6 +55,8 @@ class appVC: UIViewController {
         nextButton.addTarget(self, action: #selector(appVC.changeImage(_:)), forControlEvents: .TouchUpInside)
         
         backButton.addTarget(self, action: #selector(appVC.changeImage(_:)), forControlEvents: .TouchUpInside)
+        
+        backButton.hidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -84,6 +86,21 @@ class appVC: UIViewController {
                 let imageToSet = "image" + String(currentImage)
                 imageView.image = UIImage(named: imageToSet)
             }
+        }
+        
+        print(currentImage)
+        
+        if(currentImage == 1) {
+            
+            backButton.hidden = true
+            
+        } else if(currentImage == 16) {
+          
+            nextButton.hidden = true
+            
+        } else {
+            nextButton.hidden = false
+            backButton.hidden = false
         }
         
     }
