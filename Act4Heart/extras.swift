@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension String {
     
@@ -39,7 +40,7 @@ extension Dictionary {
 func pushNavigation(location: String) -> NSURLSessionTask {
     
     let url = "https://act4heart-act4heart.rhcloud.com/sendData"
-  
+    
     let timeInterval = NSDate().timeIntervalSince1970
     let params:[String: AnyObject] = ["user":user, "path":location, "unixtime":String(timeInterval)]
     
@@ -59,3 +60,35 @@ func pushNavigation(location: String) -> NSURLSessionTask {
     return task
     
 }
+
+// Design for rounded buttons
+func roundedButton(button:UIButton) {
+    button.layer.cornerRadius = 3
+    button.layer.borderWidth = 1
+    button.layer.borderColor = UIColor.whiteColor().CGColor
+    button.clipsToBounds = true
+}
+
+var symptoms = [
+    "Smärta i bröstet",
+    "Obehagskänsla i bröstet",
+    "Illamående",
+    "Andnöd",
+    "Kallsvettning",
+    "Rädsla och ångest",
+    "Värk i ryggen",
+    "Hjärtklappning och yrsel",
+    "Influensaliknande besvär"
+]
+
+var symptomsInfo = [
+    "Stark och ihållande bröstsmärta som kan stråla ut i armarna",
+    "Obehagskänsla i bröstet som kan stråla upp mot halsen, käkarna och skuldrorna",
+    "Illamående",
+    "Andnöd",
+    "Kallsvettning",
+    "Rädsla och ångest",
+    "Värk i ryggen",
+    "Hjärtklappning och yrsel",
+    "Influensaliknande besvär samtidigt med bröstsmärtor"
+]

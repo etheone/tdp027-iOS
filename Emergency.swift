@@ -53,16 +53,6 @@ class Emergency: UIViewController {
         UIApplication.sharedApplication().openURL(NSURL(string: "act4heart://")!)
     }
     
-    func changeSoundIcon() {
-        if soundOn {
-            let newImage = UIImage(named:"ic_volume_up_white_36pt.png")
-            soundIcon.image = newImage
-        } else {
-            let newImage = UIImage(named:"ic_volume_off_white_36pt.png")
-            soundIcon.image = newImage
-        }
-    }
-    
     @IBAction func noEmergencyClicked(sender: AnyObject) {
         blueWatch.hidden = true
         noEmergencyButton.hidden = true
@@ -88,10 +78,19 @@ class Emergency: UIViewController {
     }
     
     @IBAction func soundChanger(sender: AnyObject) {
-        print("click")
         soundOn = !soundOn
         NSUserDefaults.standardUserDefaults().setBool(soundOn, forKey: "soundOn")
         changeSoundIcon()
+    }
+    
+    func changeSoundIcon() {
+        if soundOn {
+            let newImage = UIImage(named:"ic_volume_up_white_36pt.png")
+            soundIcon.image = newImage
+        } else {
+            let newImage = UIImage(named:"ic_volume_off_white_36pt.png")
+            soundIcon.image = newImage
+        }
     }
     
     func parseDate() -> String {
@@ -173,13 +172,6 @@ class Emergency: UIViewController {
         
     }
     
-    func roundedButtons(button:UIButton) {
-        button.layer.cornerRadius = 3
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.whiteColor().CGColor
-        button.clipsToBounds = true
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -209,8 +201,8 @@ class Emergency: UIViewController {
         self.blueClock = Clock(timerValue: (5), countDown: true, timerLabel: blueWatch, parent: self)
         self.redClock = Clock(timerValue: (0), countDown: false, timerLabel: redWatch, parent: self)
         
-        roundedButtons(continueButton)
-        roundedButtons(noEmergencyButton)
+        roundedButton(continueButton)
+        roundedButton(noEmergencyButton)
         
         redWatch.layer.cornerRadius = 3
         redWatch.layer.borderWidth = 1

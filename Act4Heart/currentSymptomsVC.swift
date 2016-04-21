@@ -13,15 +13,21 @@ class CurrentSymptoms: UIViewController, UITableViewDataSource, UITableViewDeleg
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var soundIcon: UIBarButtonItem!
     
     var symptomsArray = symptoms
     var selectedRows = [Int]()
     var checkboxArray = [UITableViewCell]()
+    var soundOn : Bool = true
     let textCellIdentifier = "TextCell"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Gets saved sound option and updates icon if needed
+        self.soundOn = NSUserDefaults.standardUserDefaults().boolForKey("soundOn")
+        changeSoundIcon()
         
         self.navBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navBar.shadowImage = UIImage()
@@ -34,12 +40,6 @@ class CurrentSymptoms: UIViewController, UITableViewDataSource, UITableViewDeleg
         roundedButton(continueButton)
         
         pushNavigation("Välj symptom")
-    }
-    
-    func roundedButton(button: UIButton) {
-        button.layer.cornerRadius = 3
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.whiteColor().CGColor
     }
     
     @IBAction func backToMenu(sender: AnyObject) {
@@ -55,6 +55,24 @@ class CurrentSymptoms: UIViewController, UITableViewDataSource, UITableViewDeleg
     
     @IBAction func continueToSeriousSymptom(sender: AnyObject) {
         self.performSegueWithIdentifier("segueToSeriousSymptom", sender: nil)
+    }
+    
+    
+    // Sound icon
+    @IBAction func soundChanger(sender: AnyObject) {
+        soundOn = !soundOn
+        NSUserDefaults.standardUserDefaults().setBool(soundOn, forKey: "soundOn")
+        changeSoundIcon()
+    }
+    
+    func changeSoundIcon() {
+        if soundOn {
+            let newImage = UIImage(named:"ic_volume_up_white_36pt.png")
+            soundIcon.image = newImage
+        } else {
+            let newImage = UIImage(named:"ic_volume_off_white_36pt.png")
+            soundIcon.image = newImage
+        }
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

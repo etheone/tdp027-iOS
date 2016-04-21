@@ -13,11 +13,16 @@ class HasPrevious: UIViewController {
     @IBOutlet weak var miscButton: UIButton!
     @IBOutlet weak var emergencyButton: UIButton!
     @IBOutlet weak var navBar: UINavigationBar!
+    @IBOutlet weak var soundIcon: UIBarButtonItem!
+    
+    var soundOn : Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        // Gets saved sound option and updates icon if needed
+        self.soundOn = NSUserDefaults.standardUserDefaults().boolForKey("soundOn")
+        changeSoundIcon()
         
         self.navBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navBar.shadowImage = UIImage()
@@ -29,12 +34,6 @@ class HasPrevious: UIViewController {
         pushNavigation("Har haft infarkt tidigare")
     }
     
-    func roundedButton(button: UIButton) {
-        button.layer.cornerRadius = 3
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.whiteColor().CGColor
-    }
-    
     @IBAction func backToMenu(sender: AnyObject) {
         let refreshAlert = UIAlertController(title: "Tillbaka till menyn", message: "Du kan inte ångra detta val.", preferredStyle: UIAlertControllerStyle.Alert)
         refreshAlert.addAction(UIAlertAction(title: "Fortsätt", style: .Default, handler: { (action: UIAlertAction!) in
@@ -44,6 +43,23 @@ class HasPrevious: UIViewController {
             // Cancel
         }))
         presentViewController(refreshAlert, animated: true, completion: nil)
+    }
+    
+    // Sound icon
+    @IBAction func soundChanger(sender: AnyObject) {
+        soundOn = !soundOn
+        NSUserDefaults.standardUserDefaults().setBool(soundOn, forKey: "soundOn")
+        changeSoundIcon()
+    }
+    
+    func changeSoundIcon() {
+        if soundOn {
+            let newImage = UIImage(named:"ic_volume_up_white_36pt.png")
+            soundIcon.image = newImage
+        } else {
+            let newImage = UIImage(named:"ic_volume_off_white_36pt.png")
+            soundIcon.image = newImage
+        }
     }
     
     override func didReceiveMemoryWarning() {
