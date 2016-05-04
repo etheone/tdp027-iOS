@@ -28,7 +28,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vI5-cD-Nhp">
-                                <rect key="frame" x="46" y="307" width="283" height="80"/>
+                                <rect key="frame" x="31" y="307" width="313" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="y2I-Rx-vC9"/>
                                 </constraints>
@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Y8-DJ-0mb">
-                                <rect key="frame" x="46" y="417" width="283" height="60"/>
+                                <rect key="frame" x="31" y="417" width="313" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Oee-f0-WhG"/>
                                 </constraints>
@@ -59,22 +59,22 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="5Y8-DJ-0mb" firstAttribute="top" secondItem="vI5-cD-Nhp" secondAttribute="bottom" constant="80" id="06k-yg-4qp"/>
-                            <constraint firstItem="vI5-cD-Nhp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="0x1-sy-BZI"/>
+                            <constraint firstItem="vI5-cD-Nhp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="0x1-sy-BZI"/>
                             <constraint firstItem="NQa-eV-3RN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="6um-6j-G6g"/>
                             <constraint firstAttribute="bottomMargin" secondItem="oXI-f8-qXv" secondAttribute="bottom" id="6zX-0V-Uvg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vI5-cD-Nhp" secondAttribute="trailing" constant="30" id="Bdw-gE-UX5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vI5-cD-Nhp" secondAttribute="trailing" constant="15" id="Bdw-gE-UX5"/>
                             <constraint firstAttribute="trailing" secondItem="oXI-f8-qXv" secondAttribute="trailing" id="Evd-E1-ZwW"/>
                             <constraint firstAttribute="trailing" secondItem="NQa-eV-3RN" secondAttribute="trailing" id="T3k-5l-QWp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NQa-eV-3RN" secondAttribute="trailing" id="UJl-bq-45y"/>
                             <constraint firstItem="oXI-f8-qXv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bFV-if-Wwm"/>
                             <constraint firstItem="oXI-f8-qXv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bvX-V7-qFy"/>
-                            <constraint firstItem="5Y8-DJ-0mb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="dTB-jz-0Pb"/>
+                            <constraint firstItem="5Y8-DJ-0mb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="dTB-jz-0Pb"/>
                             <constraint firstItem="oXI-f8-qXv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="ewy-MK-JQV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oXI-f8-qXv" secondAttribute="trailing" id="hsj-b6-vYs"/>
                             <constraint firstItem="vI5-cD-Nhp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iMG-iY-ZbQ"/>
                             <constraint firstItem="5Y8-DJ-0mb" firstAttribute="top" secondItem="vI5-cD-Nhp" secondAttribute="bottom" constant="80" id="jrw-cJ-fQ1"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Y8-DJ-0mb" secondAttribute="bottom" constant="190" id="k7J-oA-KMs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5Y8-DJ-0mb" secondAttribute="trailing" constant="30" id="oVL-Sk-MeD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Y8-DJ-0mb" secondAttribute="trailing" constant="15" id="oVL-Sk-MeD"/>
                             <constraint firstItem="NQa-eV-3RN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rIc-NF-jHL"/>
                             <constraint firstItem="5Y8-DJ-0mb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wdc-6v-24x"/>
                             <constraint firstItem="5Y8-DJ-0mb" firstAttribute="top" secondItem="vI5-cD-Nhp" secondAttribute="bottom" constant="30" id="x5D-Ac-NSd"/>
@@ -122,7 +122,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="0zc-Ba-bvZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Om hjärtinfarkt">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -136,7 +136,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="O0I-PV-66p"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Vanliga symptom">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -150,7 +150,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="lz9-5K-g7j"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Historik">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -164,7 +164,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="0Jq-hz-ikc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Guide - Beslutsstöd vid besvär">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -601,23 +601,23 @@ Meddelanden:</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PvX-9e-nFY">
-                                <rect key="frame" x="0.0" y="64" width="375" height="936"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PvX-9e-nFY">
+                                <rect key="frame" x="0.0" y="64" width="375" height="974"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNH-j0-YHo">
-                                        <rect key="frame" x="10" y="10" width="98" height="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNH-j0-YHo">
+                                        <rect key="frame" x="10" y="10" width="115" height="23"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Hjärtinfarkt">
                                                 <attributes>
                                                     <color key="NSColor" red="0.98470163990000004" green="1" blue="0.95170405579999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="19" name="HelveticaNeue-Medium"/>
+                                                    <font key="NSFont" size="22" name="HelveticaNeue-Medium"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZw-ZO-kCO">
-                                        <rect key="frame" x="10" y="38" width="355" height="325"/>
+                                        <rect key="frame" x="10" y="42" width="355" height="502"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="355" id="85C-oj-JAg"/>
                                         </constraints>
@@ -626,18 +626,20 @@ Meddelanden:</string>
 Vid en hjärtinfarkt kan en skada uppkomma som gör att hjärtat inte klarar att arbeta lika bra som innan. Hjärtinfarkt kan vara en livshotande sjukdom och kräver omedelbar sjukhusvård. Ju tidigare du får vård desto större är möjligheten att behandla och påverka hjärtinfarktens utveckling.
 
 Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.98470163990000004" green="1" blue="0.95170405579999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <string key="userLabel">En hjärtinfarkt beror oftast på att en blodpropp har bildats som helt eller delvis täpper till hjärtats kranskärl så att blodet inte kan passera som det brukar. Den del av hjärtat som skulle ha tagit emot blodet från det tilltäppta kärlet drabbas av syrebrist och hjärtmuskeln skadas.  Vid en hjärtinfarkt kan en skada uppkomma som gör att hjärtat inte klarar att arbeta lika bra som innan. Hjärtinfarkt kan vara en livshotande sjukdom och kräver omedelbar sjukhusvård. Ju tidigare du får vård desto större är möjligheten att behandla och påverka hjärtinfarktens utveckling.  Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</string>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-UJ-oNg">
-                                        <rect key="frame" x="10" y="393" width="329" height="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-UJ-oNg">
+                                        <rect key="frame" x="10" y="574" width="311" height="53"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Vaga symptom kan också vara infarkt">
+                                            <fragment>
+                                                <string key="content">Vaga symptom kan också vara
+infarkt</string>
                                                 <attributes>
                                                     <color key="NSColor" red="0.98470163990000004" green="1" blue="0.95170405579999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="19" name="HelveticaNeue-Medium"/>
+                                                    <font key="NSFont" size="22" name="HelveticaNeue-Medium"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -645,13 +647,13 @@ Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</st
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pu8-b8-TXs">
-                                        <rect key="frame" x="10" y="422" width="355" height="115"/>
+                                        <rect key="frame" x="10" y="633" width="355" height="144"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="355" id="rGo-Ii-Wxf"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="355" id="sIK-Pr-vJd"/>
                                         </constraints>
                                         <string key="text">Om du är äldre eller har diabetes och får hjärtinfarkt, är det inte säkert att du får ont i bröstet. Symtomen kan då vara diffusa, som andnöd eller stark trötthet. Smärtan kan vara mindre intensiv och kan misstolkas som mindre allvarlig.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.98470163990000004" green="1" blue="0.95170405579999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
@@ -660,13 +662,15 @@ Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</st
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kq8-Lt-RH8">
-                                        <rect key="frame" x="10" y="567" width="337" height="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kq8-Lt-RH8">
+                                        <rect key="frame" x="10" y="807" width="320" height="53"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Bröstsmärtor kan vara annat än infarkt">
+                                            <fragment>
+                                                <string key="content">Bröstsmärtor kan vara annat än
+infarkt</string>
                                                 <attributes>
                                                     <color key="NSColor" red="0.98470163990000004" green="1" blue="0.95170405579999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="19" name="HelveticaNeue-Medium"/>
+                                                    <font key="NSFont" size="22" name="HelveticaNeue-Medium"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -674,7 +678,7 @@ Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</st
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klR-mH-wcy">
-                                        <rect key="frame" x="10" y="596" width="355" height="325"/>
+                                        <rect key="frame" x="10" y="866" width="355" height="454"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="355" id="PDV-4I-4tR"/>
                                         </constraints>
@@ -689,7 +693,7 @@ Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</st
 - Besvär i bröstkorgen eller överkroppens muskler
 
 - Infektioner</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.98470163990000004" green="1" blue="0.95170405579999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -703,7 +707,6 @@ Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</st
                                     <constraint firstItem="kNH-j0-YHo" firstAttribute="top" secondItem="PvX-9e-nFY" secondAttribute="top" constant="10" id="KbC-kC-ozy"/>
                                     <constraint firstItem="klR-mH-wcy" firstAttribute="top" secondItem="Kq8-Lt-RH8" secondAttribute="bottom" constant="6" id="UZF-VC-VgD"/>
                                     <constraint firstItem="bwK-UJ-oNg" firstAttribute="leading" secondItem="PvX-9e-nFY" secondAttribute="leading" constant="10" id="ZuR-Wp-fN2"/>
-                                    <constraint firstItem="pu8-b8-TXs" firstAttribute="top" secondItem="kNH-j0-YHo" secondAttribute="bottom" constant="1000" id="bwf-C6-FrP"/>
                                     <constraint firstItem="SZw-ZO-kCO" firstAttribute="top" secondItem="kNH-j0-YHo" secondAttribute="bottom" constant="5" id="e8s-Fx-AJ0"/>
                                     <constraint firstItem="klR-mH-wcy" firstAttribute="centerX" secondItem="PvX-9e-nFY" secondAttribute="centerX" id="hdy-tH-YYM"/>
                                     <constraint firstItem="SZw-ZO-kCO" firstAttribute="centerX" secondItem="PvX-9e-nFY" secondAttribute="centerX" id="lZ7-Il-Tkx"/>
@@ -712,7 +715,6 @@ Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</st
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="bwf-C6-FrP"/>
                                         <exclude reference="2Ph-lH-XjE"/>
                                     </mask>
                                 </variation>
@@ -1055,7 +1057,7 @@ Din nuvarande position</string>
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WH2-11-CRR" userLabel="SOS - button">
-                                        <rect key="frame" x="30" y="597" width="315" height="60"/>
+                                        <rect key="frame" x="15" y="597" width="345" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="AUL-Fa-BMT"/>
                                             <constraint firstAttribute="height" constant="100" id="X2o-VU-dUq"/>
@@ -1176,11 +1178,11 @@ Din nuvarande position</string>
                                     <constraint firstItem="9ZG-bj-hPg" firstAttribute="top" secondItem="BH6-Eb-pUz" secondAttribute="top" id="ZIR-jd-Gjb"/>
                                     <constraint firstAttribute="trailing" secondItem="2wp-Rn-19Z" secondAttribute="trailing" id="d7p-qe-Nmw"/>
                                     <constraint firstItem="fqL-sf-KKE" firstAttribute="leading" secondItem="BH6-Eb-pUz" secondAttribute="leading" id="dFf-LK-8PL"/>
-                                    <constraint firstAttribute="trailing" secondItem="WH2-11-CRR" secondAttribute="trailing" constant="30" id="eGL-il-LqW"/>
+                                    <constraint firstAttribute="trailing" secondItem="WH2-11-CRR" secondAttribute="trailing" constant="15" id="eGL-il-LqW"/>
                                     <constraint firstItem="2wp-Rn-19Z" firstAttribute="top" secondItem="BH6-Eb-pUz" secondAttribute="top" constant="20" id="fOh-02-b9H"/>
                                     <constraint firstItem="ejt-Up-WTN" firstAttribute="leading" secondItem="BH6-Eb-pUz" secondAttribute="leading" constant="20" id="g5S-sd-goe"/>
                                     <constraint firstAttribute="trailing" secondItem="fqL-sf-KKE" secondAttribute="trailing" id="kG8-By-WKr"/>
-                                    <constraint firstItem="WH2-11-CRR" firstAttribute="leading" secondItem="BH6-Eb-pUz" secondAttribute="leading" constant="30" id="l3b-IQ-ih8"/>
+                                    <constraint firstItem="WH2-11-CRR" firstAttribute="leading" secondItem="BH6-Eb-pUz" secondAttribute="leading" constant="15" id="l3b-IQ-ih8"/>
                                     <constraint firstAttribute="bottom" secondItem="9ZG-bj-hPg" secondAttribute="bottom" id="ofl-1U-99L"/>
                                     <constraint firstItem="ejt-Up-WTN" firstAttribute="top" secondItem="2wp-Rn-19Z" secondAttribute="bottom" constant="10" id="p0m-b5-VO3"/>
                                     <constraint firstItem="2wp-Rn-19Z" firstAttribute="top" secondItem="BH6-Eb-pUz" secondAttribute="topMargin" id="qMP-kl-S3i"/>
@@ -1268,6 +1270,16 @@ Din nuvarande position</string>
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBI-fK-r2z">
+                                        <rect key="frame" x="163" y="309" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="TCE-VD-361"/>
+                                            <constraint firstAttribute="height" constant="50" id="YaY-UJ-pBe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Har du haft hjärtinfarkt tidigare?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xw-T1-hZr" userLabel="Question">
                                         <rect key="frame" x="30" y="84" width="315" height="58"/>
                                         <constraints>
@@ -1285,11 +1297,11 @@ Din nuvarande position</string>
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ort-wC-M3e">
-                                        <rect key="frame" x="38" y="289" width="299" height="60"/>
+                                        <rect key="frame" x="23" y="384" width="329" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="E4S-SQ-hoE"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <state key="normal" title="Nej">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1299,9 +1311,9 @@ Din nuvarande position</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfL-94-OrI">
-                                        <rect key="frame" x="38" y="184" width="299" height="75"/>
+                                        <rect key="frame" x="23" y="244" width="329" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="cqX-6P-eUt"/>
+                                            <constraint firstAttribute="height" constant="60" id="cqX-6P-eUt"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <state key="normal" title="Ja">
@@ -1322,11 +1334,14 @@ Din nuvarande position</string>
                                     <constraint firstItem="aTD-KV-L6U" firstAttribute="leading" secondItem="MvH-1E-dU2" secondAttribute="leadingMargin" id="4AO-lE-iBV"/>
                                     <constraint firstAttribute="trailing" secondItem="HJC-Di-1Ol" secondAttribute="trailing" id="8Aa-FG-5RX"/>
                                     <constraint firstItem="Ort-wC-M3e" firstAttribute="top" secondItem="XfL-94-OrI" secondAttribute="bottom" constant="80" id="Aba-CS-f2U"/>
+                                    <constraint firstItem="XBI-fK-r2z" firstAttribute="centerX" secondItem="MvH-1E-dU2" secondAttribute="centerX" id="DQ1-Tj-L3H"/>
                                     <constraint firstItem="Ort-wC-M3e" firstAttribute="centerX" secondItem="MvH-1E-dU2" secondAttribute="centerX" id="DZ8-Uu-n4X"/>
+                                    <constraint firstItem="XBI-fK-r2z" firstAttribute="centerY" secondItem="MvH-1E-dU2" secondAttribute="centerY" id="HyA-ga-PzR"/>
+                                    <constraint firstItem="XBI-fK-r2z" firstAttribute="top" secondItem="XfL-94-OrI" secondAttribute="bottom" constant="5" id="Lxz-57-ZSP"/>
                                     <constraint firstItem="aTD-KV-L6U" firstAttribute="top" secondItem="MvH-1E-dU2" secondAttribute="top" id="P1l-wY-Qod"/>
                                     <constraint firstItem="aTD-KV-L6U" firstAttribute="top" secondItem="MvH-1E-dU2" secondAttribute="top" id="Q7z-oo-CKk"/>
                                     <constraint firstItem="HJC-Di-1Ol" firstAttribute="top" secondItem="MvH-1E-dU2" secondAttribute="top" constant="20" id="QE5-dw-ZDK"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="XfL-94-OrI" secondAttribute="trailing" constant="30" id="UUK-gw-jnt"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="XfL-94-OrI" secondAttribute="trailing" constant="15" id="UUK-gw-jnt"/>
                                     <constraint firstItem="8Xw-T1-hZr" firstAttribute="leading" secondItem="MvH-1E-dU2" secondAttribute="leading" constant="30" id="W4W-PS-YgO"/>
                                     <constraint firstAttribute="bottom" secondItem="aTD-KV-L6U" secondAttribute="bottom" id="c4y-zS-acL"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="aTD-KV-L6U" secondAttribute="bottom" id="dSJ-fV-3fj"/>
@@ -1335,13 +1350,15 @@ Din nuvarande position</string>
                                     <constraint firstItem="Ort-wC-M3e" firstAttribute="top" secondItem="XfL-94-OrI" secondAttribute="bottom" constant="30" id="gBu-Oz-nsG"/>
                                     <constraint firstAttribute="trailing" secondItem="8Xw-T1-hZr" secondAttribute="trailing" constant="30" id="hwK-UW-5lx"/>
                                     <constraint firstItem="XfL-94-OrI" firstAttribute="centerX" secondItem="MvH-1E-dU2" secondAttribute="centerX" id="iaA-qd-qdu"/>
+                                    <constraint firstItem="Ort-wC-M3e" firstAttribute="top" secondItem="XBI-fK-r2z" secondAttribute="bottom" constant="25" id="idh-yp-DEh"/>
                                     <constraint firstItem="XfL-94-OrI" firstAttribute="top" secondItem="HJC-Di-1Ol" secondAttribute="bottom" constant="120" id="j3S-Te-Kpy"/>
-                                    <constraint firstItem="XfL-94-OrI" firstAttribute="leading" secondItem="MvH-1E-dU2" secondAttribute="leadingMargin" constant="30" id="kXt-vn-lQL"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="Ort-wC-M3e" secondAttribute="trailing" constant="30" id="nIg-3M-Djw"/>
+                                    <constraint firstItem="XfL-94-OrI" firstAttribute="leading" secondItem="MvH-1E-dU2" secondAttribute="leadingMargin" constant="15" id="kXt-vn-lQL"/>
+                                    <constraint firstItem="Ort-wC-M3e" firstAttribute="top" secondItem="XfL-94-OrI" secondAttribute="bottom" constant="500" id="lE9-rW-FFE"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Ort-wC-M3e" secondAttribute="trailing" constant="15" id="nIg-3M-Djw"/>
                                     <constraint firstItem="HJC-Di-1Ol" firstAttribute="leading" secondItem="MvH-1E-dU2" secondAttribute="leading" id="oCQ-0J-XDz"/>
                                     <constraint firstItem="8Xw-T1-hZr" firstAttribute="centerX" secondItem="MvH-1E-dU2" secondAttribute="centerX" id="xCV-El-TpL"/>
                                     <constraint firstItem="aTD-KV-L6U" firstAttribute="leading" secondItem="MvH-1E-dU2" secondAttribute="leading" id="xQV-zK-M8F"/>
-                                    <constraint firstItem="Ort-wC-M3e" firstAttribute="leading" secondItem="MvH-1E-dU2" secondAttribute="leadingMargin" constant="30" id="yWT-Fa-prW"/>
+                                    <constraint firstItem="Ort-wC-M3e" firstAttribute="leading" secondItem="MvH-1E-dU2" secondAttribute="leadingMargin" constant="15" id="yWT-Fa-prW"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -1351,8 +1368,11 @@ Din nuvarande position</string>
                                         <exclude reference="dSJ-fV-3fj"/>
                                         <exclude reference="fF4-Kb-vFN"/>
                                         <exclude reference="xCV-El-TpL"/>
+                                        <exclude reference="j3S-Te-Kpy"/>
                                         <exclude reference="3yA-W6-B0Z"/>
                                         <exclude reference="Aba-CS-f2U"/>
+                                        <exclude reference="gBu-Oz-nsG"/>
+                                        <exclude reference="lE9-rW-FFE"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -1419,6 +1439,16 @@ Din nuvarande position</string>
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41t-fv-vBE">
+                                        <rect key="frame" x="163" y="309" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="mFi-wp-Taq"/>
+                                            <constraint firstAttribute="height" constant="50" id="mgf-7d-I60"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVf-XZ-Ou4" userLabel="Question">
                                         <rect key="frame" x="26" y="84" width="325" height="58"/>
                                         <constraints>
@@ -1438,11 +1468,11 @@ Din nuvarande position</string>
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyD-Pd-c5p">
-                                        <rect key="frame" x="38" y="289" width="299" height="60"/>
+                                        <rect key="frame" x="23" y="384" width="329" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="0Ll-Lv-eqm"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <state key="normal" title="Nej">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1452,9 +1482,9 @@ Din nuvarande position</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fs6-f4-OnW">
-                                        <rect key="frame" x="38" y="184" width="299" height="75"/>
+                                        <rect key="frame" x="23" y="244" width="329" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="AXN-9v-a74"/>
+                                            <constraint firstAttribute="height" constant="60" id="AXN-9v-a74"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <state key="normal" title="Ja">
@@ -1469,28 +1499,34 @@ Din nuvarande position</string>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailingMargin" secondItem="EyD-Pd-c5p" secondAttribute="trailing" constant="30" id="0g0-pk-8WJ"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="EyD-Pd-c5p" secondAttribute="trailing" constant="15" id="0g0-pk-8WJ"/>
                                     <constraint firstItem="EyD-Pd-c5p" firstAttribute="top" secondItem="fs6-f4-OnW" secondAttribute="bottom" constant="80" id="30I-xR-k4e"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="fs6-f4-OnW" secondAttribute="trailing" constant="30" id="3op-az-iFd"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="fs6-f4-OnW" secondAttribute="trailing" constant="15" id="3op-az-iFd"/>
                                     <constraint firstItem="2pt-yb-E5h" firstAttribute="leading" secondItem="SGn-kr-wSx" secondAttribute="leading" id="Anq-ty-nZ2"/>
-                                    <constraint firstItem="EyD-Pd-c5p" firstAttribute="leading" secondItem="SGn-kr-wSx" secondAttribute="leadingMargin" constant="30" id="EGy-zR-nJ6"/>
+                                    <constraint firstItem="41t-fv-vBE" firstAttribute="top" secondItem="fs6-f4-OnW" secondAttribute="bottom" constant="5" id="E24-4k-4Op"/>
+                                    <constraint firstItem="EyD-Pd-c5p" firstAttribute="leading" secondItem="SGn-kr-wSx" secondAttribute="leadingMargin" constant="15" id="EGy-zR-nJ6"/>
                                     <constraint firstItem="EyD-Pd-c5p" firstAttribute="top" secondItem="fs6-f4-OnW" secondAttribute="bottom" constant="80" id="FsT-V1-6Qw"/>
                                     <constraint firstItem="fs6-f4-OnW" firstAttribute="centerX" secondItem="SGn-kr-wSx" secondAttribute="centerX" id="Jwz-Wb-Bvb"/>
                                     <constraint firstItem="fs6-f4-OnW" firstAttribute="top" secondItem="ZLv-dE-W4q" secondAttribute="bottom" constant="120" id="PhJ-MQ-OOZ"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="2pt-yb-E5h" secondAttribute="trailing" id="Qqe-fd-2Mu"/>
+                                    <constraint firstItem="EyD-Pd-c5p" firstAttribute="top" secondItem="SGn-kr-wSx" secondAttribute="top" constant="501" id="TGz-31-hji"/>
                                     <constraint firstItem="2pt-yb-E5h" firstAttribute="leading" secondItem="SGn-kr-wSx" secondAttribute="leadingMargin" id="Tw2-pg-h5k"/>
-                                    <constraint firstItem="fs6-f4-OnW" firstAttribute="leading" secondItem="SGn-kr-wSx" secondAttribute="leadingMargin" constant="30" id="U1x-cb-oJG"/>
+                                    <constraint firstItem="fs6-f4-OnW" firstAttribute="leading" secondItem="SGn-kr-wSx" secondAttribute="leadingMargin" constant="15" id="U1x-cb-oJG"/>
                                     <constraint firstAttribute="trailing" secondItem="ZLv-dE-W4q" secondAttribute="trailing" id="Wge-aa-g0m"/>
                                     <constraint firstItem="ZLv-dE-W4q" firstAttribute="leading" secondItem="SGn-kr-wSx" secondAttribute="leading" id="XHh-1O-OlA"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="2pt-yb-E5h" secondAttribute="bottom" id="Yl0-yZ-8tg"/>
                                     <constraint firstItem="EyD-Pd-c5p" firstAttribute="centerX" secondItem="SGn-kr-wSx" secondAttribute="centerX" id="ZQ7-32-hub"/>
                                     <constraint firstItem="HVf-XZ-Ou4" firstAttribute="top" secondItem="ZLv-dE-W4q" secondAttribute="bottom" constant="20" id="Zve-TY-QUM"/>
                                     <constraint firstItem="EyD-Pd-c5p" firstAttribute="top" secondItem="fs6-f4-OnW" secondAttribute="bottom" constant="30" id="aaM-hU-tNG"/>
+                                    <constraint firstItem="EyD-Pd-c5p" firstAttribute="top" secondItem="41t-fv-vBE" secondAttribute="bottom" constant="25" id="du1-kS-kL4"/>
                                     <constraint firstItem="HVf-XZ-Ou4" firstAttribute="centerX" secondItem="SGn-kr-wSx" secondAttribute="centerX" id="feS-RW-5qW"/>
                                     <constraint firstItem="2pt-yb-E5h" firstAttribute="top" secondItem="SGn-kr-wSx" secondAttribute="topMargin" id="frx-3h-1pa"/>
+                                    <constraint firstItem="EyD-Pd-c5p" firstAttribute="centerY" secondItem="SGn-kr-wSx" secondAttribute="centerY" id="gUg-KP-olV"/>
+                                    <constraint firstItem="41t-fv-vBE" firstAttribute="centerY" secondItem="SGn-kr-wSx" secondAttribute="centerY" id="hDk-qI-zjn"/>
                                     <constraint firstItem="2pt-yb-E5h" firstAttribute="top" secondItem="SGn-kr-wSx" secondAttribute="top" id="jSA-Jt-shJ"/>
                                     <constraint firstAttribute="bottom" secondItem="2pt-yb-E5h" secondAttribute="bottom" id="o8s-I0-3ON"/>
                                     <constraint firstAttribute="trailing" secondItem="2pt-yb-E5h" secondAttribute="trailing" id="qtg-1R-guX"/>
+                                    <constraint firstItem="41t-fv-vBE" firstAttribute="centerX" secondItem="SGn-kr-wSx" secondAttribute="centerX" id="rA8-PZ-dDl"/>
                                     <constraint firstItem="2pt-yb-E5h" firstAttribute="top" secondItem="SGn-kr-wSx" secondAttribute="top" id="xKy-94-Vfk"/>
                                     <constraint firstItem="ZLv-dE-W4q" firstAttribute="top" secondItem="SGn-kr-wSx" secondAttribute="top" constant="20" id="xmw-3F-bkQ"/>
                                 </constraints>
@@ -1501,8 +1537,12 @@ Din nuvarande position</string>
                                         <exclude reference="Yl0-yZ-8tg"/>
                                         <exclude reference="frx-3h-1pa"/>
                                         <exclude reference="xKy-94-Vfk"/>
+                                        <exclude reference="PhJ-MQ-OOZ"/>
                                         <exclude reference="30I-xR-k4e"/>
                                         <exclude reference="FsT-V1-6Qw"/>
+                                        <exclude reference="TGz-31-hji"/>
+                                        <exclude reference="aaM-hU-tNG"/>
+                                        <exclude reference="gUg-KP-olV"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -1597,14 +1637,14 @@ Din nuvarande position</string>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qO7-22-BMP" userLabel="SOS - button">
-                                <rect key="frame" x="46" y="527" width="283" height="60"/>
+                                <rect key="frame" x="31" y="527" width="313" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="07J-Ne-d0V"/>
                                     <constraint firstAttribute="width" constant="100" id="Rpw-Zk-NE5"/>
                                     <constraint firstAttribute="height" constant="100" id="cCg-2G-Mub"/>
                                     <constraint firstAttribute="height" constant="50" id="q9P-3T-Pib"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Mitt tillstånd har förvärrats">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -1681,9 +1721,9 @@ Din nuvarande position</string>
                             <constraint firstItem="T4l-BL-sdt" firstAttribute="top" secondItem="dXM-kv-ZlJ" secondAttribute="bottom" id="FBF-jU-UO0"/>
                             <constraint firstAttribute="bottom" secondItem="KSP-5x-oRr" secondAttribute="bottom" id="FW6-GY-aLU"/>
                             <constraint firstItem="o8g-AV-1s3" firstAttribute="top" secondItem="lBd-x0-tMB" secondAttribute="bottom" constant="280" id="HA4-9K-YZ3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="qO7-22-BMP" secondAttribute="trailing" constant="30" id="HyB-5e-tNi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qO7-22-BMP" secondAttribute="trailing" constant="15" id="HyB-5e-tNi"/>
                             <constraint firstItem="YSe-5I-SPY" firstAttribute="top" secondItem="4eX-wk-Hbm" secondAttribute="bottom" constant="30" id="L19-ld-m42"/>
-                            <constraint firstItem="qO7-22-BMP" firstAttribute="leading" secondItem="NS3-2q-dkJ" secondAttribute="leadingMargin" constant="30" id="OsC-Qp-19c"/>
+                            <constraint firstItem="qO7-22-BMP" firstAttribute="leading" secondItem="NS3-2q-dkJ" secondAttribute="leadingMargin" constant="15" id="OsC-Qp-19c"/>
                             <constraint firstItem="YSe-5I-SPY" firstAttribute="top" secondItem="T4l-BL-sdt" secondAttribute="bottom" constant="80" id="Qrz-mg-DJe"/>
                             <constraint firstAttribute="bottomMargin" secondItem="y3E-tq-EUK" secondAttribute="bottom" constant="10" id="RJ4-Hx-umk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YSe-5I-SPY" secondAttribute="trailing" constant="50" id="VSr-fa-eLo"/>
