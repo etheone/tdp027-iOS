@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -268,11 +268,11 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AM3-lh-Bpc" id="tJh-TT-5TK">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XGe-om-oSo">
-                                                    <rect key="frame" x="15" y="0.0" width="313" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="313" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -296,7 +296,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tagna Nitroglycerin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9i-Np-xpF">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tagna Nitroglycerin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9i-Np-xpF">
                                         <rect key="frame" x="102" y="140" width="171" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -483,7 +483,7 @@ Meddelanden:</string>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Om appen" id="OMU-CI-HVD">
+                                    <navigationItem title="Beslutsstöd" id="OMU-CI-HVD">
                                         <barButtonItem key="leftBarButtonItem" image="ic_home_white_36pt" id="UR7-Ad-UtR">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
@@ -788,7 +788,7 @@ Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</st
                                         <rect key="frame" x="0.0" y="28" width="375" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UKR-pL-lWQ" id="Ra7-vU-bWo">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eck-RJ-RYC">
@@ -1063,7 +1063,7 @@ Din nuvarande position</string>
                                             <constraint firstAttribute="width" constant="100" id="nke-Wg-8fw"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="Fortsätt">
+                                        <state key="normal" title="Hoppa över">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <variation key="default">
@@ -1074,7 +1074,7 @@ Din nuvarande position</string>
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <action selector="continueToSeriousSymptom:" destination="Pw4-KA-Hu1" eventType="touchUpInside" id="9mo-rk-5nE"/>
+                                            <action selector="continueButton:" destination="Pw4-KA-Hu1" eventType="touchUpInside" id="9LD-gQ-51k"/>
                                             <action selector="sosStart:" destination="SeH-bM-0Pu" eventType="touchUpInside" id="dDD-pn-dcw"/>
                                         </connections>
                                     </button>
@@ -1114,14 +1114,14 @@ Din nuvarande position</string>
                                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wDJ-Xw-3ZD" id="i5X-lY-dI0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="icon-unchecked" translatesAutoresizingMaskIntoConstraints="NO" id="odH-Dz-U1T">
                                                             <rect key="frame" x="67" y="-42" width="39" height="36"/>
                                                         </imageView>
                                                         <label opaque="NO" multipleTouchEnabled="YES" tag="1" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A0C-Js-GTq">
-                                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <edgeInsets key="layoutMargins" top="12" left="8" bottom="12" right="8"/>
                                                             <attributedString key="attributedText">
@@ -1219,6 +1219,8 @@ Din nuvarande position</string>
                         <outlet property="tableView" destination="fqL-sf-KKE" id="1x7-qN-4DI"/>
                         <segue destination="Aec-6v-Xqo" kind="presentation" identifier="segueToSeriousSymptom" modalTransitionStyle="crossDissolve" id="u4O-Em-SYl"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="currentSympToMenu" modalTransitionStyle="crossDissolve" id="0bd-Gr-d6S"/>
+                        <segue destination="siD-ZO-fNb" kind="presentation" identifier="segueToSOS" modalTransitionStyle="crossDissolve" id="Hq1-ot-PLu"/>
+                        <segue destination="so6-lu-eUH" kind="presentation" identifier="segueToMisc" modalTransitionStyle="crossDissolve" id="VN0-Wa-qZ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H1D-SD-x9G" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1750,7 +1752,8 @@ Din nuvarande position</string>
         <image name="logo" width="640" height="555"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2FG-Ot-6ZO"/>
-        <segue reference="2Sg-g8-CLL"/>
+        <segue reference="0bd-Gr-d6S"/>
+        <segue reference="Hq1-ot-PLu"/>
+        <segue reference="VN0-Wa-qZ3"/>
     </inferredMetricsTieBreakers>
 </document>

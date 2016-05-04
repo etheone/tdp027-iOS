@@ -32,8 +32,6 @@ class Emergency: UIViewController {
     // Step 4
     @IBOutlet weak var noEmergencyButton: UIButton!
     
-    
-    
     var currentPage = 1
     let numberOfPages = 4
     var blueClock : Clock?
@@ -149,6 +147,7 @@ class Emergency: UIViewController {
         
         audioPlayer.prepareToPlay()
         audioPlayer.play()
+        audioPlayer.numberOfLoops = -1
     }
     
     func alertBox() {
@@ -167,6 +166,7 @@ class Emergency: UIViewController {
         let confirmAction = UIAlertAction(
             title: alertCloseText, style: UIAlertActionStyle.Default) { (action) in
                 self.continueToNextStep()
+                //self.audioPlayer.stop()
         }
         
         alertController.addAction(confirmAction)
@@ -199,7 +199,7 @@ class Emergency: UIViewController {
         self.navBar.translucent = true
         
         //imerValue: Int, clockType: String, timerLabel: UILabel)
-        self.blueClock = Clock(timerValue: (30), countDown: true, timerLabel: blueWatch, parent: self)
+        self.blueClock = Clock(timerValue: (3), countDown: true, timerLabel: blueWatch, parent: self)
         self.redClock = Clock(timerValue: (0), countDown: false, timerLabel: redWatch, parent: self)
         
         roundedButton(continueButton)

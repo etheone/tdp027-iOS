@@ -53,8 +53,14 @@ class CurrentSymptoms: UIViewController, UITableViewDataSource, UITableViewDeleg
         presentViewController(refreshAlert, animated: true, completion: nil)
     }
     
-    @IBAction func continueToSeriousSymptom(sender: AnyObject) {
-        self.performSegueWithIdentifier("segueToSeriousSymptom", sender: nil)
+    @IBAction func continueButton(sender: AnyObject) {
+        if(selectedRows.count == 0) {
+            self.performSegueWithIdentifier("segueToMisc", sender: nil)
+        } else if (selectedRows.contains(3) || selectedRows.contains(5)) {
+            self.performSegueWithIdentifier("segueToSOS", sender: nil)
+        } else if (true) {
+            self.performSegueWithIdentifier("segueToSeriousSymptom", sender: nil)
+        }
     }
     
     
@@ -110,6 +116,12 @@ class CurrentSymptoms: UIViewController, UITableViewDataSource, UITableViewDeleg
         } else {
             checkboxArray[row].imageView?.image = UIImage(named: "icon-checked")
             selectedRows.append(row)
+        }
+        
+        if(selectedRows.count == 0) {
+            continueButton.setTitle("Hoppa över", forState: UIControlState.Normal)
+        } else {
+            continueButton.setTitle("Fortsätt", forState: UIControlState.Normal)
         }
     }
     
