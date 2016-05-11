@@ -43,6 +43,7 @@ class Emergency: UIViewController {
     var userHistory = Dictionary<String,Dictionary<String,String>>()
     var callInProgress : Bool = false
     var audioRunning = false
+    var viewActive = true
     
     // Sound variables
     var audioPlayer = AVAudioPlayer() // Needed for alert sound
@@ -127,15 +128,17 @@ class Emergency: UIViewController {
 
     
     func timerDone() {
-        // Only play sound if app sound is on
-        if (soundOn && currentPage != numberOfPages)  {
-            playSound(alertSound)
-        }
-        if(currentPage < numberOfPages) {
-            alertBox()
-        } else {
-            noEmergencyButton.hidden = false
-            clockLabel.hidden = true
+        if (viewActive) {
+            // Only play sound if app sound is on
+            if (soundOn && currentPage != numberOfPages)  {
+                playSound(alertSound)
+            }
+            if(currentPage < numberOfPages) {
+                alertBox()
+            } else {
+                noEmergencyButton.hidden = false
+                clockLabel.hidden = true
+            }
         }
     }
     
@@ -206,7 +209,7 @@ class Emergency: UIViewController {
         self.navBar.translucent = true
         
         //imerValue: Int, clockType: String, timerLabel: UILabel)
-        self.blueClock = Clock(timerValue: (3), countDown: true, timerLabel: blueWatch, parent: self)
+        self.blueClock = Clock(timerValue: (30), countDown: true, timerLabel: blueWatch, parent: self)
         self.redClock = Clock(timerValue: (0), countDown: false, timerLabel: redWatch, parent: self)
         
         roundedButton(continueButton)
@@ -246,6 +249,10 @@ class Emergency: UIViewController {
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        viewActive = false;
     }
     
     
