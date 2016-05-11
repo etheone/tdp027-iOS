@@ -10,7 +10,7 @@
 
 import UIKit
 
-let user = UIDevice.currentDevice().identifierForVendor!.UUIDString
+//let user = UIDevice.currentDevice().identifierForVendor!.UUIDString
 
 class ViewController: UIViewController {
 

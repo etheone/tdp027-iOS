@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Pw4-KA-Hu1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Pw4-KA-Hu1">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -127,7 +127,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="diseasePressed:" destination="so6-lu-eUH" eventType="touchUpInside" id="Bvl-z7-bxf"/>
                                     <segue destination="mrB-pq-GIw" kind="presentation" modalTransitionStyle="crossDissolve" id="W41-aO-aeN"/>
                                 </connections>
                             </button>
@@ -141,7 +140,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="symptomsPressed:" destination="so6-lu-eUH" eventType="touchUpInside" id="k8i-x6-to2"/>
                                     <segue destination="174-m7-w5Y" kind="presentation" modalTransitionStyle="crossDissolve" id="34m-5T-XSZ"/>
                                 </connections>
                             </button>
@@ -155,7 +153,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="historyPressed:" destination="so6-lu-eUH" eventType="touchUpInside" id="DyV-dy-ACq"/>
                                     <segue destination="VSG-pm-f5A" kind="presentation" modalTransitionStyle="crossDissolve" id="UxB-na-wV1"/>
                                 </connections>
                             </button>
@@ -165,7 +162,7 @@
                                     <constraint firstAttribute="height" constant="60" id="0Jq-hz-ikc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <state key="normal" title="Guide - Beslutsstöd vid besvär">
+                                <state key="normal" title="Presentation av appen">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -234,6 +231,10 @@
                         <outlet property="buttonDisease" destination="Ego-Ge-jbe" id="cmW-kl-hLu"/>
                         <outlet property="buttonHistory" destination="ZdL-hm-MDe" id="jKP-Y4-1b5"/>
                         <outlet property="buttonSymptoms" destination="bUv-IM-LQb" id="Ya4-Fk-Jbp"/>
+                        <outlet property="constraint1" destination="yX4-jm-HTl" id="2bh-Vg-uvU"/>
+                        <outlet property="constraint2" destination="bKa-X0-Spq" id="vxZ-xn-AaR"/>
+                        <outlet property="constraint3" destination="JhW-aX-NmI" id="Cma-rv-WD4"/>
+                        <outlet property="constraintTop" destination="lZk-WV-D3E" id="BbD-oP-lhX"/>
                         <outlet property="navBar" destination="UQz-Xs-vRg" id="50i-Pz-gTo"/>
                     </connections>
                 </viewController>
@@ -1090,7 +1091,7 @@ Din nuvarande position</string>
                                             <fragment content="Markera om du känner du något av följande symptom">
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="24" name="HelveticaNeue-Medium"/>
+                                                    <font key="NSFont" size="22" name="HelveticaNeue-Medium"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -1129,7 +1130,7 @@ Din nuvarande position</string>
                                                                 <fragment content=" ">
                                                                     <attributes>
                                                                         <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <font key="NSFont" size="20" name="HelveticaNeue-Medium"/>
+                                                                        <font key="NSFont" size="19" name="HelveticaNeue-Medium"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
                                                                 </fragment>
@@ -1806,8 +1807,8 @@ Din nuvarande position</string>
         <image name="logo" width="640" height="555"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FZJ-Dd-hua"/>
         <segue reference="VN0-Wa-qZ3"/>
+        <segue reference="HHM-y3-0do"/>
         <segue reference="Hq1-ot-PLu"/>
     </inferredMetricsTieBreakers>
 </document>

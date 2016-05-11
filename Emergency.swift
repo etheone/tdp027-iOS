@@ -160,7 +160,7 @@ class Emergency: UIViewController {
         var alertMessage = "5 minuter har gått."
         if currentPage == 1 {
             alertTitle = "Ta en dos Nitroglycerin"
-            alertMessage = "Den runda klockan räknar ned tills du ska ta nästa dos"
+            alertMessage = "Den blå klockan räknar ned tills du ska ta nästa dos"
         }
         let alertCloseText = "OK"
         let alertController = UIAlertController(title: alertTitle, message:

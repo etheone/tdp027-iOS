@@ -8,6 +8,8 @@
 
 import UIKit
 
+let user = UIDevice.currentDevice().identifierForVendor!.UUIDString
+
 class CurrentSymptoms: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var navBar: UINavigationBar!
@@ -20,6 +22,7 @@ class CurrentSymptoms: UIViewController, UITableViewDataSource, UITableViewDeleg
     var checkboxArray = [UITableViewCell]()
     var soundOn : Bool = true
     let textCellIdentifier = "TextCell"
+    var gpsTracker = GPSTracker()
     
     
     override func viewDidLoad() {
@@ -39,7 +42,17 @@ class CurrentSymptoms: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         roundedButton(continueButton)
         
-        pushNavigation("Välj symptom")
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if ( !defaults.boolForKey("acceptedTerms") ) {
+            print("first")
+            gpsTracker.startTracking()
+            gpsTracker.stopTracking()
+            defaults.setBool(true, forKey: "acceptedTerms")
+        }
+        
+        pushNavigation("Start - Välj symptom")
+
     }
     
     @IBAction func continueButton(sender: AnyObject) {

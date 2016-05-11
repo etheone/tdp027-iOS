@@ -16,22 +16,23 @@ class miscVC: UIViewController {
     @IBOutlet weak var buttonHistory: UIButton!
     @IBOutlet weak var buttonApp: UIButton!
     @IBOutlet weak var navBar: UINavigationBar!
-    
-    @IBAction func diseasePressed(sender: AnyObject) {
-    }
-    
-    @IBAction func symptomsPressed(sender: AnyObject) {
-    }
-    
-    @IBAction func historyPressed(sender: AnyObject) {
-    }
-    
-    @IBAction func appPressed(sender: AnyObject) {
-    }
+    @IBOutlet weak var constraintTop: NSLayoutConstraint!
+    @IBOutlet weak var constraint1: NSLayoutConstraint!
+    @IBOutlet weak var constraint2: NSLayoutConstraint!
+    @IBOutlet weak var constraint3: NSLayoutConstraint!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let bounds = UIScreen.mainScreen().bounds
+        let width = bounds.size.width
+        if (width <= 320) {
+            constraintTop.constant = 30.0
+            constraint1.constant = 30.0
+            constraint2.constant = 30.0
+            constraint3.constant = 30.0
+        }
         
         roundedButton(buttonDisease)
         roundedButton(buttonSymptoms)

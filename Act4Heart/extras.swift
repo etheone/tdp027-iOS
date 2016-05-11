@@ -72,7 +72,7 @@ func roundedButton(button:UIButton) {
 var symptoms = [
     "Ihållande bröstsmärta",
     "Obehagskänsla i bröstet",
-    "Strålande i hals/käkar/skuldror",
+    "Strålar i hals/käke/skuldra",
     "Illamående",
     "Andnöd",
     "Kallsvettning",
@@ -85,7 +85,7 @@ var symptoms = [
 var symptomsInfo = [
     "Stark och ihållande bröstsmärta som kan stråla ut i armarna",
     "Obehagskänsla i bröstet som kan stråla upp mot halsen, käkarna och skuldrorna",
-    "Strålande i hals/käkarr/skuldror",
+    "Strålar i hals/käke/skuldra",
     "Illamående",
     "Andnöd",
     "Kallsvettning",
