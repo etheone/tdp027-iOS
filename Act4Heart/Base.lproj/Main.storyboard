@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Pw4-KA-Hu1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Pw4-KA-Hu1">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -1587,7 +1587,7 @@ Din nuvarande position</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3E-tq-EUK" userLabel="Red Watch">
-                                <rect key="frame" x="137" y="627" width="100" height="30"/>
+                                <rect key="frame" x="137" y="597" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="j2K-wi-iFE"/>
                                     <constraint firstAttribute="height" constant="30" id="rXt-Pb-kXC"/>
@@ -1652,7 +1652,7 @@ Din nuvarande position</string>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBd-x0-tMB" userLabel="noEmergency">
-                                <rect key="frame" x="46" y="437" width="283" height="60"/>
+                                <rect key="frame" x="31" y="437" width="313" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="CF9-Ar-vm9"/>
                                     <constraint firstAttribute="height" constant="100" id="Ycg-BD-KsC"/>
@@ -1674,6 +1674,22 @@ Din nuvarande position</string>
                                     <action selector="noEmergencyClicked:" destination="SeH-bM-0Pu" eventType="touchUpInside" id="69f-2O-Kuh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total tid sedan start" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tv3-Vk-pDM" userLabel="Clock label">
+                                <rect key="frame" x="30" y="629" width="315" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="44y-Dg-glK"/>
+                                    <constraint firstAttribute="width" constant="120" id="vwZ-5Q-85e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="44y-Dg-glK"/>
+                                        <exclude reference="vwZ-5Q-85e"/>
+                                    </mask>
+                                </variation>
+                            </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4l-BL-sdt">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <textAttributes key="titleTextAttributes">
@@ -1706,24 +1722,28 @@ Din nuvarande position</string>
                             <constraint firstItem="KSP-5x-oRr" firstAttribute="top" secondItem="NS3-2q-dkJ" secondAttribute="top" id="5DV-Bx-GIH"/>
                             <constraint firstItem="YSe-5I-SPY" firstAttribute="leading" secondItem="NS3-2q-dkJ" secondAttribute="leadingMargin" constant="50" id="5kM-Vh-5HF"/>
                             <constraint firstItem="4eX-wk-Hbm" firstAttribute="leading" secondItem="NS3-2q-dkJ" secondAttribute="leadingMargin" constant="20" id="6GP-dw-Da1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="lBd-x0-tMB" secondAttribute="trailing" constant="30" id="Bbe-s5-gj8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lBd-x0-tMB" secondAttribute="trailing" constant="15" id="Bbe-s5-gj8"/>
                             <constraint firstItem="YSe-5I-SPY" firstAttribute="centerY" secondItem="NS3-2q-dkJ" secondAttribute="centerY" id="BfU-QX-WqL"/>
                             <constraint firstAttribute="bottomMargin" secondItem="qO7-22-BMP" secondAttribute="bottom" constant="80" id="CQ8-wk-rLl"/>
                             <constraint firstItem="y3E-tq-EUK" firstAttribute="top" secondItem="YSe-5I-SPY" secondAttribute="bottom" constant="80" id="DBZ-9b-WHr"/>
                             <constraint firstItem="T4l-BL-sdt" firstAttribute="top" secondItem="dXM-kv-ZlJ" secondAttribute="bottom" id="FBF-jU-UO0"/>
                             <constraint firstAttribute="bottom" secondItem="KSP-5x-oRr" secondAttribute="bottom" id="FW6-GY-aLU"/>
+                            <constraint firstItem="tv3-Vk-pDM" firstAttribute="top" secondItem="YSe-5I-SPY" secondAttribute="bottom" constant="300" id="Fxh-Pe-ay7"/>
                             <constraint firstItem="o8g-AV-1s3" firstAttribute="top" secondItem="lBd-x0-tMB" secondAttribute="bottom" constant="280" id="HA4-9K-YZ3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qO7-22-BMP" secondAttribute="trailing" constant="15" id="HyB-5e-tNi"/>
                             <constraint firstItem="YSe-5I-SPY" firstAttribute="top" secondItem="4eX-wk-Hbm" secondAttribute="bottom" constant="30" id="L19-ld-m42"/>
                             <constraint firstItem="qO7-22-BMP" firstAttribute="leading" secondItem="NS3-2q-dkJ" secondAttribute="leadingMargin" constant="15" id="OsC-Qp-19c"/>
                             <constraint firstItem="YSe-5I-SPY" firstAttribute="top" secondItem="T4l-BL-sdt" secondAttribute="bottom" constant="80" id="Qrz-mg-DJe"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="y3E-tq-EUK" secondAttribute="bottom" constant="10" id="RJ4-Hx-umk"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="y3E-tq-EUK" secondAttribute="bottom" constant="40" id="RJ4-Hx-umk"/>
+                            <constraint firstItem="tv3-Vk-pDM" firstAttribute="leading" secondItem="NS3-2q-dkJ" secondAttribute="leading" constant="30" id="UL1-iC-Tcd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YSe-5I-SPY" secondAttribute="trailing" constant="50" id="VSr-fa-eLo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="y3E-tq-EUK" secondAttribute="trailing" constant="100" id="XRt-Tm-1Ng"/>
                             <constraint firstItem="YSe-5I-SPY" firstAttribute="centerX" secondItem="NS3-2q-dkJ" secondAttribute="centerX" id="ZnH-wu-ZlH"/>
                             <constraint firstItem="y3E-tq-EUK" firstAttribute="centerX" secondItem="NS3-2q-dkJ" secondAttribute="centerX" id="a2r-74-ZjT"/>
                             <constraint firstItem="4eX-wk-Hbm" firstAttribute="top" secondItem="T4l-BL-sdt" secondAttribute="bottom" constant="30" id="bQJ-UK-Hr3"/>
-                            <constraint firstItem="lBd-x0-tMB" firstAttribute="leading" secondItem="NS3-2q-dkJ" secondAttribute="leadingMargin" constant="30" id="br5-pa-5dx"/>
+                            <constraint firstItem="lBd-x0-tMB" firstAttribute="leading" secondItem="NS3-2q-dkJ" secondAttribute="leadingMargin" constant="15" id="br5-pa-5dx"/>
+                            <constraint firstItem="tv3-Vk-pDM" firstAttribute="top" secondItem="y3E-tq-EUK" secondAttribute="bottom" constant="2" id="cfX-am-eXG"/>
+                            <constraint firstAttribute="trailing" secondItem="tv3-Vk-pDM" secondAttribute="trailing" constant="30" id="dnN-1G-taW"/>
                             <constraint firstItem="qO7-22-BMP" firstAttribute="top" secondItem="lBd-x0-tMB" secondAttribute="bottom" constant="30" id="ffx-IK-1Tm"/>
                             <constraint firstItem="y3E-tq-EUK" firstAttribute="leading" secondItem="NS3-2q-dkJ" secondAttribute="leadingMargin" constant="100" id="fje-1s-lmf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4eX-wk-Hbm" secondAttribute="trailing" constant="20" id="jla-1b-fvb"/>
@@ -1751,6 +1771,7 @@ Din nuvarande position</string>
                                 <exclude reference="XRt-Tm-1Ng"/>
                                 <exclude reference="fje-1s-lmf"/>
                                 <exclude reference="nSh-7D-Oqg"/>
+                                <exclude reference="Fxh-Pe-ay7"/>
                                 <exclude reference="HA4-9K-YZ3"/>
                             </mask>
                         </variation>
