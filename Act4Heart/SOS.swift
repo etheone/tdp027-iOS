@@ -28,6 +28,9 @@ class SOS: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Prevent sleep mode
+        UIApplication.sharedApplication().idleTimerDisabled = true
+        
         //roundedButton(buttonCredits)
         
         self.navBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)

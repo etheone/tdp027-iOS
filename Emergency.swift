@@ -180,6 +180,9 @@ class Emergency: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Prevent sleep mode
+        UIApplication.sharedApplication().idleTimerDisabled = true
+        
         // Overrides user mute
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)

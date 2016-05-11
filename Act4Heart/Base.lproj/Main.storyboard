@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Pw4-KA-Hu1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Pw4-KA-Hu1">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -100,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="791.5" y="391.5"/>
+            <point key="canvasLocation" x="303.5" y="-64.5"/>
         </scene>
         <!--MiscVC-->
         <scene sceneID="rJn-qf-ciK">
@@ -128,7 +128,7 @@
                                 </state>
                                 <connections>
                                     <action selector="diseasePressed:" destination="so6-lu-eUH" eventType="touchUpInside" id="Bvl-z7-bxf"/>
-                                    <segue destination="mrB-pq-GIw" kind="show" id="W41-aO-aeN"/>
+                                    <segue destination="mrB-pq-GIw" kind="presentation" modalTransitionStyle="crossDissolve" id="W41-aO-aeN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUv-IM-LQb">
@@ -142,7 +142,7 @@
                                 </state>
                                 <connections>
                                     <action selector="symptomsPressed:" destination="so6-lu-eUH" eventType="touchUpInside" id="k8i-x6-to2"/>
-                                    <segue destination="174-m7-w5Y" kind="show" id="34m-5T-XSZ"/>
+                                    <segue destination="174-m7-w5Y" kind="presentation" modalTransitionStyle="crossDissolve" id="34m-5T-XSZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdL-hm-MDe">
@@ -156,7 +156,7 @@
                                 </state>
                                 <connections>
                                     <action selector="historyPressed:" destination="so6-lu-eUH" eventType="touchUpInside" id="DyV-dy-ACq"/>
-                                    <segue destination="VSG-pm-f5A" kind="show" id="UxB-na-wV1"/>
+                                    <segue destination="VSG-pm-f5A" kind="presentation" modalTransitionStyle="crossDissolve" id="UxB-na-wV1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtF-cr-cCF">
@@ -169,7 +169,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fcF-gx-u3W" kind="show" id="GDL-xJ-8cw"/>
+                                    <segue destination="fcF-gx-u3W" kind="presentation" modalTransitionStyle="crossDissolve" id="GDL-xJ-8cw"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQz-Xs-vRg">
@@ -184,7 +184,7 @@
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="backToMenu:" destination="SeH-bM-0Pu" id="gQf-LH-p55"/>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="sla-MD-UUd"/>
+                                                <segue destination="Pw4-KA-Hu1" kind="presentation" modalTransitionStyle="crossDissolve" id="HHM-y3-0do"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -268,11 +268,11 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AM3-lh-Bpc" id="tJh-TT-5TK">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XGe-om-oSo">
-                                                    <rect key="frame" x="15" y="0.0" width="313" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="313" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -297,7 +297,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tagna Nitroglycerin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9i-Np-xpF">
-                                        <rect key="frame" x="102" y="140" width="171" height="24"/>
+                                        <rect key="frame" x="102" y="140" width="172" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -383,11 +383,11 @@ Meddelanden:</string>
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Historik" id="H68-WD-uDX">
-                                        <barButtonItem key="leftBarButtonItem" image="ic_home_white_36pt" id="czT-Un-2QJ">
+                                        <barButtonItem key="leftBarButtonItem" image="ic_arrow_back_white_36pt" id="czT-Un-2QJ">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="menuClicked:" destination="VSG-pm-f5A" id="kJM-8r-KV5"/>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="iyV-Z5-MCq"/>
+                                                <segue destination="so6-lu-eUH" kind="presentation" modalTransitionStyle="crossDissolve" id="02s-JW-gzH"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -437,7 +437,6 @@ Meddelanden:</string>
                         <outlet property="navBar" destination="vAh-Su-A61" id="OkH-3e-pmD"/>
                         <outlet property="tableView" destination="nn1-3J-uAx" id="VHU-6s-2YO"/>
                         <outlet property="titleTop" destination="S0E-wz-a7w" id="anV-Je-G1m"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="historyToMenu" modalTransitionStyle="crossDissolve" id="awH-C7-ZxC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2JF-eL-gQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -484,11 +483,11 @@ Meddelanden:</string>
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Beslutsstöd" id="OMU-CI-HVD">
-                                        <barButtonItem key="leftBarButtonItem" image="ic_home_white_36pt" id="UR7-Ad-UtR">
+                                        <barButtonItem key="leftBarButtonItem" image="ic_arrow_back_white_36pt" id="UR7-Ad-UtR">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="backToMenu:" destination="SeH-bM-0Pu" id="SJ4-c2-62p"/>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="47N-id-PeC"/>
+                                                <segue destination="so6-lu-eUH" kind="presentation" modalTransitionStyle="crossDissolve" id="C3p-aE-UjK"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -591,11 +590,11 @@ Meddelanden:</string>
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Om hjärtinfarkt" id="hxy-bX-8MH">
-                                        <barButtonItem key="leftBarButtonItem" image="ic_home_white_36pt" id="b2g-Xf-AXB">
+                                        <barButtonItem key="leftBarButtonItem" image="ic_arrow_back_white_36pt" id="b2g-Xf-AXB">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="backToMenu:" destination="SeH-bM-0Pu" id="ycO-bo-JKi"/>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="1fn-CH-LG1"/>
+                                                <segue destination="so6-lu-eUH" kind="presentation" modalTransitionStyle="crossDissolve" id="kQy-Vg-ZOJ"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -766,11 +765,11 @@ infarkt</string>
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Symptom" id="XfK-Se-rgD">
-                                        <barButtonItem key="leftBarButtonItem" image="ic_home_white_36pt" id="Df4-Oa-Jwm">
+                                        <barButtonItem key="leftBarButtonItem" image="ic_arrow_back_white_36pt" id="Df4-Oa-Jwm">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="backToMenu:" destination="SeH-bM-0Pu" id="bcm-1L-z0I"/>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="t80-07-aaW"/>
+                                                <segue destination="so6-lu-eUH" kind="presentation" modalTransitionStyle="crossDissolve" id="S4d-Zp-fL2"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="ic_volume_up_white_36pt" id="QAx-uC-aDR">
@@ -790,7 +789,7 @@ infarkt</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UKR-pL-lWQ" id="Ra7-vU-bWo">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eck-RJ-RYC">
@@ -1031,7 +1030,7 @@ Din nuvarande position</string>
                         <outlet property="sosAddress" destination="12H-cE-JuX" id="PIH-aY-CzE"/>
                         <outlet property="sosButton" destination="0Dq-f3-b3L" id="6BJ-DU-sa6"/>
                         <outlet property="sosText" destination="4h9-ct-Vie" id="L5X-Kn-w8N"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="SOSToMenu" id="gS2-AW-aeM"/>
+                        <segue destination="Pw4-KA-Hu1" kind="presentation" identifier="SOSToMenu" modalTransitionStyle="crossDissolve" id="02j-Cp-d74"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qNm-lG-3t6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1116,14 +1115,14 @@ Din nuvarande position</string>
                                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wDJ-Xw-3ZD" id="i5X-lY-dI0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="icon-unchecked" translatesAutoresizingMaskIntoConstraints="NO" id="odH-Dz-U1T">
                                                             <rect key="frame" x="67" y="-42" width="39" height="36"/>
                                                         </imageView>
                                                         <label opaque="NO" multipleTouchEnabled="YES" tag="1" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A0C-Js-GTq">
-                                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <edgeInsets key="layoutMargins" top="12" left="8" bottom="12" right="8"/>
                                                             <attributedString key="attributedText">
@@ -1151,12 +1150,6 @@ Din nuvarande position</string>
                                         </textAttributes>
                                         <items>
                                             <navigationItem title="Symptom" id="Ro4-wj-Aam">
-                                                <barButtonItem key="leftBarButtonItem" image="ic_home_white_36pt" id="FgL-mY-FH6">
-                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <connections>
-                                                        <action selector="backToMenu:" destination="Pw4-KA-Hu1" id="IeG-Xt-evD"/>
-                                                    </connections>
-                                                </barButtonItem>
                                                 <barButtonItem key="rightBarButtonItem" image="ic_volume_up_white_36pt" id="uym-oc-IoD">
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <connections>
@@ -1220,7 +1213,6 @@ Din nuvarande position</string>
                         <outlet property="soundIcon" destination="uym-oc-IoD" id="YOO-Js-brg"/>
                         <outlet property="tableView" destination="fqL-sf-KKE" id="1x7-qN-4DI"/>
                         <segue destination="Aec-6v-Xqo" kind="presentation" identifier="segueToSeriousSymptom" modalTransitionStyle="crossDissolve" id="u4O-Em-SYl"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="currentSympToMenu" modalTransitionStyle="crossDissolve" id="0bd-Gr-d6S"/>
                         <segue destination="siD-ZO-fNb" kind="presentation" identifier="segueToSOS" modalTransitionStyle="crossDissolve" id="Hq1-ot-PLu"/>
                         <segue destination="so6-lu-eUH" kind="presentation" identifier="segueToMisc" modalTransitionStyle="crossDissolve" id="VN0-Wa-qZ3"/>
                     </connections>
@@ -1391,7 +1383,7 @@ Din nuvarande position</string>
                         <outlet property="miscButton" destination="XfL-94-OrI" id="UKr-DC-ioh"/>
                         <outlet property="navBar" destination="HJC-Di-1Ol" id="n6i-99-7RT"/>
                         <outlet property="soundIcon" destination="Ile-c8-C0a" id="5cy-Gl-Y6r"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="seriousSympToMenu" modalTransitionStyle="crossDissolve" id="JqS-St-JKC"/>
+                        <segue destination="Pw4-KA-Hu1" kind="presentation" identifier="seriousSympToMenu" modalTransitionStyle="crossDissolve" id="pPa-6n-Wcn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="115-xc-5hg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1449,8 +1441,8 @@ Din nuvarande position</string>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVf-XZ-Ou4" userLabel="Question">
-                                        <rect key="frame" x="26" y="84" width="325" height="58"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVf-XZ-Ou4" userLabel="Question">
+                                        <rect key="frame" x="25" y="84" width="326" height="58"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.5" id="50q-Jh-zMj"/>
                                             <constraint firstAttribute="width" constant="187.5" id="l12-3X-59W"/>
@@ -1561,7 +1553,7 @@ Din nuvarande position</string>
                         <outlet property="miscButton" destination="fs6-f4-OnW" id="V9H-VF-uxA"/>
                         <outlet property="navBar" destination="ZLv-dE-W4q" id="LKt-im-lEw"/>
                         <outlet property="soundIcon" destination="D6N-I3-qOI" id="pKa-He-Vpa"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="hasPrevToMenu" modalTransitionStyle="crossDissolve" id="PmJ-iA-JgB"/>
+                        <segue destination="Pw4-KA-Hu1" kind="presentation" identifier="hasPrevToMenu" modalTransitionStyle="crossDissolve" id="7SO-dD-Axp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pgv-io-7Dy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1774,8 +1766,8 @@ Din nuvarande position</string>
                         <outlet property="redWatch" destination="y3E-tq-EUK" id="xuh-Np-Ljm"/>
                         <outlet property="soundIcon" destination="X90-3G-66F" id="Yha-d5-Px4"/>
                         <outlet property="topText" destination="4eX-wk-Hbm" id="TLz-8Y-P3d"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="emergencyToMenu" modalTransitionStyle="crossDissolve" id="2FG-Ot-6ZO"/>
                         <segue destination="siD-ZO-fNb" kind="presentation" identifier="startSOS" id="2Sg-g8-CLL"/>
+                        <segue destination="Pw4-KA-Hu1" kind="presentation" identifier="emergencyToMenu" modalTransitionStyle="crossDissolve" id="f1t-2y-MuN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIy-Lm-1oq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1786,14 +1778,15 @@ Din nuvarande position</string>
     <resources>
         <image name="bg" width="640" height="1136"/>
         <image name="call-button" width="256" height="256"/>
+        <image name="ic_arrow_back_white_36pt" width="36" height="36"/>
         <image name="ic_home_white_36pt" width="36" height="36"/>
         <image name="ic_volume_up_white_36pt" width="36" height="36"/>
         <image name="icon-unchecked" width="512" height="512"/>
         <image name="logo" width="640" height="555"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0bd-Gr-d6S"/>
-        <segue reference="Hq1-ot-PLu"/>
+        <segue reference="FZJ-Dd-hua"/>
         <segue reference="VN0-Wa-qZ3"/>
+        <segue reference="Hq1-ot-PLu"/>
     </inferredMetricsTieBreakers>
 </document>
