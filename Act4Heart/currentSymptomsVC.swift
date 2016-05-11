@@ -42,17 +42,6 @@ class CurrentSymptoms: UIViewController, UITableViewDataSource, UITableViewDeleg
         pushNavigation("Välj symptom")
     }
     
-    @IBAction func backToMenu(sender: AnyObject) {
-        let refreshAlert = UIAlertController(title: "Tillbaka till menyn", message: "Du kan inte ångra detta val.", preferredStyle: UIAlertControllerStyle.Alert)
-        refreshAlert.addAction(UIAlertAction(title: "Fortsätt", style: .Default, handler: { (action: UIAlertAction!) in
-            self.performSegueWithIdentifier("currentSympToMenu", sender: nil)
-        }))
-        refreshAlert.addAction(UIAlertAction(title: "Avbryt", style: .Default, handler: { (action: UIAlertAction!) in
-            // Cancel
-        }))
-        presentViewController(refreshAlert, animated: true, completion: nil)
-    }
-    
     @IBAction func continueButton(sender: AnyObject) {
         if(selectedRows.count == 0) {
             self.performSegueWithIdentifier("segueToMisc", sender: nil)

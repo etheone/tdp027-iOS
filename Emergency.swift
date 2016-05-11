@@ -42,6 +42,7 @@ class Emergency: UIViewController {
     var currentEmergency = Dictionary<String,String>()
     var userHistory = Dictionary<String,Dictionary<String,String>>()
     var callInProgress : Bool = false
+    var audioRunning = false
     
     // Sound variables
     var audioPlayer = AVAudioPlayer() // Needed for alert sound
@@ -127,7 +128,7 @@ class Emergency: UIViewController {
     
     func timerDone() {
         // Only play sound if app sound is on
-        if soundOn {
+        if (soundOn && currentPage != numberOfPages)  {
             playSound(alertSound)
         }
         if(currentPage < numberOfPages) {
@@ -148,6 +149,7 @@ class Emergency: UIViewController {
         audioPlayer.prepareToPlay()
         audioPlayer.play()
         audioPlayer.numberOfLoops = -1
+        audioRunning = true
     }
     
     func alertBox() {
@@ -166,7 +168,9 @@ class Emergency: UIViewController {
         let confirmAction = UIAlertAction(
             title: alertCloseText, style: UIAlertActionStyle.Default) { (action) in
                 self.continueToNextStep()
-                //self.audioPlayer.stop()
+                if (self.audioRunning) {
+                    self.audioPlayer.stop()
+                }
         }
         
         alertController.addAction(confirmAction)
@@ -175,6 +179,9 @@ class Emergency: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Prevent sleep mode
+        UIApplication.sharedApplication().idleTimerDisabled = true
         
         // Overrides user mute
         do {
