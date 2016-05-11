@@ -85,6 +85,7 @@ var symptoms = [
 var symptomsInfo = [
     "Stark och ihållande bröstsmärta som kan stråla ut i armarna",
     "Obehagskänsla i bröstet som kan stråla upp mot halsen, käkarna och skuldrorna",
+    "Strålande i hals/käkarr/skuldror",
     "Illamående",
     "Andnöd",
     "Kallsvettning",
