@@ -14,13 +14,18 @@ class diseaseVC: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    
+    @IBAction func readOnButton(sender: AnyObject) {
+            UIApplication.sharedApplication().openURL(NSURL(string: "https://www.1177.se/Stockholm/Fakta-och-rad/Sjukdomar/Hjartinfarkt/")!)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navBar.shadowImage = UIImage()
         self.navBar.translucent = true
-        scrollView.contentSize.height = 1350
+        scrollView.contentSize.height = 3300
         
         pushNavigation("Om hjärtinfarkt")
     }
@@ -33,6 +38,7 @@ class diseaseVC: UIViewController {
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
+  
     
     /*
     override func prefersStatusBarHidden() -> Bool {
