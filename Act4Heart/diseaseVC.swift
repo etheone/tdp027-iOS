@@ -20,7 +20,7 @@ class diseaseVC: UIViewController {
         self.navBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navBar.shadowImage = UIImage()
         self.navBar.translucent = true
-        scrollView.contentSize.height = 1350
+        scrollView.contentSize.height = 3300
         
         pushNavigation("Om hjärtinfarkt")
     }
