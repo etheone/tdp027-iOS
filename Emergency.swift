@@ -18,6 +18,9 @@ class Emergency: UIViewController {
     @IBOutlet weak var navTitle: UINavigationItem!
     @IBOutlet weak var topText: UILabel!
     @IBOutlet weak var clockLabel: UILabel!
+    @IBOutlet weak var blueWatchConstraint: NSLayoutConstraint!
+    @IBOutlet weak var blueWatchWidth: NSLayoutConstraint!
+    @IBOutlet weak var blueWatchHeight: NSLayoutConstraint!
     
     @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var processStartButton: UIButton!
@@ -183,6 +186,16 @@ class Emergency: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let bounds = UIScreen.mainScreen().bounds
+        let width = bounds.size.width
+        if (width <= 320) {
+            blueWatchConstraint.constant = 10.0
+            blueWatchHeight.constant = 150.0
+            blueWatch.frame.size.height = 150
+            blueWatchWidth.constant = 150.0
+            blueWatch.frame.size.width = 150
+        }
+        
         // Prevent sleep mode
         UIApplication.sharedApplication().idleTimerDisabled = true
         
@@ -209,7 +222,7 @@ class Emergency: UIViewController {
         self.navBar.translucent = true
         
         //imerValue: Int, clockType: String, timerLabel: UILabel)
-        self.blueClock = Clock(timerValue: (30), countDown: true, timerLabel: blueWatch, parent: self)
+        self.blueClock = Clock(timerValue: (1), countDown: true, timerLabel: blueWatch, parent: self)
         self.redClock = Clock(timerValue: (0), countDown: false, timerLabel: redWatch, parent: self)
         
         roundedButton(continueButton)
