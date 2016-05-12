@@ -579,11 +579,11 @@ Meddelanden:</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PvX-9e-nFY">
-                                <rect key="frame" x="0.0" y="64" width="375" height="3000"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PvX-9e-nFY">
+                                <rect key="frame" x="0.0" y="64" width="375" height="2936"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ia-Ke-9va">
-                                        <rect key="frame" x="18" y="5037" width="340" height="36"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ia-Ke-9va">
+                                        <rect key="frame" x="15" y="3093.5" width="346" height="36"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Tryck här för att läsa vidare på 1177.se">
@@ -599,8 +599,8 @@ Meddelanden:</string>
                                             <action selector="readOnButton:" destination="mrB-pq-GIw" eventType="touchUpInside" id="8hC-3X-UEV"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNH-j0-YHo">
-                                        <rect key="frame" x="10" y="10" width="115" height="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNH-j0-YHo">
+                                        <rect key="frame" x="10" y="10" width="112.5" height="26.5"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Hjärtinfarkt">
                                                 <attributes>
@@ -611,8 +611,8 @@ Meddelanden:</string>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZw-ZO-kCO">
-                                        <rect key="frame" x="10" y="42" width="355" height="2074"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZw-ZO-kCO">
+                                        <rect key="frame" x="10" y="41.5" width="355" height="2237"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="355" id="85C-oj-JAg"/>
                                         </constraints>
@@ -630,13 +630,7 @@ Om du fått en hjärtinfarkt behöver kranskärlet som har täppts till av en bl
 
 Ju tidigare kärlet öppnas, desto större är chansen att blodflödet till hjärtmuskeln återställs och hjärtskadan minimeras. Om du bor i närheten av ett sjukhus som kan göra akut ballongvidgning brukar ambulansen köra direkt dit om EKG-bilden uppvisar ett särskilt mönster. Om du befinner dig mer än två timmar från ett sådant sjukhus kan du få propplösande medicin, som kan ges redan i hemmet eller i ambulansen av en sjuksköterska, som följt med. 
 
-Hjärt- och kärlsjukdomar är den vanligaste dödsorsaken i Sverige. Ungefär hälften av västvärldens befolkning insjuknar och dör i någon av dessa sjukdomar, där akut kranskärlssjukdom, alltså instabil kärlkramp och hjärtinfarkt, utgör en stor del.
-Det är känt att vissa typiska riskfaktorer ökar risken för att få hjärtinfarkt. De flesta av dessa kan du påverka med ändrade vanor. Risken ökar också med åldern.
-•	Sluta med rökning och annat tobaksbruk. Även om du redan har blivit sjuk finns stora hälsovinster med att sluta röka.
-•	Minska det skadliga kolesterolet (LDL) genom ändrad kost. Höga blodfetter ökar risken för att fååderförfettning, vilket i sin tur ökar risken för hjärtinfarkt.
-•	Håll din diabetessjukdom under kontroll, diabetes typ 1 eller diabetes typ 2. Två av tre personer som får en hjärtinfarkt har en försämrad omsättning av socker i kroppen.
-•	Högt blodtryck ökar risken för hjärtinfarkt. Du kan ofta sänka blodtrycket med fysisk aktivitet eller läkemedel. 
-•	Motionera regelbundet. En daglig promenad på 30 minuter är bra motion för att minska risken för att få en kranskärlssjukdom.
+Hjärt- och kärlsjukdomar är den vanligaste dödsorsaken i Sverige.
 </string>
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -673,18 +667,24 @@ Cg
                                             </fragment>
                                             <fragment>
                                                 <string key="content">Det är känt att vissa typiska riskfaktorer ökar risken för att få hjärtinfarkt. De flesta av dessa kan du påverka med ändrade vanor. Risken ökar också med åldern.
-</string>
+
+</string>
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="20" name="HelveticaNeue"/>
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <mutableString key="content">- Sluta med rökning och annat tobaksbruk. Även om du redan har blivit sjuk finns stora hälsovinster med att sluta röka.
-- Minska det skadliga kolesterolet (LDL) genom ändrad kost. Höga blodfetter ökar risken för att få åderförfettning, vilket i sin tur ökar risken för hjärtinfarkt.
-- Håll din diabetessjukdom under kontroll, diabetes typ 1 eller diabetes typ 2. Två av tre personer som får en hjärtinfarkt har en försämrad omsättning av socker i kroppen.
-- Högt blodtryck ökar risken för hjärtinfarkt. Du kan ofta sänka blodtrycket med fysisk aktivitet eller läkemedel. 
-- Motionera regelbundet. En daglig promenad på 30 minuter är bra motion för att minska risken för att få en kranskärlssjukdom.</mutableString>
+                                                <string key="content">- Sluta med rökning och annat tobaksbruk. Även om du redan har blivit sjuk finns stora hälsovinster med att sluta röka.
+
+- Minska det skadliga kolesterolet (LDL) genom ändrad kost. Höga blodfetter ökar risken för att få åderförfettning, vilket i sin tur ökar risken för hjärtinfarkt.
+
+- Håll din diabetessjukdom under kontroll, diabetes typ 1 eller diabetes typ 2. Två av tre personer som får en hjärtinfarkt har en försämrad omsättning av socker i kroppen.
+
+- Högt blodtryck ökar risken för hjärtinfarkt. Du kan ofta sänka blodtrycket med fysisk aktivitet eller läkemedel. 
+
+- Motionera regelbundet. En daglig promenad på 30 minuter är bra motion för att minska risken för att få en kranskärlssjukdom.
+</string>
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="20" name="HelveticaNeue"/>
@@ -695,8 +695,8 @@ Cg
                                         <nil key="highlightedColor"/>
                                         <string key="userLabel">En hjärtinfarkt beror oftast på att en blodpropp har bildats som helt eller delvis täpper till hjärtats kranskärl så att blodet inte kan passera som det brukar. Den del av hjärtat som skulle ha tagit emot blodet från det tilltäppta kärlet drabbas av syrebrist och hjärtmuskeln skadas.  Vid en hjärtinfarkt kan en skada uppkomma som gör att hjärtat inte klarar att arbeta lika bra som innan. Hjärtinfarkt kan vara en livshotande sjukdom och kräver omedelbar sjukhusvård. Ju tidigare du får vård desto större är möjligheten att behandla och påverka hjärtinfarktens utveckling.  Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</string>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-UJ-oNg">
-                                        <rect key="frame" x="10" y="2136" width="311" height="53"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-UJ-oNg">
+                                        <rect key="frame" x="10" y="2298.5" width="311" height="53"/>
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">Vaga symptom kan också vara
@@ -710,8 +710,8 @@ infarkt</string>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pu8-b8-TXs">
-                                        <rect key="frame" x="10" y="2195" width="355" height="144"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pu8-b8-TXs">
+                                        <rect key="frame" x="10" y="2357.5" width="355" height="143.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="355" id="rGo-Ii-Wxf"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="355" id="sIK-Pr-vJd"/>
@@ -726,8 +726,8 @@ infarkt</string>
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kq8-Lt-RH8">
-                                        <rect key="frame" x="10" y="2369" width="320" height="53"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kq8-Lt-RH8">
+                                        <rect key="frame" x="10" y="2531" width="320" height="53"/>
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">Bröstsmärtor kan vara annat än
@@ -741,8 +741,8 @@ infarkt</string>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klR-mH-wcy">
-                                        <rect key="frame" x="10" y="2428" width="355" height="454"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klR-mH-wcy">
+                                        <rect key="frame" x="10" y="2590" width="355" height="453.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="355" id="PDV-4I-4tR"/>
                                         </constraints>
@@ -1900,8 +1900,8 @@ Din nuvarande position</string>
         <image name="logo" width="640" height="555"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kQy-Vg-ZOJ"/>
-        <segue reference="f1t-2y-MuN"/>
+        <segue reference="dLr-n9-eUP"/>
         <segue reference="2Sg-g8-CLL"/>
+        <segue reference="f1t-2y-MuN"/>
     </inferredMetricsTieBreakers>
 </document>

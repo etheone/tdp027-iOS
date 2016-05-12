@@ -69,7 +69,7 @@ func roundedButton(button:UIButton) {
     button.clipsToBounds = true
 }
 
-var symptomsList = [
+var symptomList = [
     "Ihållande bröstsmärta",
     "Obehagskänsla i bröstet",
     "Strålar i hals/käke/skuldra",

@@ -200,9 +200,9 @@ class Emergency: UIViewController {
         let notification = UILocalNotification()
         notification.fireDate = NSDate(timeIntervalSinceNow: Double(countdownTimer))
         notification.alertBody = "5 minuter har gått"
-        notification.alertAction = "be awesome!"
+        notification.alertAction = "Öppna appen"
         notification.soundName = UILocalNotificationDefaultSoundName
-        notification.userInfo = ["CustomField1": ""]
+        notification.applicationIconBadgeNumber = 1
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
         
     }

@@ -17,7 +17,7 @@ class CurrentSymptoms: UIViewController, UITableViewDataSource, UITableViewDeleg
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var soundIcon: UIBarButtonItem!
     
-    var symptomsArray = symptoms
+    var symptomsArray = symptomList
     var selectedRows = [Int]()
     var checkboxArray = [UITableViewCell]()
     var soundOn : Bool = true
