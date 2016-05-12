@@ -20,7 +20,7 @@ class Clock : NSObject {
     
     init (timerValue: Int, countDown: Bool, timerLabel: UILabel, parent: Emergency) {
         self.timerValue = timerValue
-        self.initialTime = timerValue
+        self.initialTime = Int(NSDate().timeIntervalSince1970)
         self.countDown = countDown
         self.timerLabel = timerLabel
         self.parent = parent
@@ -34,10 +34,9 @@ class Clock : NSObject {
     func updateTimer() {
         // Determine if the clock ticks up or down
         if countDown {
-            time -= 1
+            time = max(timerValue + initialTime - Int(NSDate().timeIntervalSince1970),0)
         } else {
-            time += 1
-
+            time = Int(NSDate().timeIntervalSince1970) - initialTime
         }
         // Only display hours if needed
         if time < 3600 {
@@ -51,7 +50,7 @@ class Clock : NSObject {
             parent.timerDone()
         } else if countDown && time == 0 {
             pause()
-            parent.timerDone()
+            //parent.timerDone()
         }
     }
     
@@ -65,6 +64,11 @@ class Clock : NSObject {
     
     func reset() {
         timer.invalidate()
-        time = initialTime
+        initialTime = Int(NSDate().timeIntervalSince1970)
+        if countDown {
+            time = timerValue + initialTime - Int(NSDate().timeIntervalSince1970)
+        } else {
+            time = Int(NSDate().timeIntervalSince1970) - initialTime
+        }
     }
 }

@@ -74,7 +74,7 @@ class SOS: UIViewController {
             callInProgress = true
             
             NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(2), target: self, selector: #selector(SOS.openApp), userInfo: nil, repeats: false)
-            UIApplication.sharedApplication().openURL(NSURL(string: "tel://0763080242")!)
+            UIApplication.sharedApplication().openURL(NSURL(string: "tel://0706190790")!)
         }
     }
     

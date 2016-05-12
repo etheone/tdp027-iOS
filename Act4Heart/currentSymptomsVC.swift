@@ -51,6 +51,10 @@ class CurrentSymptoms: UIViewController, UITableViewDataSource, UITableViewDeleg
             defaults.setBool(true, forKey: "acceptedTerms")
         }
         
+        // Make user get notification popup at start
+        let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
+        
         pushNavigation("Start - Välj symptom")
 
     }

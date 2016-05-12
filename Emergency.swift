@@ -37,6 +37,7 @@ class Emergency: UIViewController {
     
     var currentPage = 1
     let numberOfPages = 4
+    let countdownTimer:Int = 7
     var blueClock : Clock?
     var redClock : Clock?
     var soundOn : Bool = true
@@ -68,6 +69,7 @@ class Emergency: UIViewController {
     @IBAction func backToMenu(sender: AnyObject) {
         let refreshAlert = UIAlertController(title: "Tillbaka till menyn", message: "Du kan inte ångra detta val.", preferredStyle: UIAlertControllerStyle.Alert)
         refreshAlert.addAction(UIAlertAction(title: "Fortsätt", style: .Default, handler: { (action: UIAlertAction!) in
+            UIApplication.sharedApplication().cancelAllLocalNotifications()
             self.performSegueWithIdentifier("emergencyToMenu", sender: nil)
         }))
         refreshAlert.addAction(UIAlertAction(title: "Avbryt", style: .Default, handler: { (action: UIAlertAction!) in
@@ -103,6 +105,8 @@ class Emergency: UIViewController {
     }
     
     func continueToNextStep() {
+        
+        NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(self.countdownTimer), target: self, selector: #selector(self.timerDone), userInfo: nil, repeats: false)
         
         currentPage += 1
         if(currentPage <= numberOfPages) {
@@ -183,9 +187,31 @@ class Emergency: UIViewController {
         
     }
     
+    func scheduleLocal(sender: AnyObject) {
+        let settings = UIApplication.sharedApplication().currentUserNotificationSettings()
+        
+        if settings!.types == .None {
+            let ac = UIAlertController(title: "Can't schedule", message: "Either we don't have permission to schedule notifications, or we haven't asked yet.", preferredStyle: .Alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            presentViewController(ac, animated: true, completion: nil)
+            return
+        }
+        
+        let notification = UILocalNotification()
+        notification.fireDate = NSDate(timeIntervalSinceNow: Double(countdownTimer))
+        notification.alertBody = "5 minuter har gått"
+        notification.alertAction = "be awesome!"
+        notification.soundName = UILocalNotificationDefaultSoundName
+        notification.userInfo = ["CustomField1": ""]
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        scheduleLocal(self)
+
         let bounds = UIScreen.mainScreen().bounds
         let width = bounds.size.width
         if (width <= 320) {
@@ -216,14 +242,14 @@ class Emergency: UIViewController {
         self.soundOn = NSUserDefaults.standardUserDefaults().boolForKey("soundOn")
         changeSoundIcon()
         
-        
         self.navBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navBar.shadowImage = UIImage()
         self.navBar.translucent = true
         
-        //imerValue: Int, clockType: String, timerLabel: UILabel)
-        self.blueClock = Clock(timerValue: (1), countDown: true, timerLabel: blueWatch, parent: self)
+        //timerValue: Int, clockType: String, timerLabel: UILabel)
+        self.blueClock = Clock(timerValue: (self.countdownTimer), countDown: true, timerLabel: blueWatch, parent: self)
         self.redClock = Clock(timerValue: (0), countDown: false, timerLabel: redWatch, parent: self)
+        
         
         roundedButton(continueButton)
         roundedButton(noEmergencyButton)
