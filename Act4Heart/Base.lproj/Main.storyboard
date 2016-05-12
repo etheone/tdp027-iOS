@@ -604,6 +604,23 @@ Meddelanden:</string>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PvX-9e-nFY">
                                 <rect key="frame" x="0.0" y="64" width="375" height="974"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ia-Ke-9va">
+                                        <rect key="frame" x="18" y="5037" width="340" height="36"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Tryck här för att läsa vidare på 1177.se">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="readOnButton:" destination="mrB-pq-GIw" eventType="touchUpInside" id="8hC-3X-UEV"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNH-j0-YHo">
                                         <rect key="frame" x="10" y="10" width="115" height="23"/>
                                         <attributedString key="attributedText">
@@ -710,18 +727,24 @@ infarkt</string>
                                     <constraint firstItem="kNH-j0-YHo" firstAttribute="leading" secondItem="PvX-9e-nFY" secondAttribute="leading" constant="10" id="3nq-Ap-yla"/>
                                     <constraint firstItem="bwK-UJ-oNg" firstAttribute="top" secondItem="SZw-ZO-kCO" secondAttribute="bottom" constant="20" id="7wC-B1-akb"/>
                                     <constraint firstItem="pu8-b8-TXs" firstAttribute="centerX" secondItem="PvX-9e-nFY" secondAttribute="centerX" id="Eu5-Tk-GZT"/>
+                                    <constraint firstItem="8ia-Ke-9va" firstAttribute="top" secondItem="klR-mH-wcy" secondAttribute="bottom" constant="50" id="HF9-dz-Ydm"/>
+                                    <constraint firstItem="8ia-Ke-9va" firstAttribute="top" secondItem="klR-mH-wcy" secondAttribute="bottom" constant="20" id="Jk9-6e-iqk"/>
                                     <constraint firstItem="kNH-j0-YHo" firstAttribute="top" secondItem="PvX-9e-nFY" secondAttribute="top" constant="10" id="KbC-kC-ozy"/>
                                     <constraint firstItem="klR-mH-wcy" firstAttribute="top" secondItem="Kq8-Lt-RH8" secondAttribute="bottom" constant="6" id="UZF-VC-VgD"/>
+                                    <constraint firstItem="8ia-Ke-9va" firstAttribute="centerX" secondItem="PvX-9e-nFY" secondAttribute="centerX" id="YZu-X0-z3V"/>
                                     <constraint firstItem="bwK-UJ-oNg" firstAttribute="leading" secondItem="PvX-9e-nFY" secondAttribute="leading" constant="10" id="ZuR-Wp-fN2"/>
                                     <constraint firstItem="SZw-ZO-kCO" firstAttribute="top" secondItem="kNH-j0-YHo" secondAttribute="bottom" constant="5" id="e8s-Fx-AJ0"/>
                                     <constraint firstItem="klR-mH-wcy" firstAttribute="centerX" secondItem="PvX-9e-nFY" secondAttribute="centerX" id="hdy-tH-YYM"/>
                                     <constraint firstItem="SZw-ZO-kCO" firstAttribute="centerX" secondItem="PvX-9e-nFY" secondAttribute="centerX" id="lZ7-Il-Tkx"/>
                                     <constraint firstItem="Kq8-Lt-RH8" firstAttribute="leading" secondItem="PvX-9e-nFY" secondAttribute="leading" constant="10" id="n61-qI-Xnh"/>
+                                    <constraint firstAttribute="bottom" secondItem="8ia-Ke-9va" secondAttribute="bottom" constant="20" id="pGh-qW-8HV"/>
                                     <constraint firstItem="Kq8-Lt-RH8" firstAttribute="top" secondItem="pu8-b8-TXs" secondAttribute="bottom" constant="30" id="wy1-XZ-Jdl"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="2Ph-lH-XjE"/>
+                                        <exclude reference="Jk9-6e-iqk"/>
+                                        <exclude reference="pGh-qW-8HV"/>
                                     </mask>
                                 </variation>
                             </scrollView>

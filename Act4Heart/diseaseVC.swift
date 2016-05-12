@@ -14,6 +14,11 @@ class diseaseVC: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    
+    @IBAction func readOnButton(sender: AnyObject) {
+            UIApplication.sharedApplication().openURL(NSURL(string: "https://www.1177.se/Stockholm/Fakta-och-rad/Sjukdomar/Hjartinfarkt/")!)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +38,7 @@ class diseaseVC: UIViewController {
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
+  
     
     /*
     override func prefersStatusBarHidden() -> Bool {
