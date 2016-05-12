@@ -18,8 +18,7 @@ class TableViewCellController : UITableViewCell {
     @IBOutlet var textLabel2: UILabel!
     
     
-    
-    class var expandableHeight: CGFloat { get { return 150 } }
+    class var expandableHeight: CGFloat { get { return 200 } }
     class var defaultHeight: CGFloat    { get { return 44 } }
     
     func checkHeight() {

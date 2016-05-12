@@ -11,7 +11,6 @@ import UIKit
 class miscVC: UIViewController {
     
     
-    @IBOutlet weak var buttonDisease: UIButton!
     @IBOutlet weak var buttonSymptoms: UIButton!
     @IBOutlet weak var buttonHistory: UIButton!
     @IBOutlet weak var buttonApp: UIButton!
@@ -34,7 +33,7 @@ class miscVC: UIViewController {
             constraint3.constant = 30.0
         }
         
-        roundedButton(buttonDisease)
+        //roundedButton(buttonDisease)
         roundedButton(buttonSymptoms)
         roundedButton(buttonHistory)
         roundedButton(buttonApp)

@@ -16,6 +16,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet var tableView: UITableView!
     @IBOutlet var navBar: UINavigationBar!
     
+    
 
     
     override func viewDidLoad() {
@@ -101,10 +102,43 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         //print(" tja")
         //print(indexPath)
+        var expandableHeight: CGFloat { get { return 800 } }
+        var expandableHeight2: CGFloat { get { return 470 } }
+        var expandableHeight4: CGFloat { get { return 500 } }
+        var expandableHeight1: CGFloat { get { return 240 } }
+        var expandableHeight3: CGFloat { get { return 700 } }
+        var defaultHeight: CGFloat    { get { return 44 } }
+        var defaultHeight1: CGFloat    { get { return 65 } }
+        //print("indexPath is \(indexPath.row)")
         if indexPath == selectedIndexPath {
-            return TableViewCellController.expandableHeight
+            switch(indexPath.row) {
+            case 0:
+                print("case 0")
+                return expandableHeight
+            case 2:
+                return expandableHeight1
+            case 1:
+                print("case 123")
+                return expandableHeight4
+            case 3:
+                return expandableHeight2
+            case 4:
+                print("Case 4")
+                return expandableHeight3
+            default:
+                return TableViewCellController.defaultHeight
+            }
+            
         } else {
-            return TableViewCellController.defaultHeight
+            switch(indexPath.row) {
+            case 0, 1, 4:
+                return defaultHeight
+            case 2, 3:
+                return defaultHeight1
+            default:
+                return defaultHeight
+            }
+            
         }
     }
     
