@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Act4Heart/currentSymptomsVC.swift"
-            timestampString = "482920481.629127"
+            timestampString = "484645119.349059"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "CurrentSymptoms"
             landmarkType = "3">
          </BreakpointContent>

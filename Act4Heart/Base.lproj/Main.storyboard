@@ -176,7 +176,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Övrigt" id="cq8-lz-MxJ">
+                                    <navigationItem title="Information" id="cq8-lz-MxJ">
                                         <barButtonItem key="leftBarButtonItem" image="ic_home_white_36pt" id="NkR-sr-Ryg">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
@@ -269,11 +269,11 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AM3-lh-Bpc" id="tJh-TT-5TK">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XGe-om-oSo">
-                                                    <rect key="frame" x="15" y="0.0" width="313" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="313" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -483,7 +483,7 @@ Meddelanden:</string>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Beslutsstöd" id="OMU-CI-HVD">
+                                    <navigationItem title="Presentation" id="OMU-CI-HVD">
                                         <barButtonItem key="leftBarButtonItem" image="ic_arrow_back_white_36pt" id="UR7-Ad-UtR">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
@@ -631,7 +631,7 @@ Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</st
                                         <nil key="highlightedColor"/>
                                         <string key="userLabel">En hjärtinfarkt beror oftast på att en blodpropp har bildats som helt eller delvis täpper till hjärtats kranskärl så att blodet inte kan passera som det brukar. Den del av hjärtat som skulle ha tagit emot blodet från det tilltäppta kärlet drabbas av syrebrist och hjärtmuskeln skadas.  Vid en hjärtinfarkt kan en skada uppkomma som gör att hjärtat inte klarar att arbeta lika bra som innan. Hjärtinfarkt kan vara en livshotande sjukdom och kräver omedelbar sjukhusvård. Ju tidigare du får vård desto större är möjligheten att behandla och påverka hjärtinfarktens utveckling.  Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</string>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-UJ-oNg">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-UJ-oNg">
                                         <rect key="frame" x="10" y="574" width="311" height="53"/>
                                         <attributedString key="attributedText">
                                             <fragment>
@@ -646,7 +646,7 @@ infarkt</string>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pu8-b8-TXs">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pu8-b8-TXs">
                                         <rect key="frame" x="10" y="633" width="355" height="144"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="355" id="rGo-Ii-Wxf"/>
@@ -662,7 +662,7 @@ infarkt</string>
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kq8-Lt-RH8">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kq8-Lt-RH8">
                                         <rect key="frame" x="10" y="807" width="320" height="53"/>
                                         <attributedString key="attributedText">
                                             <fragment>
@@ -677,7 +677,7 @@ infarkt</string>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klR-mH-wcy">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klR-mH-wcy">
                                         <rect key="frame" x="10" y="866" width="355" height="454"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="355" id="PDV-4I-4tR"/>
@@ -790,7 +790,7 @@ infarkt</string>
                                         <rect key="frame" x="0.0" y="28" width="375" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UKR-pL-lWQ" id="Ra7-vU-bWo">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eck-RJ-RYC">
@@ -880,14 +880,12 @@ infarkt</string>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="qXL-A5-WCO">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTV-O0-xSj" userLabel="SOS-text">
-                                        <rect key="frame" x="0.0" y="120" width="375" height="48"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ring 112 direkt, det finns en risk att du drabbats av hjärtinfarkt" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTV-O0-xSj" userLabel="SOS-text">
+                                        <rect key="frame" x="10" y="80" width="355" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.5" id="Cuf-vc-rUy"/>
                                             <constraint firstAttribute="width" constant="187.5" id="WmV-ZO-gqG"/>
                                         </constraints>
-                                        <string key="text">Det är möjligt att du har en hjärtinfarkt.
-Ring 112 efter en ambulans!</string>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -899,7 +897,7 @@ Ring 112 efter en ambulans!</string>
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Dq-f3-b3L">
-                                        <rect key="frame" x="137" y="198" width="100" height="100"/>
+                                        <rect key="frame" x="137" y="235" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="c2D-L5-sq0"/>
                                             <constraint firstAttribute="width" constant="100" id="dbn-kn-gJ7"/>
@@ -918,17 +916,15 @@ Ring 112 efter en ambulans!</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4h9-ct-Vie" userLabel="Click text">
-                                        <rect key="frame" x="0.0" y="318" width="375" height="118"/>
+                                        <rect key="frame" x="20" y="355" width="335" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="187.5" id="0lw-B0-LoP"/>
                                             <constraint firstAttribute="height" constant="20.5" id="rC1-EC-fUW"/>
                                         </constraints>
-                                        <string key="text">Tryck på den gröna knappen 
-för att kontakta SOS
-
+                                        <string key="text">Tryck på den gröna knappen för att kontakta SOS  Alarm
 
 Din nuvarande position</string>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
@@ -938,8 +934,24 @@ Din nuvarande position</string>
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adess:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12H-cE-JuX" userLabel="SOS Address">
-                                        <rect key="frame" x="0.0" y="446" width="375" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inta en vilande position och möt inte ambulansen. Glöm inte att berätta din adress och om du har någon portkod. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Enc-ZB-M34" userLabel="Info text">
+                                        <rect key="frame" x="20" y="148" width="335" height="67.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20.5" id="coe-XL-KPL"/>
+                                            <constraint firstAttribute="width" constant="187.5" id="sie-1u-cAz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="sie-1u-cAz"/>
+                                                <exclude reference="coe-XL-KPL"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adress:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12H-cE-JuX" userLabel="SOS Address">
+                                        <rect key="frame" x="0.0" y="455.5" width="375" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.5" id="QWD-sL-jWZ"/>
                                             <constraint firstAttribute="width" constant="187.5" id="Uge-8Y-qFL"/>
@@ -957,28 +969,33 @@ Din nuvarande position</string>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="MTV-O0-xSj" firstAttribute="leading" secondItem="t00-BR-Olx" secondAttribute="leading" id="4dG-Fq-dBq"/>
-                                    <constraint firstAttribute="trailing" secondItem="4h9-ct-Vie" secondAttribute="trailing" id="5M0-kD-vKd"/>
+                                    <constraint firstItem="MTV-O0-xSj" firstAttribute="leading" secondItem="t00-BR-Olx" secondAttribute="leading" constant="10" id="4dG-Fq-dBq"/>
+                                    <constraint firstAttribute="trailing" secondItem="4h9-ct-Vie" secondAttribute="trailing" constant="20" id="5M0-kD-vKd"/>
                                     <constraint firstAttribute="bottom" secondItem="qXL-A5-WCO" secondAttribute="bottom" id="7K4-c3-jH8"/>
                                     <constraint firstItem="4h9-ct-Vie" firstAttribute="top" secondItem="MTV-O0-xSj" secondAttribute="bottom" constant="20" id="7p4-NV-17Y"/>
-                                    <constraint firstItem="0Dq-f3-b3L" firstAttribute="top" secondItem="MTV-O0-xSj" secondAttribute="bottom" constant="30" id="BDV-zW-gFS"/>
+                                    <constraint firstItem="0Dq-f3-b3L" firstAttribute="top" secondItem="MTV-O0-xSj" secondAttribute="bottom" constant="230" id="BDV-zW-gFS"/>
                                     <constraint firstAttribute="trailing" secondItem="12H-cE-JuX" secondAttribute="trailing" id="CBf-Nz-wc9"/>
                                     <constraint firstItem="0Dq-f3-b3L" firstAttribute="top" secondItem="4h9-ct-Vie" secondAttribute="bottom" constant="20" id="Eqy-ic-aNS"/>
-                                    <constraint firstItem="MTV-O0-xSj" firstAttribute="top" secondItem="t00-BR-Olx" secondAttribute="top" constant="120" id="Hiq-Pv-JI5"/>
+                                    <constraint firstItem="MTV-O0-xSj" firstAttribute="top" secondItem="t00-BR-Olx" secondAttribute="top" constant="80" id="Hiq-Pv-JI5"/>
+                                    <constraint firstItem="0Dq-f3-b3L" firstAttribute="top" secondItem="Enc-ZB-M34" secondAttribute="bottom" constant="20" id="JN8-3i-OS5"/>
                                     <constraint firstItem="qXL-A5-WCO" firstAttribute="leading" secondItem="t00-BR-Olx" secondAttribute="leading" id="Kim-AM-1Jy"/>
+                                    <constraint firstItem="Enc-ZB-M34" firstAttribute="top" secondItem="MTV-O0-xSj" secondAttribute="bottom" constant="20" id="Lqz-Q3-ajy"/>
                                     <constraint firstAttribute="bottom" secondItem="12H-cE-JuX" secondAttribute="bottom" constant="10" id="NUk-s9-wT3"/>
                                     <constraint firstItem="qXL-A5-WCO" firstAttribute="top" secondItem="t00-BR-Olx" secondAttribute="top" id="OzB-6r-IPO"/>
                                     <constraint firstItem="12H-cE-JuX" firstAttribute="leading" secondItem="t00-BR-Olx" secondAttribute="leading" id="Tfg-bR-Kd6"/>
                                     <constraint firstAttribute="trailing" secondItem="qXL-A5-WCO" secondAttribute="trailing" id="ZP8-EN-Xf7"/>
-                                    <constraint firstItem="4h9-ct-Vie" firstAttribute="leading" secondItem="t00-BR-Olx" secondAttribute="leading" id="dDj-H6-Flp"/>
+                                    <constraint firstItem="4h9-ct-Vie" firstAttribute="leading" secondItem="t00-BR-Olx" secondAttribute="leading" constant="20" id="dDj-H6-Flp"/>
+                                    <constraint firstAttribute="trailing" secondItem="Enc-ZB-M34" secondAttribute="trailing" constant="20" id="dIA-Ma-4JQ"/>
                                     <constraint firstItem="4h9-ct-Vie" firstAttribute="top" secondItem="0Dq-f3-b3L" secondAttribute="bottom" constant="20" id="hzR-JP-czR"/>
-                                    <constraint firstAttribute="trailing" secondItem="MTV-O0-xSj" secondAttribute="trailing" id="pll-aO-9DU"/>
+                                    <constraint firstItem="Enc-ZB-M34" firstAttribute="leading" secondItem="t00-BR-Olx" secondAttribute="leading" constant="20" id="ngm-2V-X92"/>
+                                    <constraint firstAttribute="trailing" secondItem="MTV-O0-xSj" secondAttribute="trailing" constant="10" id="pll-aO-9DU"/>
                                     <constraint firstItem="0Dq-f3-b3L" firstAttribute="centerX" secondItem="t00-BR-Olx" secondAttribute="centerX" id="r2l-fF-6uq"/>
                                     <constraint firstItem="0Dq-f3-b3L" firstAttribute="top" secondItem="MTV-O0-xSj" secondAttribute="bottom" constant="30" id="twE-3y-xaB"/>
                                     <constraint firstItem="12H-cE-JuX" firstAttribute="top" secondItem="4h9-ct-Vie" secondAttribute="bottom" constant="10" id="vAq-qz-Mgu"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="BDV-zW-gFS"/>
                                         <exclude reference="Eqy-ic-aNS"/>
                                         <exclude reference="twE-3y-xaB"/>
                                         <exclude reference="7p4-NV-17Y"/>
@@ -1116,14 +1133,14 @@ Din nuvarande position</string>
                                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wDJ-Xw-3ZD" id="i5X-lY-dI0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="icon-unchecked" translatesAutoresizingMaskIntoConstraints="NO" id="odH-Dz-U1T">
                                                             <rect key="frame" x="67" y="-42" width="39" height="36"/>
                                                         </imageView>
                                                         <label opaque="NO" multipleTouchEnabled="YES" tag="1" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A0C-Js-GTq">
-                                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <edgeInsets key="layoutMargins" top="12" left="8" bottom="12" right="8"/>
                                                             <attributedString key="attributedText">
@@ -1270,7 +1287,7 @@ Din nuvarande position</string>
                                             <constraint firstAttribute="height" constant="50" id="YaY-UJ-pBe"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Har du haft hjärtinfarkt tidigare?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xw-T1-hZr" userLabel="Question">
@@ -1439,7 +1456,7 @@ Din nuvarande position</string>
                                             <constraint firstAttribute="height" constant="50" id="mgf-7d-I60"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVf-XZ-Ou4" userLabel="Question">
@@ -1587,8 +1604,8 @@ Din nuvarande position</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3E-tq-EUK" userLabel="Red Watch">
-                                <rect key="frame" x="137" y="597" width="100" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3E-tq-EUK" userLabel="Red Watch">
+                                <rect key="frame" x="137" y="603" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="j2K-wi-iFE"/>
                                     <constraint firstAttribute="height" constant="30" id="rXt-Pb-kXC"/>
@@ -1629,8 +1646,8 @@ Din nuvarande position</string>
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qO7-22-BMP" userLabel="SOS - button">
-                                <rect key="frame" x="31" y="527" width="313" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qO7-22-BMP" userLabel="SOS - button">
+                                <rect key="frame" x="31" y="523" width="313" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="07J-Ne-d0V"/>
                                     <constraint firstAttribute="width" constant="100" id="Rpw-Zk-NE5"/>
@@ -1652,8 +1669,8 @@ Din nuvarande position</string>
                                     <action selector="sosStart:" destination="SeH-bM-0Pu" eventType="touchUpInside" id="1XV-iR-dXH"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBd-x0-tMB" userLabel="noEmergency">
-                                <rect key="frame" x="31" y="437" width="313" height="60"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBd-x0-tMB" userLabel="noEmergency">
+                                <rect key="frame" x="31" y="433" width="313" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="CF9-Ar-vm9"/>
                                     <constraint firstAttribute="height" constant="100" id="Ycg-BD-KsC"/>
@@ -1675,13 +1692,13 @@ Din nuvarande position</string>
                                     <action selector="noEmergencyClicked:" destination="SeH-bM-0Pu" eventType="touchUpInside" id="69f-2O-Kuh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total tid sedan start" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tv3-Vk-pDM" userLabel="Clock label">
-                                <rect key="frame" x="30" y="629" width="315" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total tid sedan start" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tv3-Vk-pDM" userLabel="Clock label">
+                                <rect key="frame" x="30" y="645.5" width="315" height="16.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="44y-Dg-glK"/>
                                     <constraint firstAttribute="width" constant="120" id="vwZ-5Q-85e"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
@@ -1717,6 +1734,7 @@ Din nuvarande position</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="tv3-Vk-pDM" firstAttribute="top" secondItem="y3E-tq-EUK" secondAttribute="bottom" constant="10" id="1Kf-kk-1ex"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GtH-Jz-pZ8" secondAttribute="trailing" constant="30" id="1k0-b4-y2V"/>
                             <constraint firstAttribute="trailing" secondItem="KSP-5x-oRr" secondAttribute="trailing" id="3wm-It-ALd"/>
                             <constraint firstItem="T4l-BL-sdt" firstAttribute="top" secondItem="NS3-2q-dkJ" secondAttribute="topMargin" id="5A2-hH-Ctz"/>
@@ -1730,8 +1748,10 @@ Din nuvarande position</string>
                             <constraint firstItem="T4l-BL-sdt" firstAttribute="top" secondItem="dXM-kv-ZlJ" secondAttribute="bottom" id="FBF-jU-UO0"/>
                             <constraint firstAttribute="bottom" secondItem="KSP-5x-oRr" secondAttribute="bottom" id="FW6-GY-aLU"/>
                             <constraint firstItem="tv3-Vk-pDM" firstAttribute="top" secondItem="YSe-5I-SPY" secondAttribute="bottom" constant="300" id="Fxh-Pe-ay7"/>
+                            <constraint firstItem="y3E-tq-EUK" firstAttribute="top" secondItem="qO7-22-BMP" secondAttribute="bottom" constant="20" id="Goe-as-oUh"/>
                             <constraint firstItem="o8g-AV-1s3" firstAttribute="top" secondItem="lBd-x0-tMB" secondAttribute="bottom" constant="280" id="HA4-9K-YZ3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qO7-22-BMP" secondAttribute="trailing" constant="15" id="HyB-5e-tNi"/>
+                            <constraint firstItem="o8g-AV-1s3" firstAttribute="top" secondItem="tv3-Vk-pDM" secondAttribute="bottom" constant="5" id="I1X-Cg-QBc"/>
                             <constraint firstItem="YSe-5I-SPY" firstAttribute="top" secondItem="4eX-wk-Hbm" secondAttribute="bottom" constant="30" id="L19-ld-m42"/>
                             <constraint firstItem="qO7-22-BMP" firstAttribute="leading" secondItem="NS3-2q-dkJ" secondAttribute="leadingMargin" constant="15" id="OsC-Qp-19c"/>
                             <constraint firstItem="YSe-5I-SPY" firstAttribute="top" secondItem="T4l-BL-sdt" secondAttribute="bottom" constant="80" id="Qrz-mg-DJe"/>
@@ -1768,11 +1788,14 @@ Din nuvarande position</string>
                                 <exclude reference="L19-ld-m42"/>
                                 <exclude reference="VSr-fa-eLo"/>
                                 <exclude reference="mme-z2-K9h"/>
+                                <exclude reference="CQ8-wk-rLl"/>
                                 <exclude reference="DBZ-9b-WHr"/>
+                                <exclude reference="RJ4-Hx-umk"/>
                                 <exclude reference="XRt-Tm-1Ng"/>
                                 <exclude reference="fje-1s-lmf"/>
                                 <exclude reference="nSh-7D-Oqg"/>
                                 <exclude reference="Fxh-Pe-ay7"/>
+                                <exclude reference="cfX-am-eXG"/>
                                 <exclude reference="HA4-9K-YZ3"/>
                             </mask>
                         </variation>
@@ -1807,8 +1830,8 @@ Din nuvarande position</string>
         <image name="logo" width="640" height="555"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VN0-Wa-qZ3"/>
+        <segue reference="C3p-aE-UjK"/>
         <segue reference="HHM-y3-0do"/>
-        <segue reference="Hq1-ot-PLu"/>
+        <segue reference="2Sg-g8-CLL"/>
     </inferredMetricsTieBreakers>
 </document>
