@@ -117,26 +117,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="ReP-2c-0Xo" userLabel="bg-with-logo">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ego-Ge-jbe">
-                                <rect key="frame" x="31" y="164" width="313" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="0zc-Ba-bvZ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <state key="normal" title="Om hjärtinfarkt">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="mrB-pq-GIw" kind="presentation" modalTransitionStyle="crossDissolve" id="W41-aO-aeN"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUv-IM-LQb">
-                                <rect key="frame" x="31" y="274" width="313" height="60"/>
+                                <rect key="frame" x="31" y="164" width="313" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="O0I-PV-66p"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <state key="normal" title="Vanliga symptom">
+                                <state key="normal" title="Om hjärtinfarkt">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -144,7 +131,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdL-hm-MDe">
-                                <rect key="frame" x="31" y="384" width="313" height="60"/>
+                                <rect key="frame" x="31" y="274" width="313" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="lz9-5K-g7j"/>
                                 </constraints>
@@ -157,7 +144,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtF-cr-cCF">
-                                <rect key="frame" x="31" y="494" width="313" height="60"/>
+                                <rect key="frame" x="31" y="384" width="313" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="0Jq-hz-ikc"/>
                                 </constraints>
@@ -192,11 +179,9 @@
                         <constraints>
                             <constraint firstItem="mtF-cr-cCF" firstAttribute="top" secondItem="bUv-IM-LQb" secondAttribute="bottom" constant="100" id="2Qc-th-IUg"/>
                             <constraint firstAttribute="trailing" secondItem="UQz-Xs-vRg" secondAttribute="trailing" id="3vb-ut-GTX"/>
-                            <constraint firstItem="Ego-Ge-jbe" firstAttribute="leading" secondItem="3eL-pG-6LI" secondAttribute="leadingMargin" constant="15" id="8R7-0M-imu"/>
                             <constraint firstItem="UQz-Xs-vRg" firstAttribute="top" secondItem="qge-CZ-XJh" secondAttribute="bottom" id="9dr-ga-Jnb"/>
                             <constraint firstAttribute="trailing" secondItem="UQz-Xs-vRg" secondAttribute="trailing" id="9lh-lV-4Q0"/>
                             <constraint firstItem="mtF-cr-cCF" firstAttribute="leading" secondItem="3eL-pG-6LI" secondAttribute="leadingMargin" constant="15" id="9x3-Kb-UAZ"/>
-                            <constraint firstItem="Ego-Ge-jbe" firstAttribute="top" secondItem="UQz-Xs-vRg" secondAttribute="bottom" constant="50" id="9xH-zA-qk8"/>
                             <constraint firstItem="UQz-Xs-vRg" firstAttribute="leading" secondItem="3eL-pG-6LI" secondAttribute="leadingMargin" id="Er4-Ju-psz"/>
                             <constraint firstItem="mtF-cr-cCF" firstAttribute="top" secondItem="ZdL-hm-MDe" secondAttribute="bottom" constant="50" id="JhW-aX-NmI"/>
                             <constraint firstItem="UQz-Xs-vRg" firstAttribute="top" secondItem="qge-CZ-XJh" secondAttribute="bottom" id="Ktq-Si-G7X"/>
@@ -205,13 +190,11 @@
                             <constraint firstItem="UQz-Xs-vRg" firstAttribute="leading" secondItem="3eL-pG-6LI" secondAttribute="leading" id="VWX-ec-x53"/>
                             <constraint firstItem="bUv-IM-LQb" firstAttribute="leading" secondItem="3eL-pG-6LI" secondAttribute="leadingMargin" constant="15" id="WgI-eA-JVx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bUv-IM-LQb" secondAttribute="trailing" constant="15" id="ZRY-bB-oQ4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ego-Ge-jbe" secondAttribute="trailing" constant="15" id="ZY4-5F-V5M"/>
                             <constraint firstItem="ZdL-hm-MDe" firstAttribute="top" secondItem="bUv-IM-LQb" secondAttribute="bottom" constant="50" id="bKa-X0-Spq"/>
                             <constraint firstItem="ZdL-hm-MDe" firstAttribute="leading" secondItem="3eL-pG-6LI" secondAttribute="leadingMargin" constant="15" id="dw0-hj-WJI"/>
+                            <constraint firstItem="bUv-IM-LQb" firstAttribute="top" secondItem="UQz-Xs-vRg" secondAttribute="bottom" constant="100" id="gOC-9R-EDC"/>
                             <constraint firstItem="UQz-Xs-vRg" firstAttribute="leading" secondItem="3eL-pG-6LI" secondAttribute="leading" id="hhM-mp-KNl"/>
-                            <constraint firstItem="Ego-Ge-jbe" firstAttribute="top" secondItem="UQz-Xs-vRg" secondAttribute="bottom" constant="100" id="lZk-WV-D3E"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mtF-cr-cCF" secondAttribute="trailing" constant="15" id="onx-CZ-GT3"/>
-                            <constraint firstItem="bUv-IM-LQb" firstAttribute="top" secondItem="Ego-Ge-jbe" secondAttribute="bottom" constant="50" id="yX4-jm-HTl"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -220,7 +203,6 @@
                                 <exclude reference="Er4-Ju-psz"/>
                                 <exclude reference="Lcf-XW-D0K"/>
                                 <exclude reference="hhM-mp-KNl"/>
-                                <exclude reference="9xH-zA-qk8"/>
                                 <exclude reference="2Qc-th-IUg"/>
                             </mask>
                         </variation>
@@ -228,13 +210,10 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="buttonApp" destination="mtF-cr-cCF" id="evd-d8-xad"/>
-                        <outlet property="buttonDisease" destination="Ego-Ge-jbe" id="cmW-kl-hLu"/>
                         <outlet property="buttonHistory" destination="ZdL-hm-MDe" id="jKP-Y4-1b5"/>
                         <outlet property="buttonSymptoms" destination="bUv-IM-LQb" id="Ya4-Fk-Jbp"/>
-                        <outlet property="constraint1" destination="yX4-jm-HTl" id="2bh-Vg-uvU"/>
                         <outlet property="constraint2" destination="bKa-X0-Spq" id="vxZ-xn-AaR"/>
                         <outlet property="constraint3" destination="JhW-aX-NmI" id="Cma-rv-WD4"/>
-                        <outlet property="constraintTop" destination="lZk-WV-D3E" id="BbD-oP-lhX"/>
                         <outlet property="navBar" destination="UQz-Xs-vRg" id="50i-Pz-gTo"/>
                     </connections>
                 </viewController>
@@ -577,7 +556,7 @@ Meddelanden:</string>
                         <viewControllerLayoutGuide type="bottom" id="hHM-2r-zlf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sZh-Fz-zZb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="3000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Vbq-DY-MCk" userLabel="bg-with-logo">
@@ -595,14 +574,13 @@ Meddelanden:</string>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="backToMenu:" destination="SeH-bM-0Pu" id="ycO-bo-JKi"/>
-                                                <segue destination="so6-lu-eUH" kind="presentation" modalTransitionStyle="crossDissolve" id="kQy-Vg-ZOJ"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PvX-9e-nFY">
-                                <rect key="frame" x="0.0" y="64" width="375" height="936"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PvX-9e-nFY">
+                                <rect key="frame" x="0.0" y="64" width="375" height="3000"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ia-Ke-9va">
                                         <rect key="frame" x="18" y="5037" width="340" height="36"/>
@@ -633,7 +611,7 @@ Meddelanden:</string>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZw-ZO-kCO">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZw-ZO-kCO">
                                         <rect key="frame" x="10" y="42" width="355" height="2074"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="355" id="85C-oj-JAg"/>
@@ -661,22 +639,70 @@ Det är känt att vissa typiska riskfaktorer ökar risken för att få hjärtinf
 •	Motionera regelbundet. En daglig promenad på 30 minuter är bra motion för att minska risken för att få en kranskärlssjukdom.
 </string>
                                                 <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">Ungefär hälften av västvärldens befolkning insjuknar och dör i någon av dessa sjukdomar, där akut kranskärlssjukdom, alltså instabil kärlkramp och hjärtinfarkt, utgör en stor del.
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">Det är känt att vissa typiska riskfaktorer ökar risken för att få hjärtinfarkt. De flesta av dessa kan du påverka med ändrade vanor. Risken ökar också med åldern.
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <mutableString key="content">- Sluta med rökning och annat tobaksbruk. Även om du redan har blivit sjuk finns stora hälsovinster med att sluta röka.
+- Minska det skadliga kolesterolet (LDL) genom ändrad kost. Höga blodfetter ökar risken för att få åderförfettning, vilket i sin tur ökar risken för hjärtinfarkt.
+- Håll din diabetessjukdom under kontroll, diabetes typ 1 eller diabetes typ 2. Två av tre personer som får en hjärtinfarkt har en försämrad omsättning av socker i kroppen.
+- Högt blodtryck ökar risken för hjärtinfarkt. Du kan ofta sänka blodtrycket med fysisk aktivitet eller läkemedel. 
+- Motionera regelbundet. En daglig promenad på 30 minuter är bra motion för att minska risken för att få en kranskärlssjukdom.</mutableString>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                         <string key="userLabel">En hjärtinfarkt beror oftast på att en blodpropp har bildats som helt eller delvis täpper till hjärtats kranskärl så att blodet inte kan passera som det brukar. Den del av hjärtat som skulle ha tagit emot blodet från det tilltäppta kärlet drabbas av syrebrist och hjärtmuskeln skadas.  Vid en hjärtinfarkt kan en skada uppkomma som gör att hjärtat inte klarar att arbeta lika bra som innan. Hjärtinfarkt kan vara en livshotande sjukdom och kräver omedelbar sjukhusvård. Ju tidigare du får vård desto större är möjligheten att behandla och påverka hjärtinfarktens utveckling.  Om du misstänker att någon i din närhet fått en hjärtinfarkt, ring 112.</string>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-UJ-oNg">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-UJ-oNg">
                                         <rect key="frame" x="10" y="2136" width="311" height="53"/>
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">Vaga symptom kan också vara
 infarkt</string>
                                                 <attributes>
-                                                    <color key="NSColor" red="0.98470163990000004" green="1" blue="0.95170405579999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="22" name="HelveticaNeue-Medium"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
@@ -684,7 +710,7 @@ infarkt</string>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pu8-b8-TXs">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pu8-b8-TXs">
                                         <rect key="frame" x="10" y="2195" width="355" height="144"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="355" id="rGo-Ii-Wxf"/>
@@ -777,7 +803,7 @@ infarkt</string>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="1000"/>
+                    <size key="freeformSize" width="375" height="3000"/>
                     <connections>
                         <outlet property="navBar" destination="t8S-xf-gQV" id="yGh-8n-gap"/>
                         <outlet property="scrollView" destination="PvX-9e-nFY" id="Eka-cz-SZa"/>
@@ -809,7 +835,7 @@ infarkt</string>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Symptom" id="XfK-Se-rgD">
+                                    <navigationItem title="Om hjärtinfarkt" id="XfK-Se-rgD">
                                         <barButtonItem key="leftBarButtonItem" image="ic_arrow_back_white_36pt" id="Df4-Oa-Jwm">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
@@ -837,7 +863,7 @@ infarkt</string>
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="115.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eck-RJ-RYC">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eck-RJ-RYC">
                                                     <rect key="frame" x="8" y="18" width="359" height="26"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Lablele">
@@ -850,7 +876,7 @@ infarkt</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S80-eX-KHr">
-                                                    <rect key="frame" x="8" y="46" width="359" height="82"/>
+                                                    <rect key="frame" x="8" y="64" width="359" height="82"/>
                                                     <attributedString key="attributedText">
                                                         <fragment>
                                                             <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
@@ -867,17 +893,11 @@ infarkt</string>
                                             <constraints>
                                                 <constraint firstItem="S80-eX-KHr" firstAttribute="trailing" secondItem="Ra7-vU-bWo" secondAttribute="trailingMargin" id="4K7-oQ-PVh"/>
                                                 <constraint firstItem="eck-RJ-RYC" firstAttribute="top" secondItem="Ra7-vU-bWo" secondAttribute="topMargin" constant="10" id="C1N-6n-cln"/>
-                                                <constraint firstItem="S80-eX-KHr" firstAttribute="top" secondItem="Ra7-vU-bWo" secondAttribute="topMargin" constant="100" id="DVO-5t-SsG"/>
                                                 <constraint firstItem="eck-RJ-RYC" firstAttribute="leading" secondItem="Ra7-vU-bWo" secondAttribute="leadingMargin" id="Fh7-bl-UtR"/>
                                                 <constraint firstItem="eck-RJ-RYC" firstAttribute="trailing" secondItem="Ra7-vU-bWo" secondAttribute="trailingMargin" id="fsi-pL-SFd"/>
-                                                <constraint firstItem="S80-eX-KHr" firstAttribute="top" secondItem="eck-RJ-RYC" secondAttribute="bottom" constant="2" id="ikK-cj-1yY"/>
                                                 <constraint firstItem="S80-eX-KHr" firstAttribute="leading" secondItem="Ra7-vU-bWo" secondAttribute="leadingMargin" id="pfD-Hh-AIF"/>
+                                                <constraint firstItem="S80-eX-KHr" firstAttribute="top" secondItem="eck-RJ-RYC" secondAttribute="bottom" constant="20" id="xNX-Y3-zmC"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="DVO-5t-SsG"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
@@ -891,8 +911,8 @@ infarkt</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="qKw-G3-byp" firstAttribute="top" secondItem="Xj9-gn-Ha0" secondAttribute="bottom" id="XKE-Ga-EBG"/>
                             <constraint firstItem="qKw-G3-byp" firstAttribute="leading" secondItem="KWq-5c-pYQ" secondAttribute="leading" id="ZRi-XL-MDE"/>
-                            <constraint firstItem="qKw-G3-byp" firstAttribute="top" secondItem="Xj9-gn-Ha0" secondAttribute="bottom" id="azO-Nh-9vc"/>
                             <constraint firstAttribute="trailing" secondItem="qKw-G3-byp" secondAttribute="trailing" id="n8k-vX-cGF"/>
                         </constraints>
                     </view>
