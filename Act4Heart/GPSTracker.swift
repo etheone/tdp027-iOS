@@ -18,7 +18,6 @@ class GPSTracker: NSObject, CLLocationManagerDelegate {
     func startTracking() {
         
         if CLLocationManager.locationServicesEnabled() {
-            print("trackar")
             locationManager1 = CLLocationManager()
             locationManager1.delegate = self
             locationManager1.desiredAccuracy = kCLLocationAccuracyBest
@@ -53,9 +52,6 @@ class GPSTracker: NSObject, CLLocationManagerDelegate {
                 
                 if let p = placemarks?[0] {
                     
-                    //self.address = String(p.addressDictionary!)
-                    //print(p.addressDictionary!)
-                    
                     var city = ""
                     var zip = ""
                     var street = ""
@@ -70,9 +66,6 @@ class GPSTracker: NSObject, CLLocationManagerDelegate {
                     self.address["zip"] = zip
                     self.address["street"] = street
                     self.address["name"] = name
-                    //self.address["info"] = String(p.addressDictionary!)
-                    
-                    //p.addressDictionary["Street"]
                     
                 }
                 

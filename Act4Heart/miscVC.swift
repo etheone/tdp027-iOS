@@ -28,7 +28,6 @@ class miscVC: UIViewController {
         let width = bounds.size.width
         if (width <= 320) {
             constraintTop.constant = 30.0
-            constraint1.constant = 30.0
             constraint2.constant = 30.0
             constraint3.constant = 30.0
         }

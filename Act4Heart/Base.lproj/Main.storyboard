@@ -6,102 +6,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Act4Heart" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="oXI-f8-qXv" userLabel="bg-with-logo">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="NQa-eV-3RN">
-                                <rect key="frame" x="0.0" y="40" width="375" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="AZ9-1C-bCM"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vI5-cD-Nhp">
-                                <rect key="frame" x="31" y="307" width="313" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="y2I-Rx-vC9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                <state key="normal" title="Känner du besvär?">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="3"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="Pw4-KA-Hu1" kind="presentation" modalTransitionStyle="crossDissolve" id="FZJ-Dd-hua"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Y8-DJ-0mb">
-                                <rect key="frame" x="31" y="417" width="313" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Oee-f0-WhG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Övrigt">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="miscButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0dQ-ra-zRN"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="5Y8-DJ-0mb" firstAttribute="top" secondItem="vI5-cD-Nhp" secondAttribute="bottom" constant="80" id="06k-yg-4qp"/>
-                            <constraint firstItem="vI5-cD-Nhp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="0x1-sy-BZI"/>
-                            <constraint firstItem="NQa-eV-3RN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="6um-6j-G6g"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="oXI-f8-qXv" secondAttribute="bottom" id="6zX-0V-Uvg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vI5-cD-Nhp" secondAttribute="trailing" constant="15" id="Bdw-gE-UX5"/>
-                            <constraint firstAttribute="trailing" secondItem="oXI-f8-qXv" secondAttribute="trailing" id="Evd-E1-ZwW"/>
-                            <constraint firstAttribute="trailing" secondItem="NQa-eV-3RN" secondAttribute="trailing" id="T3k-5l-QWp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NQa-eV-3RN" secondAttribute="trailing" id="UJl-bq-45y"/>
-                            <constraint firstItem="oXI-f8-qXv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bFV-if-Wwm"/>
-                            <constraint firstItem="oXI-f8-qXv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bvX-V7-qFy"/>
-                            <constraint firstItem="5Y8-DJ-0mb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="dTB-jz-0Pb"/>
-                            <constraint firstItem="oXI-f8-qXv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="ewy-MK-JQV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oXI-f8-qXv" secondAttribute="trailing" id="hsj-b6-vYs"/>
-                            <constraint firstItem="vI5-cD-Nhp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iMG-iY-ZbQ"/>
-                            <constraint firstItem="5Y8-DJ-0mb" firstAttribute="top" secondItem="vI5-cD-Nhp" secondAttribute="bottom" constant="80" id="jrw-cJ-fQ1"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Y8-DJ-0mb" secondAttribute="bottom" constant="190" id="k7J-oA-KMs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5Y8-DJ-0mb" secondAttribute="trailing" constant="15" id="oVL-Sk-MeD"/>
-                            <constraint firstItem="NQa-eV-3RN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rIc-NF-jHL"/>
-                            <constraint firstItem="5Y8-DJ-0mb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wdc-6v-24x"/>
-                            <constraint firstItem="5Y8-DJ-0mb" firstAttribute="top" secondItem="vI5-cD-Nhp" secondAttribute="bottom" constant="30" id="x5D-Ac-NSd"/>
-                            <constraint firstItem="NQa-eV-3RN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="yxb-Nf-7Vb"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="bvX-V7-qFy"/>
-                                <exclude reference="hsj-b6-vYs"/>
-                                <exclude reference="UJl-bq-45y"/>
-                                <exclude reference="yxb-Nf-7Vb"/>
-                                <exclude reference="06k-yg-4qp"/>
-                                <exclude reference="jrw-cJ-fQ1"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="emergencyButton" destination="vI5-cD-Nhp" id="IiA-ok-0d9"/>
-                        <outlet property="miscButton" destination="5Y8-DJ-0mb" id="eZR-Rg-dEf"/>
-                        <segue destination="so6-lu-eUH" kind="presentation" identifier="menuToMisc" modalTransitionStyle="crossDissolve" id="dLr-n9-eUP"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="303.5" y="-64.5"/>
-        </scene>
         <!--MiscVC-->
         <scene sceneID="rJn-qf-ciK">
             <objects>
@@ -214,6 +118,7 @@
                         <outlet property="buttonSymptoms" destination="bUv-IM-LQb" id="Ya4-Fk-Jbp"/>
                         <outlet property="constraint2" destination="bKa-X0-Spq" id="vxZ-xn-AaR"/>
                         <outlet property="constraint3" destination="JhW-aX-NmI" id="Cma-rv-WD4"/>
+                        <outlet property="constraintTop" destination="gOC-9R-EDC" id="sQB-k4-ltL"/>
                         <outlet property="navBar" destination="UQz-Xs-vRg" id="50i-Pz-gTo"/>
                     </connections>
                 </viewController>
@@ -852,7 +757,7 @@ infarkt</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="116" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZVq-CZ-lrw">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="116" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZVq-CZ-lrw">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -911,9 +816,13 @@ infarkt</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZVq-CZ-lrw" firstAttribute="top" secondItem="qKw-G3-byp" secondAttribute="bottom" id="KSn-lK-6Rh"/>
+                            <constraint firstItem="4uj-e5-QdN" firstAttribute="top" secondItem="ZVq-CZ-lrw" secondAttribute="bottom" id="Q9C-g4-bdM"/>
                             <constraint firstItem="qKw-G3-byp" firstAttribute="top" secondItem="Xj9-gn-Ha0" secondAttribute="bottom" id="XKE-Ga-EBG"/>
                             <constraint firstItem="qKw-G3-byp" firstAttribute="leading" secondItem="KWq-5c-pYQ" secondAttribute="leading" id="ZRi-XL-MDE"/>
                             <constraint firstAttribute="trailing" secondItem="qKw-G3-byp" secondAttribute="trailing" id="n8k-vX-cGF"/>
+                            <constraint firstAttribute="trailing" secondItem="ZVq-CZ-lrw" secondAttribute="trailing" id="ukJ-Ka-gCb"/>
+                            <constraint firstItem="ZVq-CZ-lrw" firstAttribute="leading" secondItem="KWq-5c-pYQ" secondAttribute="leading" id="wLk-F2-eL9"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -1380,7 +1289,6 @@ Din nuvarande position</string>
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="miscButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JLh-xZ-NZp"/>
                                             <segue destination="siD-ZO-fNb" kind="presentation" modalTransitionStyle="crossDissolve" id="5Of-7v-7X3"/>
                                         </connections>
                                     </button>
@@ -1551,7 +1459,6 @@ Din nuvarande position</string>
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="miscButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rkv-Ex-Kql"/>
                                             <segue destination="siD-ZO-fNb" kind="presentation" modalTransitionStyle="crossDissolve" id="jLj-dW-2T6"/>
                                         </connections>
                                     </button>
@@ -1897,11 +1804,10 @@ Din nuvarande position</string>
         <image name="ic_home_white_36pt" width="36" height="36"/>
         <image name="ic_volume_up_white_36pt" width="36" height="36"/>
         <image name="icon-unchecked" width="512" height="512"/>
-        <image name="logo" width="640" height="555"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dLr-n9-eUP"/>
         <segue reference="2Sg-g8-CLL"/>
-        <segue reference="f1t-2y-MuN"/>
+        <segue reference="HHM-y3-0do"/>
+        <segue reference="S4d-Zp-fL2"/>
     </inferredMetricsTieBreakers>
 </document>

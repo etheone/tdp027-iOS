@@ -31,8 +31,6 @@ class History: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.performSegueWithIdentifier("historyToMenu", sender: nil)
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -100,8 +98,6 @@ class History: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         let row = indexPath.row
         
-        //let dateData = userHistory[historyArray[row]]!["Start"]!.componentsSeparatedByString(",")
-        
         var date = ""
         var start = "-"
         var second = "-"
@@ -126,7 +122,7 @@ class History: UIViewController, UITableViewDataSource, UITableViewDelegate {
             total += 1
         }
         
-        sos = "-" // Fix later
+        sos = "-"
         
         titleTop.text = "Akutsituation " + date
         infoRight.text = "\(start)\n\(second)\n\(third)\n\n\(total)\n\(sos)\n"
@@ -139,14 +135,5 @@ class History: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return UIStatusBarStyle.LightContent
     }
     
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
 }

@@ -37,7 +37,7 @@ class Emergency: UIViewController {
     
     var currentPage = 1
     let numberOfPages = 4
-    let countdownTimer:Int = 7
+    let countdownTimer:Int = 30
     var blueClock : Clock?
     var redClock : Clock?
     var soundOn : Bool = true
@@ -57,6 +57,7 @@ class Emergency: UIViewController {
         UIApplication.sharedApplication().openURL(NSURL(string: "act4heart://")!)
     }
     
+    // Button that updates the text accordingly
     @IBAction func noEmergencyClicked(sender: AnyObject) {
         blueWatch.hidden = true
         noEmergencyButton.hidden = true
@@ -78,16 +79,19 @@ class Emergency: UIViewController {
         presentViewController(refreshAlert, animated: true, completion: nil)
     }
     
+    // Performs segue to SOS ViewController
     @IBAction func sosStart(sender: AnyObject) {
         self.performSegueWithIdentifier("startSOS", sender: nil)
     }
     
+    // Toggle between sound on or off
     @IBAction func soundChanger(sender: AnyObject) {
         soundOn = !soundOn
         NSUserDefaults.standardUserDefaults().setBool(soundOn, forKey: "soundOn")
         changeSoundIcon()
     }
     
+    // Function that updates sound icon
     func changeSoundIcon() {
         if soundOn {
             let newImage = UIImage(named:"ic_volume_up_white_36pt.png")
@@ -98,6 +102,7 @@ class Emergency: UIViewController {
         }
     }
     
+    // Convert Date string to readable format
     func parseDate() -> String {
         let formatter = NSDateFormatter()
         formatter.dateFormat = "yyyy,MM,dd,HH,mm,ss"
@@ -106,8 +111,11 @@ class Emergency: UIViewController {
     
     func continueToNextStep() {
         
+        // Checks if timer has expired every second.
+        // Works if the user has minimized the app and later reopen the app.
         NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(self.countdownTimer), target: self, selector: #selector(self.timerDone), userInfo: nil, repeats: false)
         
+        // Update current page
         currentPage += 1
         if(currentPage <= numberOfPages) {
             blueClock!.reset()
@@ -130,19 +138,20 @@ class Emergency: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-    
+    // Functions that excecutes at end of timer
     func timerDone() {
+        // If the app hasn't changed ViewController
         if (viewActive) {
             // Only play sound if app sound is on
-            if (soundOn && currentPage != numberOfPages)  {
+            if (soundOn && currentPage <= numberOfPages) {
                 playSound(alertSound)
             }
-            if(currentPage < numberOfPages) {
+            if(currentPage <= numberOfPages) {
                 alertBox()
-            } else {
+            }
+            if(currentPage == numberOfPages) {
                 noEmergencyButton.hidden = false
                 clockLabel.hidden = true
             }
@@ -162,17 +171,22 @@ class Emergency: UIViewController {
         audioRunning = true
     }
     
+    // Popup that displays at end of timerDone()
     func alertBox() {
         var alertTitle = "Ta nästa dos Nitroglycerin"
         var alertMessage = "5 minuter har gått."
         if currentPage == 1 {
             alertTitle = "Ta en dos Nitroglycerin"
             alertMessage = "Den blå klockan räknar ned tills du ska ta nästa dos"
+        } else if currentPage == numberOfPages {
+            alertTitle = "Det har gått 5 minuter"
+            alertMessage = "Välj det alternativ alternativ som beskriver din situation"
         }
         let alertCloseText = "OK"
         let alertController = UIAlertController(title: alertTitle, message:
             alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
         
+        // Opens alert box
         self.presentViewController(alertController, animated: true, completion: nil)
         
         let confirmAction = UIAlertAction(
@@ -187,6 +201,7 @@ class Emergency: UIViewController {
         
     }
     
+    // Notifications
     func scheduleLocal(sender: AnyObject) {
         let settings = UIApplication.sharedApplication().currentUserNotificationSettings()
         
@@ -210,8 +225,10 @@ class Emergency: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Init notification
         scheduleLocal(self)
 
+        // If iPhone 4s
         let bounds = UIScreen.mainScreen().bounds
         let width = bounds.size.width
         if (width <= 320) {
@@ -246,10 +263,8 @@ class Emergency: UIViewController {
         self.navBar.shadowImage = UIImage()
         self.navBar.translucent = true
         
-        //timerValue: Int, clockType: String, timerLabel: UILabel)
         self.blueClock = Clock(timerValue: (self.countdownTimer), countDown: true, timerLabel: blueWatch, parent: self)
         self.redClock = Clock(timerValue: (0), countDown: false, timerLabel: redWatch, parent: self)
-        
         
         roundedButton(continueButton)
         roundedButton(noEmergencyButton)

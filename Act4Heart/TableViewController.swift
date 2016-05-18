@@ -33,7 +33,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.navBar.translucent = true
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
-        pushNavigation("Om symptom")
+        pushNavigation("Om hjärtinfarkt")
     }
     
     override func didReceiveMemoryWarning() {
@@ -102,13 +102,33 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         //print(" tja")
         //print(indexPath)
-        var expandableHeight: CGFloat { get { return 800 } }
-        var expandableHeight2: CGFloat { get { return 470 } }
-        var expandableHeight4: CGFloat { get { return 500 } }
-        var expandableHeight1: CGFloat { get { return 240 } }
-        var expandableHeight3: CGFloat { get { return 700 } }
+        var expandableHeight: CGFloat
+        var expandableHeight2: CGFloat
+        var expandableHeight4: CGFloat
+        var expandableHeight1: CGFloat
+        var expandableHeight3: CGFloat
+        
+        let bounds = UIScreen.mainScreen().bounds
+        let width = bounds.size.width
+        if (width <= 320) {
+            expandableHeight = 970 as CGFloat
+            expandableHeight2 = 520 as CGFloat
+            expandableHeight4 = 500 as CGFloat
+            expandableHeight1 = 240 as CGFloat
+            expandableHeight3 = 955 as CGFloat
+        } else {
+            expandableHeight = 800 as CGFloat
+            expandableHeight2 = 470 as CGFloat
+            expandableHeight4 = 500 as CGFloat
+            expandableHeight1 = 240 as CGFloat
+            expandableHeight3 = 700 as CGFloat
+        }
+        
+        
         var defaultHeight: CGFloat    { get { return 44 } }
         var defaultHeight1: CGFloat    { get { return 65 } }
+        
+
         //print("indexPath is \(indexPath.row)")
         if indexPath == selectedIndexPath {
             switch(indexPath.row) {
