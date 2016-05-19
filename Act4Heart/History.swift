@@ -1,8 +1,8 @@
 //
-//  Game.swift
+//  History.swift
 //  Act4Heart
 //
-//  Created by Joel Karlsson on 2016-02-25.
+//  Created by Act4Heart on 2016-02-25.
 //  Copyright © 2016 act4heart. All rights reserved.
 //
 

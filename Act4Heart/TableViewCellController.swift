@@ -2,7 +2,7 @@
 //  TableViewCellController.swift
 //  Act4Heart
 //
-//  Created by Emil Nilsson on 06/04/16.
+//  Created by Act4Heart on 06/04/16.
 //  Copyright © 2016 act4heart. All rights reserved.
 //
 

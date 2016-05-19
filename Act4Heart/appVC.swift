@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  appVC.swift
 //  Act4Heart
 //
-//  Created by Joel Karlsson on 2016-03-06.
+//  Created by Act4Heart on 2016-03-06.
 //  Copyright © 2016 act4heart. All rights reserved.
 //
 

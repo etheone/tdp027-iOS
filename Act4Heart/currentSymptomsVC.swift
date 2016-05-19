@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Act4Heart
 //
-//  Created by Joel Karlsson on 2016-04-07.
+//  Created by Act4Heart on 2016-04-07.
 //  Copyright © 2016 act4heart. All rights reserved.
 //
 
@@ -27,6 +27,7 @@ class CurrentSymptoms: UIViewController, UITableViewDataSource, UITableViewDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         // Gets saved sound option and updates icon if needed
         self.soundOn = NSUserDefaults.standardUserDefaults().boolForKey("soundOn")
@@ -54,6 +55,8 @@ class CurrentSymptoms: UIViewController, UITableViewDataSource, UITableViewDeleg
         // Make user get notification popup at start
         let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
         UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
+        
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
         
         pushNavigation("Start - Välj symptom")
 

@@ -2,7 +2,7 @@
 //  Emergency.swift
 //  Act4Heart
 //
-//  Created by Joel Karlsson on 2016-02-01.
+//  Created by Act4Heart on 2016-02-01.
 //  Copyright © 2016 act4heart. All rights reserved.
 //
 

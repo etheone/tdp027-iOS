@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Act4Heart
 //
-//  Created by Joel Karlsson on 2016-01-27.
+//  Created by Act4Heart on 2016-01-27.
 //  Copyright © 2016 act4heart. All rights reserved.
 //
 

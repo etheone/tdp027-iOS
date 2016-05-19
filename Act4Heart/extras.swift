@@ -1,8 +1,8 @@
 //
-//  navigationInfo.swift
+//  extras.swift
 //  Act4Heart
 //
-//  Created by Emil Nilsson on 13/04/16.
+//  Created by Act4Heart on 13/04/16.
 //  Copyright © 2016 act4heart. All rights reserved.
 //
 

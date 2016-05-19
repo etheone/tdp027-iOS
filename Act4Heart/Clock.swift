@@ -2,7 +2,7 @@
 //  Clock.swift
 //  Act4Heart
 //
-//  Created by Joel Karlsson on 2016-02-03.
+//  Created by Act4Heart on 2016-02-03.
 //  Copyright © 2016 act4heart. All rights reserved.
 //
 
