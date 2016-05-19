@@ -28,9 +28,9 @@ class appVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        currentImage = 1
+        currentImage = 0
         
-        imageView.image = UIImage(named: "image" + String(currentImage))
+        imageView.image = UIImage(named: "ios" + String(currentImage))
         
         let screenSize: CGRect = UIScreen.mainScreen().bounds
         let sizeToSet = screenSize.width * 0.45
@@ -72,29 +72,29 @@ class appVC: UIViewController {
         
         if sender == nextButton {
             
-            if(currentImage < 16) {
+            if(currentImage < 15) {
                 
                 currentImage += 1
-                let imageToSet = "image" + String(currentImage)
+                let imageToSet = "ios" + String(currentImage)
                 imageView.image = UIImage(named: imageToSet)
             }
             
         } else if(sender == backButton) {
             
-            if(currentImage > 1) {
+            if(currentImage > 0) {
                 currentImage -= 1
-                let imageToSet = "image" + String(currentImage)
+                let imageToSet = "ios" + String(currentImage)
                 imageView.image = UIImage(named: imageToSet)
             }
         }
         
         print(currentImage)
         
-        if(currentImage == 1) {
+        if(currentImage == 0) {
             
             backButton.hidden = true
             
-        } else if(currentImage == 16) {
+        } else if(currentImage == 15) {
           
             nextButton.hidden = true
             
